@@ -1,0 +1,102 @@
+
+
+/* Global classes */
+
+.title-text {
+    font: var(--gravitasone);
+    font-weight: bolder;
+}
+
+.title-text2 {
+    letter-spacing: 0.2125rem;
+    font: normal 50px/72px var(--rozhaone);
+}
+
+.title-text3 {
+    letter-spacing: 0.2125rem;
+    font: normal 50px/72px var(--roboto);
+}
+
+/* Button */
+
+.button {
+    padding: 1rem 3rem;
+    font: normal 16px/20px var(--roboto);
+    letter-spacing: 0.2125rem;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    background: var(--gradient-color-button);
+    background-clip: padding-box;
+    color: rgba(206, 182, 116, 0.774);
+    transition: background .6s ease;
+}
+
+.button.button:hover {
+    background: var(--gradient-color-button-hover);
+    color:  rgba(206, 182, 116, 0.774);
+    box-shadow: var(--box-shadow);
+}
+
+.button.button::after {
+    position: absolute;
+    top: -2px; left: -2px;
+    bottom: -2px;  right: -2px;
+    background: var(--gradient-color-button);
+    content: ' ';
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.button2 {
+    padding: .75rem 2rem;
+    font: normal 16px/20px var(--roboto);
+    letter-spacing: 0.2125rem;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    background: var(--gradient-color-button);
+    background-clip: padding-box;
+    color: rgba(206, 182, 116, 0.774);
+    transition: background .6s ease;
+}
+
+.button4 {
+    padding: 1rem 3rem;
+    font: normal 16px/20px var(--roboto);
+    letter-spacing: 0.2125rem;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: rgba(206, 182, 116, 0.774);
+    background-clip: padding-box;
+    color: rgba(206, 182, 116, 0.774);
+    transition: background .1s ease;
+}
+
+.button4.button4:hover {
+    background: rgba(255, 255, 255, 0.774);
+    border: 1.5px solid rgba(206, 182, 116, 0.774);
+    color:  rgba(0, 0, 0, 0.774);
+    box-shadow: var(--box-shadow);
+    transition: background .1s ease;
+}
+
+.button4.button4::after {
+    position: absolute;
+    top: -2px; left: -2px;
+    bottom: -2px;  right: -2px;
+    background: var(--gradient-color-button);
+    content: ' ';
+    z-index: -1;
+    border-radius: 4px;
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active {
+    outline: 0px !important;
+    box-shadow: none !important;
+}

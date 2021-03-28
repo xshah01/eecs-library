@@ -1,0 +1,13 @@
+
+
+/* @font-face */
+
+@font-face {
+    font-family: "Roboto";
+    src: '../fonts/Roboto/Roboto-Light.ttf';
+}
+
+@font-face {
+    font-family: "Rozha_One";
+    src: '../fonts/Rozha_One/RozhaOne-Regular.ttf';
+}
