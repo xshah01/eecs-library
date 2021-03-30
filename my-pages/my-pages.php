@@ -46,7 +46,7 @@
                 <li><a href="home.html">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Books</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="my-pages.html">My pages</a></li>
+                <li><a href="my-pages/my-pages.php">My pages</a></li>
                 <li><a href="about-us.html">About us</a></li>
                 <li><a href="contact.html">Contact us</a></li>
             </ul>
@@ -58,7 +58,24 @@
 
     <main class="site-main">
 
+        <!-- ==================== Start Banner Area ==================== -->
+
+        <section id="scroll" class="site-banner-contact">
+            <div class="bg-image-contact"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h3 class="contact-title text-center">My pages</h3>
+                            <h2></h2>
+                        </div>    
+                    </div> 
+                </div>
+            </div>    
+        </section>   
+
     </main>
+
+    <!-- ========================= End Banner Area ========================= -->
     
     <!-- ========================= End Main Area ========================= -->
 
