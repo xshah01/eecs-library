@@ -51,7 +51,7 @@
                 <li><a href="home.html">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Books</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="my-pages/my-pages.php">My pages</a></li>
+                <li><a href="my-pages.php">My pages</a></li>
                 <li><a href="about-us.html">About us</a></li>
                 <li><a href="contact.html">Contact us</a></li>
             </ul>
