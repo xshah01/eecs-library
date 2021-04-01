@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/all.css">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fancy.css">
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -41,14 +41,13 @@
     <!-- ========================= Start Header Area ========================= -->
 
     <header>
-        <a href="home.htphpml" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
+        <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
                 <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Books</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="about-us.php">About us</a></li>
                 <li><a href="contact.php">Contact us</a></li>
-                <li><a href="admin.php">Admin</a></li>
             </ul>
     </header>
 

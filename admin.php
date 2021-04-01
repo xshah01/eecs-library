@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/all.css">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fancy.css">
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -48,7 +48,7 @@
                 <li><a href="services.php">Services</a></li>
                 <li><a href="about-us.php">About us</a></li>
                 <li><a href="contact.php">Contact us</a></li>
-                <li><a href="admin.php">Admin</a></li>
+                <li><a id="admin" href="admin.php">Admin</a></li>
             </ul>
     </header>
 
@@ -65,7 +65,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="contact-title text-center">Admin</h3>
+                            <h3 class="admin-title text-center">Admin</h3>
                             <h2></h2>
                         </div>    
                     </div> 
