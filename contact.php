@@ -41,14 +41,14 @@
     <!-- ========================= Start Header Area ========================= -->
 
     <header>
-        <a href="home.html" class="logo"href="home.html"><img src="./img/eecslogo.png" alt="logo"></a>
+        <a href="home.htphpml" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
-                <li><a href="home.html">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Books</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="my-pages.html">My pages</a></li>
-                <li><a href="about-us.html">About us</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="admin.php">My pages</a></li>
+                <li><a href="about-us.php">About us</a></li>
+                <li><a href="contact.php">Contact us</a></li>
             </ul>
     </header>
 

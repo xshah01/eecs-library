@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My pages</title>
+    <title>Admin</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -41,14 +41,14 @@
     <!-- ========================= Start Header Area ========================= -->
 
     <header>
-        <a href="home.html" class="logo"href="home.html"><img src="./img/eecslogo.png" alt="logo"></a>
+        <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
-                <li><a href="home.html">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Books</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="my-pages.php">My pages</a></li>
-                <li><a href="about-us.html">About us</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="admin.php">My pages</a></li>
+                <li><a href="about-us.php">About us</a></li>
+                <li><a href="contact.php">Contact us</a></li>
             </ul>
     </header>
 
