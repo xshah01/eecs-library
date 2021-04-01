@@ -46,9 +46,9 @@
                 <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Books</a></li>
                 <li><a href="services.php">Services</a></li>
-                <li><a href="admin.php">My pages</a></li>
                 <li><a href="about-us.php">About us</a></li>
                 <li><a href="contact.php">Contact us</a></li>
+                <li><a href="admin.php">Admin</a></li>
             </ul>
     </header>
 
@@ -60,12 +60,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-contact">
-            <div class="bg-image-contact"></div>
+        <section id="scroll" class="site-banner-admin">
+            <div class="bg-image-admin"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="contact-title text-center">My pages</h3>
+                            <h3 class="contact-title text-center">Admin</h3>
                             <h2></h2>
                         </div>    
                     </div> 
