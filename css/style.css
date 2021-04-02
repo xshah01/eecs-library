@@ -1166,6 +1166,7 @@ a:link {
     background-size: cover;
     filter: brightness(80%);
 }
+
 .site-banner-accounts .accounts-title {
     font-family: 'Abril Fatface', cursive;
 	font-size: 85px;
@@ -1267,3 +1268,81 @@ table tr td {
     padding-left: 175px;
     padding-bottom: 15px;
 }
+
+/* End Accounts Area */
+
+/* Start Add Admin Area */
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.site-banner-add-admin .bg-image-accounts {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url(../img/accounts-bg.jpg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+
+.site-banner-add-admin .admin-title {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 85px;
+	color: #FFF;
+    transform: translate(37%, -450%);
+    z-index: 2;
+}
+
+.site-banner-add-admin h2 {
+    position: relative;
+    content: " ";
+    display: block;
+    margin-left: 44%;
+    width: 10%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(380%, -22000%);
+    z-index: 2;
+}
+
+.site-banner-add-admin .main-content .add-admin-title h1 {
+    padding-left: 175px;
+    padding-bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+.site-banner-add-admin .form-control {
+    margin-left: -10px;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.site-banner-add-admin .form-control-submit {
+    padding: 1rem 3rem;
+    width: 100%;
+    font: var(--roboto);
+    font-size: 12px;
+    letter-spacing: 0.2125rem;
+    border: none;
+    background: black;
+    background-clip: padding-box;
+    color: white;
+    text-transform: uppercase;
+}
+
+.site-banner-add-admin .form-control-submit:hover {
+    background: white;
+    color:  black;
+    border: 1px solid black;
+    margin: -1px;
+}
+
+/* End Add Admin Area */

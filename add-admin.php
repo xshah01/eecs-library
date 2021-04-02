@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounts</title>
+    <title>Add Admin</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -59,12 +59,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-accounts">
+        <section id="scroll" class="site-banner-add-admin">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="accounts-title text-center">Accounts</h3>
+                            <h3 class="admin-title text-center">Accounts</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -72,64 +72,27 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="manage-accounts-title">
-                        <h1 class="title">Manage Accounts</h1>
+                    <div class="add-admin-title">
+                        <h1 class="title">Add Admin</h1>
                     </div>
 
-                    <div class="add-account-button">
-                    <!-- Button to add admin -->
-                    <button type="button" class="btn-add-admin mr-4" 
-                        onclick="window.location.href='add-admin.php';">add admin ›
-                    </button>
-                    </div>
-
-                    <table class="tbl-full">
-                        <tr>
-                            <th>ID</th>
-                            <th>Full Name</th>
-                            <th>E-mail</th>
-                            <th>Manage</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Shadab Ahmed</td>
-                            <td>shadaba@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Hamed Khavari</td>
-                            <td>hkhavari@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Rami Achkoudir</td>
-                            <td>ramiac@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                    </table>
+                    <form action="" method="POST">
+                        <table>
+                            <tr>
+                                <td><input type="text" class="form-control" name="full_name" placeholder="Enter your full name"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="email" placeholder="Enter your e-mail"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="password" class="form-control" name="password" placeholder="Enter your password"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="form-control-submit" name="submit" value="Add admin"><br></td>
+                            </tr>
+                        </table>
+                    </form>
+                    
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -158,6 +121,39 @@
     </footer>
 
     <!-- ========================= End Footer Area ========================= -->
+
+    <!-- ========================= Start PHP MyAdmin Area ========================= -->
+
+    <?php 
+
+        //Connect to database
+        $conn = mysqli_connect('localhost', 'root', '') or die(mysqli_error());
+        $db_select = mysqli_select_db($conn, 'eecs-library') or die(mysqli_error());
+    
+        //Process the value from Form and save it in database
+
+        //When submit button is clicked:
+
+        if (isset($_POST['submit'])) {
+
+            $full_name = $_POST['full_name'];
+            $email = $_POST['email'];
+            $password = md5($_POST['password']); //Password encryption with MD5
+
+            //SQL query 
+            $sql = "INSERT INTO tbl_admin SET
+                full_name = '$full_name',
+                email = '$email',
+                password = '$password' ";
+
+            //Execute query and save data into database
+            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+        }
+
+    ?>
+
+    <!-- ========================= End PHP MyAdmin Area ========================= -->
 
         <!-- ========================= Start Scrool to Top ========================= -->
 
