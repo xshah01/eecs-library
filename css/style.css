@@ -92,15 +92,11 @@ header.sticky ul li a {
     color: #fff;
 }
 
-.sticky #accounts, #books, #reservations, #admin {
-    color: rgb(255, 255, 255);
-}
-
 header.sticky ul li a:hover {
     color: rgb(255, 166, 0, 0.849);
 }
 
-.sticky #accounts:hover, #books:hover, #reservations:hover, #admin:hover {
+.sticky #accounts:hover, .sticky #books:hover, .sticky #reservations:hover, .sticky #admin:hover {
     color: rgb(255, 166, 0, 0.849);
 }
 
@@ -1191,7 +1187,7 @@ a:link {
 
 .site-banner-accounts .main-content .manage-accounts-title h1 {
     padding-left: 175px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     color: rgb(0, 0, 0);
     font-family: sans-serif;
 }
@@ -1200,16 +1196,68 @@ a:link {
     width: 90%;
 }
 
-.btn-add-admin button {
-    position: absolute;
-    top: 68%;
-    margin-left: 90px;
-    padding-top: 10px;
-    font-size: .8rem;
-    background-color: rgb(0, 0, 0);
+.site-banner-accounts .add-account-button {
+    padding-left: 175px;
+}
+
+.btn-add-admin {
+    padding: 1.5%;
+    font: var(--roboto);
+    font-size: 12px;
+    letter-spacing: 0.2rem;
+    position: relative;
+    border: none;
+    background: black;
+    background-clip: padding-box;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn-add-admin:hover {
+    background: white;
+    color:  black;
+    border: 1px solid black;
+    margin: -1px;
+}
+
+.btn-update-admin {
+    padding: 4%;
+    font: var(--roboto);
+    font-size: 12px;
+    position: relative;
+    border: none;
+    background: rgb(11, 232, 129);
+    background-clip: padding-box;
+    color: black;
+    text-transform: uppercase;
+}
+
+.btn-update-admin:hover {
+    background: rgb(11, 232, 129);
+    color:  white;
+    margin: -.01px;
+}
+
+.btn-delete-admin {
+    padding: 4%;
+    font: var(--roboto);
+    font-size: 12px;
+    position: relative;
+    border: none;
+    background: rgb(255, 63, 52);
+    background-clip: padding-box;
+    color: black;
+    text-transform: uppercase;
+}
+
+.btn-delete-admin:hover {
+    background: rgb(255, 63, 52);
+    color:  white;
+    margin: -.01px;
 }
 
 table tr th {
+    padding-top: 100px;
     padding-left: 175px;
     padding-bottom: 35px;
     text-align: left;

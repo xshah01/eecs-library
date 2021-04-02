@@ -64,7 +64,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="accounts-title text-center">Accounts</h3>
+                            <h3 class="accounts-title text-center">Reservations</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -73,13 +73,13 @@
             <div class="main-content">
                 <div class="wrapper">
                     <div class="manage-accounts-title">
-                        <h1 class="title">Manage Accounts</h1>
+                        <h1 class="title">Manage Reservations</h1>
                     </div>
 
                     <div class="add-account-button">
                     <!-- Button to add admin -->
                     <button type="button" class="btn-add-admin mr-4" 
-                        onclick="window.location.href='home.php';">add admin
+                        onclick="window.location.href='home.php';">add reservation
                     </button>
                     </div>
 

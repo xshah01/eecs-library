@@ -76,7 +76,7 @@
                         <h4 class="title-text3 text-uppercase">Your book reservation system is here</h4>
                         <div class="site-buttons">
                             <div class="d-flex flex-row flex-wrap">
-                                <button type="button" class="btn button button mr-4 text-uppercase">View Books</button>
+                                <button type="button" class="btn button mr-4 text-uppercase">View Books</button>
                             </div>
                         </div>
                     </div>
