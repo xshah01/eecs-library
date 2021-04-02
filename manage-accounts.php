@@ -43,7 +43,7 @@
     <header>
         <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
         <ul>
-                <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="home.php">Exit Admin<span class="sr-only">(current)</span></a></li>
                 <li><a id="accounts" href="manage-accounts.php">Accounts</a></li>
                 <li><a id="books" href="manage-books.php">Manage books</a></li>
                 <li><a id="reservations" href="manage-reservations.php">Reservations</a></li>
