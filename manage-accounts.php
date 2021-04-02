@@ -42,11 +42,11 @@
 
     <header>
         <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
-            <ul>
+        <ul>
                 <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="accounts.php">Accounts</a></li>
-                <li><a href="manage-books.php">Manage books</a></li>
-                <li><a href="reservations.php">Reservations</a></li>
+                <li><a id="accounts" href="manage-accounts.php">Accounts</a></li>
+                <li><a id="books" href="manage-books.php">Manage books</a></li>
+                <li><a id="reservations" href="manage-reservations.php">Reservations</a></li>
                 <li><a id="admin" href="admin.php">Admin</a></li>
             </ul>
     </header>
@@ -72,9 +72,48 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="dashboard-title">
-                        <h1 class="title text-center">Dashboard</h1>
-                    </div>  
+                    <div class="manage-accounts-title">
+                        <h1 class="title">Manage Accounts</h1>
+                    </div>
+
+                    <!-- Button to add admin -->
+                    <a href="#" class="btn-add-admin button2">Add admin</a>
+
+                    <table class="tbl-full">
+                        <tr>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>E-mail</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Shadab Ahmed</td>
+                            <td>shadaba@kth.se</td>
+                            <td>
+                                Update Admin
+                                Delete Admin
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Hamed Khavari</td>
+                            <td>hkhavari@kth.se</td>
+                            <td>
+                                Update Admin
+                                Delete Admin
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Rami Achkoudir</td>
+                            <td>ramiac@kth.se</td>
+                            <td>
+                                Update Admin
+                                Delete Admin
+                            </td>
+                        </tr>
+                    </table>
                     <div class="clearfix"></div>
                 </div>
             </div>
