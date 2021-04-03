@@ -126,9 +126,7 @@
 
     <?php 
 
-        //Connect to database
-        $conn = mysqli_connect('localhost', 'root', '') or die(mysqli_error());
-        $db_select = mysqli_select_db($conn, 'eecs-library') or die(mysqli_error());
+        include('config.php');
     
         //Process the value from Form and save it in database
 
@@ -138,7 +136,7 @@
 
             $full_name = $_POST['full_name'];
             $email = $_POST['email'];
-            $password = md5($_POST['password']); //Password encryption with MD5
+            $password = md5($_POST['password']);    //Password encryption with MD5
 
             //SQL query 
             $sql = "INSERT INTO tbl_admin SET
@@ -148,6 +146,17 @@
 
             //Execute query and save data into database
             $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+            if($res == TRUE) {
+                echo $_SESSION['add'] = "Admin added succesfully";   //Create a session variable to display message
+                header("location: http://localhost:8080/eecs-library/manage-accounts.php");    //Redirect to Manage Accounts
+                exit();
+            }
+            else {
+                $_SESSION['add'] = "Failed to add admin";   //Create a session variable to display message
+                header("location: http://localhost:8080/eecs-library/add-admin.php");    //Stay on same page
+                exit();
+            }
 
         }
 

@@ -1194,7 +1194,7 @@ a:link {
 }
 
 .tbl-full {
-    width: 90%;
+    width: 100%;
 }
 
 .site-banner-accounts .add-account-button {
@@ -1307,6 +1307,7 @@ table tr td {
 }
 
 .site-banner-add-admin .main-content .add-admin-title h1 {
+    padding-top: 100px;
     padding-left: 175px;
     padding-bottom: 30px;
     color: rgb(0, 0, 0);
@@ -1343,6 +1344,10 @@ table tr td {
     color:  black;
     border: 1px solid black;
     margin: -1px;
+}
+
+.site-banner-add-admin .clearfix {
+    padding-top: 200px;
 }
 
 /* End Add Admin Area */

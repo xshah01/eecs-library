@@ -76,6 +76,12 @@
                         <h1 class="title">Manage Accounts</h1>
                     </div>
 
+                    <?php 
+                        if(isset($_SESSION['add'])) {
+                            echo $_SESSION['add'];
+                        }
+                    ?>
+
                     <div class="add-account-button">
                     <!-- Button to add admin -->
                     <button type="button" class="btn-add-admin mr-4" 
@@ -90,45 +96,63 @@
                             <th>E-mail</th>
                             <th>Manage</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Shadab Ahmed</td>
-                            <td>shadaba@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Hamed Khavari</td>
-                            <td>hkhavari@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Rami Achkoudir</td>
-                            <td>ramiac@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
+
+                        <?php
+
+                        include('config.php');
+                        
+                        
+                        $sql = "SELECT * FROM tbl_admin";
+
+                        //Execute query
+                        $res = mysqli_query($conn, $sql);
+
+                        //Check whether query is executed or not
+                        if($res == TRUE) {
+
+                            //Count rows to check whether we have data in database or not
+                            $count = mysqli_num_rows($res);  //Function to get all rows in database
+
+                            $sn = 1001;
+
+                            //Check the number of rows
+                            if($count > 0) {
+                                //We have data in database
+                                //While loop get all data from database and will run as long as there is data to fetch
+                                while($rows = mysqli_fetch_assoc($res)) {
+                                    $id = $rows['id'];  //Get individual data
+                                    $full_name = $rows['full_name'];
+                                    $email = $rows['email'];
+
+                                    //Display the values in our table
+                                    ?>
+                                    
+                                    <tr>
+                                        <td><?php echo $sn++; ?></td>
+                                        <td><?php echo $full_name; ?></td>
+                                        <td><?php echo $email; ?></td>
+                                        <td>
+                                            <button type="button" class="btn-update-admin mr-4" 
+                                                onclick="window.location.href='home.php';">update admin
+                                            </button>
+                                            <button type="button" class="btn-delete-admin mr-4" 
+                                                onclick="window.location.href='home.php';">delete admin
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <?php
+                                }
+                            }
+                            else {
+                                //No data in database
+                                exit();
+                            }
+                    
+                        }
+
+                        ?>
+
                     </table>
                     <div class="clearfix"></div>
                 </div>
