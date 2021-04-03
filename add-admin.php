@@ -24,13 +24,13 @@
             $res = mysqli_query($conn, $sql) or die(mysqli_error());
 
             if($res == TRUE) {
-                $_SESSION['add'] = "Admin added succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-accounts.php');
+                $_SESSION['add'] = "Admin Added Succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
                 exit();
             }
             else {
-                $_SESSION['add'] = "Failed to add admin";   //Create a session variable to display message
-                header("location: " .SITEURL.'add-admin.php');    //Stay on same page
+                $_SESSION['add'] = "Failed to Add Admin";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-accounts.php');
                 exit();
             }
 

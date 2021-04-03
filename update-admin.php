@@ -1,10 +1,52 @@
+    <!-- ========================= Start PHP MyAdmin Area ========================= -->
+
+    <?php 
+
+        include('config.php');
+    
+        //Process the value from Form and save it in database
+
+        //When submit button is clicked:
+
+        if (isset($_POST['submit'])) {
+
+            $full_name = $_POST['full_name'];
+            $email = $_POST['email'];
+            $password = md5($_POST['password']);    //Password encryption with MD5
+
+            //SQL query 
+            $sql = "INSERT INTO tbl_admin SET
+                full_name = '$full_name',
+                email = '$email',
+                password = '$password' ";
+
+            //Execute query and save data into database
+            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+            if($res == TRUE) {
+                $_SESSION['add'] = "Admin Added Succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
+                exit();
+            }
+            else {
+                $_SESSION['add'] = "Failed to Add Admin";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-accounts.php');
+                exit();
+            }
+
+        }
+
+    ?>
+
+    <!-- ========================= End PHP MyAdmin Area ========================= -->
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounts</title>
+    <title>Update Admin</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -59,12 +101,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-accounts">
+        <section id="scroll" class="site-banner-add-admin">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="accounts-title text-center">Accounts</h3>
+                            <h3 class="admin-title text-center">Accounts</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -72,104 +114,27 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="manage-accounts-title">
-                        <h1 class="title">Manage Accounts</h1>
+                    <div class="add-admin-title">
+                        <h1 class="title">Update Admin</h1>
                     </div>
 
-                    <div class="admin-message">
-
-                    <!-- Display message "Admin added successfully" -->
-                    <?php 
-
-                    include('config.php');
-
-                        if(isset($_SESSION['add'])) {
-                            echo $_SESSION['add'];  //Display session message
-                            unset($_SESSION['add']);   //Remove session message
-                        }
-
-                        if(isset($_SESSION['delete'])) {
-                            echo $_SESSION['delete'];  //Display session message
-                            unset($_SESSION['delete']);   //Remove session message
-                        }
-
-                    ?>
-
-                    </div>
-
-                    <br><br>
-
-                    <div class="add-account-button">
-                    <!-- Button to add admin -->
-                    <button type="button" class="btn-add-admin mr-4" 
-                        onclick="window.location.href='add-admin.php';">add admin ›
-                    </button>
-                    </div>
-
-                    <table class="tbl-full">
-                        <tr>
-                            <th>ID</th>
-                            <th>Full Name</th>
-                            <th>E-mail</th>
-                            <th>Manage</th>
-                        </tr>
-
-                        <?php
-
-                        include('config.php');
-                        
-                        $sql = "SELECT * FROM tbl_admin";
-
-                        //Execute query
-                        $res = mysqli_query($conn, $sql);
-
-                        //Check whether query is executed or not
-                        if($res == TRUE) {
-
-                            //Count rows to check whether we have data in database or not
-                            $count = mysqli_num_rows($res);  //Function to get all rows in database
-
-                            $sn = 1001;
-
-                            //Check the number of rows
-                            if($count > 0) {
-                                //We have data in database
-                                //While loop get all data from database and will run as long as there is data to fetch
-                                while($rows = mysqli_fetch_assoc($res)) {
-                                    $id = $rows['id'];  //Get individual data
-                                    $full_name = $rows['full_name'];
-                                    $email = $rows['email'];
-
-                                    //Display the values in our table
-                                    ?>
-                                    
-                                    <tr>
-                                        <td><?php echo $sn++; ?></td>
-                                        <td><?php echo $full_name; ?></td>
-                                        <td><?php echo $email; ?></td>
-                                        <td>
-                                            <button type="button" class="btn-update-admin mr-4" 
-                                                onclick="window.location.href='home.php';">update admin
-                                            </button>
-                                            <a href="<?php echo SITEURL; ?>delete-admin.php?id=<?php echo $id; ?>">
-                                                <button type="button" class="btn-delete-admin mr-4">delete admin</button>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                    <?php
-                                }
-                            }
-                            else {
-                                //No data in database
-                                exit();
-                            }
+                    <form action="" method="POST">
+                        <table>
+                            <tr>
+                                <td><input type="text" class="form-control" name="full_name" placeholder="Enter your full name"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="email" placeholder="Enter your e-mail"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="password" class="form-control" name="password" placeholder="Enter your password"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="form-control-submit" name="submit" value="Add admin"><br></td>
+                            </tr>
+                        </table>
+                    </form>
                     
-                        }
-
-                        ?>
-
-                    </table>
                     <div class="clearfix"></div>
                 </div>
             </div>
