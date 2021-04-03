@@ -138,7 +138,7 @@
                             //Check whether admin data has been retrieved or not
                             if($count == 1) {
 
-                                //Get the details
+                                //Retrieve the details
                                 $row = mysqli_fetch_assoc($res);
                                 
                                 $full_name = $row['full_name'];

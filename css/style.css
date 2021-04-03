@@ -1226,8 +1226,26 @@ a:link {
     color:rgb(6, 82, 221);
 }
 
+.btn-change-password {
+    padding: 6px;
+    font: var(--roboto);
+    font-size: 12px;
+    position: relative;
+    border: none;
+    background: rgb(247, 183, 49);
+    background-clip: padding-box;
+    color: black;
+    text-transform: uppercase;
+}
+
+.btn-change-password:hover {
+    background: rgb(247, 183, 49);
+    color:  white;
+    margin: -.01px;
+}
+
 .btn-update-admin {
-    padding: 4%;
+    padding: 6px;
     font: var(--roboto);
     font-size: 12px;
     position: relative;
@@ -1245,7 +1263,7 @@ a:link {
 }
 
 .btn-delete-admin {
-    padding: 4%;
+    padding: 6px;
     font: var(--roboto);
     font-size: 12px;
     position: relative;

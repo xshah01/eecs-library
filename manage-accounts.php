@@ -145,34 +145,37 @@
                                     $full_name = $rows['full_name'];
                                     $email = $rows['email'];
 
-                                    ?>
+                        ?>
                                     
-                                    <!-- Display the values in our table -->
-                                    <tr>
-                                        <td><?php echo $sn++; ?></td>
-                                        <td><?php echo $full_name; ?></td>
-                                        <td><?php echo $email; ?></td>
-                                        <td>
-                                            <a href="<?php echo SITEURL; ?>update-admin.php?id=<?php echo $id; ?>">
-                                                <button type="button" class="btn-update-admin mr-4">update admin</button>
-                                            </a>
-                                            <a href="<?php echo SITEURL; ?>delete-admin.php?id=<?php echo $id; ?>">
-                                                <button type="button" class="btn-delete-admin mr-4">delete admin</button>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                <!-- Display the values in our table -->
+                                <tr>
+                                    <td><?php echo $sn++; ?></td>
+                                    <td><?php echo $full_name; ?></td>
+                                    <td><?php echo $email; ?></td>
+                                    <td>
+                                        <a href="<?php echo SITEURL; ?>change-password.php?id=<?php echo $id; ?>">
+                                            <button type="button" class="btn-change-password mr-4">change password</button>
+                                        </a>
+                                        <a href="<?php echo SITEURL; ?>update-admin.php?id=<?php echo $id; ?>">
+                                            <button type="button" class="btn-update-admin mr-4">update admin</button>
+                                        </a>
+                                        <a href="<?php echo SITEURL; ?>delete-admin.php?id=<?php echo $id; ?>">
+                                            <button type="button" class="btn-delete-admin mr-4">delete admin</button>
+                                        </a>
+                                    </td>
+                                </tr>
 
-                                    <?php
+                                <?php
+
+                                }
                                         }
-                                            }
-                                            else {
-                                            //No data in database
-                                            exit();
+                                        else {
+                                            exit(); // Exit, no data in database
                                         }
                     
                         }
 
-                                    ?>
+                    ?>
 
                     </table>
                     <div class="clearfix"></div>
