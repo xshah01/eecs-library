@@ -12,12 +12,10 @@
      if ($res == TRUE) {
         $_SESSION['delete'] = "Admin Deleted Successfully"; //Create a session variable to display message 
         header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
-        exit();
      }
      else {
         $_SESSION['delete'] = "Failed to Delete Admin";   //Create a session variable to display message
         header("location: ".SITEURL.'manage-accounts.php');
-        exit();
      }
 
 ?>

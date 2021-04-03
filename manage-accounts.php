@@ -93,6 +93,11 @@
                             unset($_SESSION['delete']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['update'])) {
+                            echo $_SESSION['update'];  //Display session message
+                            unset($_SESSION['update']);   //Remove session message
+                        }
+
                     ?>
 
                     </div>
@@ -140,17 +145,17 @@
                                     $full_name = $rows['full_name'];
                                     $email = $rows['email'];
 
-                                    //Display the values in our table
                                     ?>
                                     
+                                    <!-- Display the values in our table -->
                                     <tr>
                                         <td><?php echo $sn++; ?></td>
                                         <td><?php echo $full_name; ?></td>
                                         <td><?php echo $email; ?></td>
                                         <td>
-                                            <button type="button" class="btn-update-admin mr-4" 
-                                                onclick="window.location.href='home.php';">update admin
-                                            </button>
+                                            <a href="<?php echo SITEURL; ?>update-admin.php?id=<?php echo $id; ?>">
+                                                <button type="button" class="btn-update-admin mr-4">update admin</button>
+                                            </a>
                                             <a href="<?php echo SITEURL; ?>delete-admin.php?id=<?php echo $id; ?>">
                                                 <button type="button" class="btn-delete-admin mr-4">delete admin</button>
                                             </a>
@@ -158,16 +163,16 @@
                                     </tr>
 
                                     <?php
-                                }
-                            }
-                            else {
-                                //No data in database
-                                exit();
-                            }
+                                        }
+                                            }
+                                            else {
+                                            //No data in database
+                                            exit();
+                                        }
                     
                         }
 
-                        ?>
+                                    ?>
 
                     </table>
                     <div class="clearfix"></div>

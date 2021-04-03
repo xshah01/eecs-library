@@ -26,12 +26,10 @@
             if($res == TRUE) {
                 $_SESSION['add'] = "Admin Added Succesfully";   //Create a session variable to display message
                 header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
-                exit();
             }
             else {
                 $_SESSION['add'] = "Failed to Add Admin";   //Create a session variable to display message
                 header("location: ".SITEURL.'manage-accounts.php');
-                exit();
             }
 
         }
