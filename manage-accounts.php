@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/all.css">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -76,11 +76,22 @@
                         <h1 class="title">Manage Accounts</h1>
                     </div>
 
+                    <div class="added-admin-message">
+
+                    <!-- Display message "Admin added successfully" -->
                     <?php 
+
+                    include('config.php');
+
                         if(isset($_SESSION['add'])) {
                             echo $_SESSION['add'];
                         }
+
                     ?>
+
+                    </div>
+
+                    <br><br>
 
                     <div class="add-account-button">
                     <!-- Button to add admin -->

@@ -1,3 +1,45 @@
+    <!-- ========================= Start PHP MyAdmin Area ========================= -->
+
+    <?php 
+
+        include('config.php');
+    
+        //Process the value from Form and save it in database
+
+        //When submit button is clicked:
+
+        if (isset($_POST['submit'])) {
+
+            $full_name = $_POST['full_name'];
+            $email = $_POST['email'];
+            $password = md5($_POST['password']);    //Password encryption with MD5
+
+            //SQL query 
+            $sql = "INSERT INTO tbl_admin SET
+                full_name = '$full_name',
+                email = '$email',
+                password = '$password' ";
+
+            //Execute query and save data into database
+            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+            if($res == TRUE) {
+                $_SESSION['add'] = "Admin added succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-accounts.php');
+                exit();
+            }
+            else {
+                $_SESSION['add'] = "Failed to add admin";   //Create a session variable to display message
+                header("location: " .SITEURL.'add-admin.php');    //Stay on same page
+                exit();
+            }
+
+        }
+
+    ?>
+
+    <!-- ========================= End PHP MyAdmin Area ========================= -->
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +56,7 @@
     <link rel="stylesheet" href="./css/all.css">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -121,48 +163,6 @@
     </footer>
 
     <!-- ========================= End Footer Area ========================= -->
-
-    <!-- ========================= Start PHP MyAdmin Area ========================= -->
-
-    <?php 
-
-        include('config.php');
-    
-        //Process the value from Form and save it in database
-
-        //When submit button is clicked:
-
-        if (isset($_POST['submit'])) {
-
-            $full_name = $_POST['full_name'];
-            $email = $_POST['email'];
-            $password = md5($_POST['password']);    //Password encryption with MD5
-
-            //SQL query 
-            $sql = "INSERT INTO tbl_admin SET
-                full_name = '$full_name',
-                email = '$email',
-                password = '$password' ";
-
-            //Execute query and save data into database
-            $res = mysqli_query($conn, $sql) or die(mysqli_error());
-
-            if($res == TRUE) {
-                echo $_SESSION['add'] = "Admin added succesfully";   //Create a session variable to display message
-                header("location: http://localhost:8080/eecs-library/manage-accounts.php");    //Redirect to Manage Accounts
-                exit();
-            }
-            else {
-                $_SESSION['add'] = "Failed to add admin";   //Create a session variable to display message
-                header("location: http://localhost:8080/eecs-library/add-admin.php");    //Stay on same page
-                exit();
-            }
-
-        }
-
-    ?>
-
-    <!-- ========================= End PHP MyAdmin Area ========================= -->
 
         <!-- ========================= Start Scrool to Top ========================= -->
 
