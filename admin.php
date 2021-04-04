@@ -48,6 +48,7 @@
                 <li><a id="books" href="manage-books.php">Manage books</a></li>
                 <li><a id="reservations" href="manage-reservations.php">Reservations</a></li>
                 <li><a id="admin" href="admin.php">Admin</a></li>
+                <li><a id="logout" href="login.php">Logout</a></li>
             </ul>
     </header>
 
@@ -72,26 +73,26 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
+
+                <div class="welcome-message">
+
+                    <?php 
+
+                        include('config.php');
+                        include('login-check.php');
+
+                        if(isset($_SESSION['login'])) {
+                            echo $_SESSION['login'];  //Display session message
+                            unset($_SESSION['login']);  //Remove session message
+                        }
+
+                    ?>
+
+
+                </div>
                     <div class="dashboard-title">
                         <h1 class="title text-center">Dashboard</h1>
-                    </div>
-
-                    <div class="welcome-message">
-
-                        <?php 
-
-                            include('config.php');
-
-                            if(isset($_SESSION['login'])) {
-                                echo $_SESSION['login'];  //Display session message
-                                unset($_SESSION['login']);  //Remove session message
-                            }
-                        
-                        ?>
-
-
-                    </div>
-            
+                    </div>            
                     <div class="col-3">
                         <div class="box text-center ">
                             <h1>5</h1>

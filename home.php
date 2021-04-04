@@ -53,7 +53,7 @@
                 <li><a href="services.php">Services</a></li>
                 <li><a href="about-us.php">About us</a></li>
                 <li><a href="contact.php">Contact us</a></li>
-                <li><a id="admin" href="admin.php">Admin</a></li>
+                <li><a id="admin" href="login.php">Admin</a></li>
             </ul>
     </header>
 

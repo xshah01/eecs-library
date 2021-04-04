@@ -89,6 +89,7 @@
                 <li><a id="books" href="manage-books.php">Manage books</a></li>
                 <li><a id="reservations" href="manage-reservations.php">Reservations</a></li>
                 <li><a id="admin" href="admin.php">Admin</a></li>
+                <li><a id="logout" href="login.php">Logout</a></li>
             </ul>
     </header>
 

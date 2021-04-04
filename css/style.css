@@ -76,6 +76,18 @@ header ul li a {
     transition: all 0.2s;
 }
 
+#logout {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 20px 16px;
+    border: 0.1em solid white;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
 header ul li a:hover {
     color: black;
 }
@@ -88,6 +100,12 @@ header ul li a:hover {
     background-color: white;
 }
 
+#logout:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: 0.1em solid black;
+}
+
 header.sticky ul li a {
     color: #fff;
 }
@@ -97,6 +115,10 @@ header.sticky ul li a:hover {
 }
 
 .sticky #accounts:hover, .sticky #books:hover, .sticky #reservations:hover, .sticky #admin:hover {
+    color: rgb(255, 166, 0, 0.849);
+}
+
+.sticky #logout:hover {
     color: rgb(255, 166, 0, 0.849);
 }
 
@@ -1132,7 +1154,8 @@ a:link {
     font-family: sans-serif;
 	font-size: 25px;
     color:rgb(6, 82, 221);
-    padding-left: 615px;
+    padding-left: 612px;
+    padding-bottom: 40px;
     text-transform: uppercase;
 }
 

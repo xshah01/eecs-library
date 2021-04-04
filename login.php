@@ -25,6 +25,7 @@
             if($count == 1) {
 
                 $_SESSION['login'] = "Welcome Admin"; //Admin available and login success
+                $_SESSION['admin'] = $email;    //Check whether admin is logged in or not. Logout will unset it
                 header("location: ".SITEURL.'admin.php'); //Redirect to Admin
                 exit(0);
 
@@ -50,6 +51,7 @@
 
         <!-- custom css file -->
         <link href="./css/style-login.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+        <link href="./css/all.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     </head>
     
@@ -70,7 +72,12 @@
             if(isset($_SESSION['login'])) {
                 echo $_SESSION['login'];  //Display session message
                 unset($_SESSION['login']);  //Remove session message
-            }       
+            }
+            
+            if(isset($_SESSION['no-login-message'])) {
+                echo $_SESSION['no-login-message']; //Display session message
+                unset($_SESSION['no-login-message']);  //Remove session message
+            }
 
         ?>
 
@@ -86,8 +93,11 @@
           <input type="submit" class="btn-sign-in" name="submit" value="Sign in" />
         </form>
         <footer>
-          <div class="hr"></div>
-          <div class="fp"><a href="">EECS LIBRARY ADMIN PANEL</a></div>
+            <div class="fp">
+                <h1 class="icon">
+                    <i class="fas fa-users-cog"></i>
+                </h1>
+            </div>
         </footer>
       </div>
     </div>
