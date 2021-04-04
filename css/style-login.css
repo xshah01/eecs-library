@@ -8,7 +8,7 @@
   }
   
 body {
-    background: #aaf0d07e;
+    background: rgba(247, 184, 49, 0.815);
     font-family: "Montserrat", sans-serif;
     margin: 0;
   }
@@ -50,7 +50,7 @@ body {
   }
   
   .login-page .headings a {
-    color: #aaf0d1;
+    color: rgb(247, 183, 49);
     padding-bottom: 10px;
   }
   
@@ -85,8 +85,8 @@ body {
   
   .login-page input:active,
   .login-page input:focus {
-    border-bottom: 0.12em solid #aaf0d1;
-    border-color: #aaf0d1;
+    border-bottom: 0.12em solid rgb(247, 183, 49);
+    border-color: rgb(247, 183, 49);
   }
   
   .login-page #password {
@@ -109,7 +109,7 @@ body {
   
   .login-page .btn-sign-in {
     width: 100%;
-    background: #aaf0d1;
+    background: rgb(247, 183, 49);
     color: #2c353e;
     text-transform: uppercase;
     margin-top: 1.3em;
@@ -122,7 +122,7 @@ body {
   
   .login-page .btn-sign-in:hover {
     background: rgb(0, 0, 0);
-    color: aaf0d1;
+    color: rgb(247, 183, 49);
     letter-spacing: 0.3rem;
     font-weight: lighter;
   }
@@ -148,5 +148,10 @@ body {
   .login-page #sign-in-form {
     display: block;
   }
+
+  .admin-message {
+    padding-left: 175px;
+    color:rgb(6, 82, 221);
+}
   
   /* End Login Area */

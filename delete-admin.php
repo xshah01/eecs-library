@@ -8,7 +8,6 @@
 
      $res = mysqli_query($conn, $sql);  //Execute the query
 
-     //Executed query check and display message
      if ($res == TRUE) {
         $_SESSION['delete'] = "Admin Deleted Successfully"; //Create a session variable to display message 
         header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts

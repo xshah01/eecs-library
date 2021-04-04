@@ -75,6 +75,23 @@
                     <div class="dashboard-title">
                         <h1 class="title text-center">Dashboard</h1>
                     </div>
+
+                    <div class="admin-message">
+
+                        <!-- Display message "Admin added successfully" -->
+                        <?php 
+
+                        include('config.php');
+
+                            if(isset($_SESSION['login'])) {
+                                echo $_SESSION['login'];  //Display session message
+                                unset($_SESSION['login']);   //Remove session message
+                            }
+
+                        ?>
+
+                    </div>
+
                     <div class="col-3">
                         <div class="box text-center ">
                             <h1>5</h1>

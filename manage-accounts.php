@@ -98,6 +98,11 @@
                             unset($_SESSION['update']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['login'])) {
+                            echo $_SESSION['login'];  //Display session message
+                            unset($_SESSION['login']);   //Remove session message
+                        }
+
                     ?>
 
                     </div>
