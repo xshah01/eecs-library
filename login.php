@@ -1,5 +1,7 @@
 <!-- ========================= Start PHP MyAdmin Area ========================= -->
 
+
+    
     <?php 
 
         include('config.php');
@@ -9,7 +11,7 @@
 
             //Retrieve data from form
             $email = $_POST['email'];
-            $password = $_POST['password'];
+            $password = md5($_POST['password']);
 
             //SQL to check whether admin with email and password exists or not
             $sql = "SELECT * FROM tbl_admin WHERE email = '$email' AND password = '$password'";
@@ -22,15 +24,17 @@
             
             if($count == 1) {
 
-                $_SESSION['login'] = "Login Successful";    //Admin available and login success
+                $_SESSION['login'] = "Welcome Admin"; //Admin available and login success
                 header("location: ".SITEURL.'admin.php'); //Redirect to Admin
+                exit(0);
 
             }
 
             else {
 
-                $_SESSION['login'] = "Email or Password did not Match";    //Admin not available
-                header("location: ".SITEURL.'manage-accounts.php'); //Stay on same page
+                $_SESSION['login'] = "Email or Password is incorrect";    //Admin not available
+                header("location: ".SITEURL.'login.php'); //Stay on same page
+                exit(0);
 
             }
 
@@ -39,6 +43,7 @@
     ?>
 
     <!-- ========================= End PHP MyAdmin Area ========================= -->
+  
 <html>
     <head>
         <title>Login Admin</title>
@@ -54,28 +59,26 @@
   <div class="container">
     <div class="wrap">
       <div class="headings">
-        <a id="sign-in" class="active"><span>Log In</span></a>
+      <div class="admin-message">
 
-        <div class="admin-message">
-
-        <!-- Display message "Admin added successfully" -->
+        <!-- Display message error message -->
         <?php 
 
         include('config.php');
 
+
             if(isset($_SESSION['login'])) {
                 echo $_SESSION['login'];  //Display session message
-                unset($_SESSION['login']);   //Remove session message
-            }
+                unset($_SESSION['login']);  //Remove session message
+            }       
 
         ?>
 
         </div>
-        
+        <a id="sign-in" class="active"><span>Log In</span></a>        
       </div>
       <div id="sign-in-form">
         <form action="" method="POST">
-
           <label for="email">Email</label>
           <input id="email" type="text" name="email" />
           <label for="password">Password</label>

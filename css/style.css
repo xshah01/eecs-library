@@ -1128,6 +1128,14 @@ a:link {
     font-family: sans-serif;
 }
 
+.welcome-message {
+    font-family: sans-serif;
+	font-size: 25px;
+    color:rgb(6, 82, 221);
+    padding-left: 615px;
+    text-transform: uppercase;
+}
+
 .wrapper {
     width: 100%;
     margin: 0 auto;

@@ -78,7 +78,7 @@
 
                     <div class="admin-message">
 
-                    <!-- Display message "Admin added successfully" -->
+                    <!-- Display message Admin message -->
                     <?php 
 
                     include('config.php');
@@ -96,11 +96,6 @@
                         if(isset($_SESSION['update'])) {
                             echo $_SESSION['update'];  //Display session message
                             unset($_SESSION['update']);   //Remove session message
-                        }
-
-                        if(isset($_SESSION['login'])) {
-                            echo $_SESSION['login'];  //Display session message
-                            unset($_SESSION['login']);   //Remove session message
                         }
 
                     ?>

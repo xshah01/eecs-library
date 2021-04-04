@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/all.css">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -76,22 +76,22 @@
                         <h1 class="title text-center">Dashboard</h1>
                     </div>
 
-                    <div class="admin-message">
+                    <div class="welcome-message">
 
-                        <!-- Display message "Admin added successfully" -->
                         <?php 
 
-                        include('config.php');
+                            include('config.php');
 
                             if(isset($_SESSION['login'])) {
                                 echo $_SESSION['login'];  //Display session message
-                                unset($_SESSION['login']);   //Remove session message
+                                unset($_SESSION['login']);  //Remove session message
                             }
-
+                        
                         ?>
 
-                    </div>
 
+                    </div>
+            
                     <div class="col-3">
                         <div class="box text-center ">
                             <h1>5</h1>
