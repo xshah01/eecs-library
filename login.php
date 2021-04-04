@@ -82,27 +82,28 @@
         ?>
 
         </div>
-        <a id="sign-in" class="active"><span>Log In</span></a>        
-      </div>
-      <div id="sign-in-form">
-        <form action="" method="POST">
-          <label for="email">Email</label>
-          <input id="email" type="text" name="email" />
-          <label for="password">Password</label>
-          <input id="password" type="password" name="password" />
-          <input type="submit" class="btn-sign-in" name="submit" value="Sign in" />
-        </form>
-        <footer>
-            <div class="fp">
-                <h1 class="icon">
-                    <i class="fas fa-users-cog"></i>
-                </h1>
+        <a id="sign-in" class="active"><span>login</span></a>
+            <h1>admin panel</h1>        
+        </div>
+            <div id="sign-in-form">
+                <form action="" method="POST">
+                <label for="email">Email</label>
+                <input id="email" type="text" name="email" />
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" />
+                <input type="submit" class="btn-sign-in" name="submit" value="Sign in" />
+                </form>
+                <footer>
+                    <div class="fp">
+                        <h1 class="icon">
+                            <i class="fas fa-users-cog"></i>
+                        </h1>
+                    </div>
+                </footer>
             </div>
-        </footer>
-      </div>
-    </div>
-  </div>
-  </div> 
+            </div>
+        </div>
+        </div> 
 </body>
 </html>
 
