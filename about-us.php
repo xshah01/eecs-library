@@ -152,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-row flex-wrap">
-                                <a href="services.html">
+                                <a href="services.php">
                                 <button type="button" class="btn button4 mr-4 text-uppercase">detailed info</button>
                             </a>
                             </div> 

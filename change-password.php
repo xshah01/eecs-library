@@ -4,16 +4,26 @@
 
         include('config.php');
         include('login-check.php');
-    
-        //Process the value from Form and save it in database
 
         //When submit button is clicked:
 
         if (isset($_POST['submit'])) {
 
-            $full_name = $_POST['full_name'];
-            $email = $_POST['email'];
-            $password = md5($_POST['password']);    //Encrypted password
+            //Process the value from Form and save it in database
+            $id = $_POST['id'];
+            $current_password = md5($_POST['current_password']);
+            $new_password = md5($_POST['new_password']);
+            $confirm_password = md5($_POST['confirm_password']);
+
+            //Check whether admin with current ID and current password exists or not
+            $sql = "SELECT * FROM tbl_admin WHERE id=$id AND password='$current_password'";
+
+            //Execute the query
+            
+
+            //Check whether 'new password' and 'confirm new password' match or not
+
+            //Change password if all above is true
 
             //SQL query 
             $sql = "INSERT INTO tbl_admin SET
@@ -45,7 +55,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Admin</title>
+    <title>Change Password</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -101,7 +111,7 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-add-admin">
+        <section id="scroll" class="site-banner-change-password">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
@@ -114,23 +124,32 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="add-admin-title">
-                        <h1 class="title">Add Admin</h1>
+                    <div class="change-password-title">
+                        <h1 class="title">Change Password</h1>
                     </div>
+
+                    <?php 
+                        if(isset($_GET['id'])) {
+                            $id = $_GET['id'];
+                        }
+                    ?>
 
                     <form action="" method="POST">
                         <table>
                             <tr>
-                                <td><input type="text" class="form-control" name="full_name" placeholder="Enter your full name"><br></td>
+                                <td><input type="password" class="form-control" name="current_password" placeholder="Current Password"><br></td>
                             </tr>
                             <tr>
-                                <td><input type="text" class="form-control" name="email" placeholder="Enter your e-mail"><br></td>
+                                <td><input type="password" class="form-control" name="new_password" placeholder="New Password"><br></td>
                             </tr>
                             <tr>
-                                <td><input type="password" class="form-control" name="password" placeholder="Enter your password"><br></td>
+                                <td><input type="password" class="form-control" name="confirm_password" placeholder="Confirm New Password"><br></td>
                             </tr>
                             <tr>
-                                <td><input type="submit" class="form-control-submit" name="submit" value="Add admin"><br></td>
+                                <td>
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <input type="submit" class="form-control-submit" name="submit" value="Change Password"><br>
+                                </td>
                             </tr>
                         </table>
                     </form>

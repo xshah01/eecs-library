@@ -64,9 +64,10 @@ body {
   .login-page .headings h1 {
     color: rgb(247, 183, 49);
     font-size: 15px;
+    font-weight: lighter;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-left: 142px;
+    padding-left: 143px;
     margin-bottom: -10px;
   }
   
@@ -151,6 +152,7 @@ body {
 
   .admin-message {
     padding-bottom: 25px;
+    padding-left: 80px;
     color: rgb(247, 183, 49);
 }
   
