@@ -100,6 +100,21 @@
                             unset($_SESSION['update']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['admin-not-found'])) {
+                            echo $_SESSION['admin-not-found'];  //Display session message
+                            unset($_SESSION['admin-not-found']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['password-not-match'])) {
+                            echo $_SESSION['password-not-match'];  //Display session message
+                            unset($_SESSION['password-not-match']);   //Remove session message
+                        }
+                        
+                        if(isset($_SESSION['change-password'])) {
+                            echo $_SESSION['change-password'];  //Display session message
+                            unset($_SESSION['change-password']);   //Remove session message
+                        }
+
                     ?>
 
                     </div>

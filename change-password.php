@@ -1,3 +1,4 @@
+
     <!-- ========================= Start PHP MyAdmin Area ========================= -->
 
     <?php 
@@ -19,28 +20,63 @@
             $sql = "SELECT * FROM tbl_admin WHERE id=$id AND password='$current_password'";
 
             //Execute the query
-            
-
-            //Check whether 'new password' and 'confirm new password' match or not
-
-            //Change password if all above is true
-
-            //SQL query 
-            $sql = "INSERT INTO tbl_admin SET
-                full_name = '$full_name',
-                email = '$email',
-                password = '$password' ";
-
-            //Execute query and save data into database
             $res = mysqli_query($conn, $sql) or die(mysqli_error());
 
             if($res == TRUE) {
-                $_SESSION['add'] = "Admin Added Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
-            }
-            else {
-                $_SESSION['add'] = "Failed to Add Admin";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-accounts.php');
+
+                //Check whether data is available or not
+                $count = mysqli_num_rows($res);
+
+                if($count == 1) {
+
+                    //Admin exists and password can be changed
+                    //Check whether 'new password' and 'confirm new password' match or not
+
+                    if($new_password == $confirm_password) {
+
+                        //Passwords matched - proceed to update password
+                        $sql2 = "UPDATE tbl_admin SET password='$new_password' WHERE id=$id";
+
+                        //Execute the query
+                        $res2 = mysqli_query($conn, $sql2);
+
+                        //Check whether query is executed or not
+                        if($res2 == TRUE) {
+
+                            $_SESSION['change-password'] = "Password Changed Successfully";
+                            header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
+                            exit(0);
+
+                        }
+
+                        else {
+
+                            $_SESSION['change-password'] = "Failed to Change Password";
+                            header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
+                            exit(0);
+
+                        }
+                        
+                    }
+
+                    else {
+
+                        $_SESSION['password-not-match'] = "New Passwords did not match";
+                        header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
+                        exit(0);
+
+                    }
+                    
+                }
+
+                else {
+
+                    $_SESSION['admin-not-found'] = "Admin not found";
+                    header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
+                    exit(0);
+
+                }
+
             }
 
         }
@@ -48,7 +84,7 @@
     ?>
 
     <!-- ========================= End PHP MyAdmin Area ========================= -->
-    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
