@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/all.css">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -49,7 +49,7 @@
         <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
                 <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Books</a></li>
+                <li><a href="books.php">Books</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="about-us.php">About us</a></li>
                 <li><a href="contact.php">Contact us</a></li>
@@ -76,7 +76,9 @@
                         <h4 class="title-text3 text-uppercase">Your book reservation system is here</h4>
                         <div class="site-buttons">
                             <div class="d-flex flex-row flex-wrap">
-                                <button type="button" class="btn button mr-4 text-uppercase">View Books</button>
+                                <button type="button" class="btn button mr-4 text-uppercase"
+                                    onclick="window.location.href='books.php';">View Books
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -90,7 +92,7 @@
 
         <section id="Bookshelf" class="book-area">
             <div class="project-title">
-                <h1 class="title text-center">Bookshelf</h1>
+                <h1 class="title">Bookshelf</h1>
                 <h2></h2>
             </div>
             <div class="container text-center">
@@ -103,7 +105,9 @@
                                 <li type="button" data-filter=".network">NETWORK</li>
                                 <li type="button" data-filter=".database">DATABASE</li>
                                 <li type="button" data-filter=".computerscience">COMPUTER SCIENCE</li>
-                                <li id="All" type="button">VIEW ALL BOOKS</li>
+                                <a href="books.php">
+                                    <li id="All" type="button">VIEW ALL BOOKS</li>
+                                </a>
                             </ul>
                         </div>
                         <div class="book-container">
@@ -277,8 +281,8 @@
                                     student's education. We gracefully accept all kinds of books.</h3>
                             </div>
                             <div class="d-flex flex-row flex-wrap">
-                                <a href="contact.html">
-                                <button type="button" class="btn button button2 mr-4 text-uppercase">recycle now</button>
+                                <a href="contact.php">
+                                <button type="button" class="button button2 mr-4 text-uppercase">recycle now</button>
                                 </a>
                             </div>                       
 	                    </div>

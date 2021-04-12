@@ -122,10 +122,10 @@
                     <br><br>
 
                     <div class="add-account-button">
-                    <!-- Button to add admin -->
-                    <button type="button" class="btn-add-admin mr-4" 
-                        onclick="window.location.href='add-admin.php';">add admin ›
-                    </button>
+                        <!-- Button to add admin -->
+                        <button type="button" class="btn-add-admin mr-4" 
+                            onclick="window.location.href='add-admin.php';">add admin ›
+                        </button>
                     </div>
 
                     <table class="tbl-full">

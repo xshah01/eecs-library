@@ -3,10 +3,10 @@
 /* import fonts from fonts.css file */
 @import url(./fonts.css);
 
-/* css variables */ 
+/* css variables */
 @import url(./partials/variables.css);
 
-/* import global styling */ 
+/* import global styling */
 @import url(./partials/global.css);
 
 /* Start Navigation Area */
@@ -208,7 +208,7 @@ header.sticky ul li a:hover {
       .site-banner a:hover {
         opacity: .5;
       }
-      
+
       #scroll a {
         padding-top: 60px;
       }
@@ -227,7 +227,7 @@ header.sticky ul li a:hover {
         animation: sdb04 2s infinite;
         box-sizing: border-box;
       }
-      
+
       @keyframes sdb04 {
         0% {
           transform: rotate(-45deg) translate(0, 0);
@@ -246,9 +246,11 @@ header.sticky ul li a:hover {
 
 .site-main .book-area h1 {
     font-family: 'Abril Fatface', cursive;
-    font-size: 50px;
-    padding-top: 10%;
-    padding-bottom: 1%;
+	color: rgb(49, 49, 49);
+    font-size: 85px;
+    padding-left: 520px;
+    padding-top: 100px;
+    padding-bottom: 10px;
 }
 
 .site-main .book-area h2 {
@@ -275,11 +277,26 @@ header.sticky ul li a:hover {
     color: rgba(255, 166, 0, 0.849);
 }
 
+#All:hover {
+    color: rgba(0, 0, 0, 0.849);
+}
+
+#All:hover {
+    background: rgba(0, 0, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .site-main .book-area .button-group li + li {
     padding-left: 6.6rem;
 }
 
-.site-main .book-area .button-group .active li { 
+.site-main .book-area .button-group li + a {
+    padding-left: 6.6rem;
+}
+
+.site-main .book-area .button-group .active li {
     background: var(--gradient-color2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -287,14 +304,17 @@ header.sticky ul li a:hover {
 }
 
 .site-main .book-area .button-group li:hover {
-    background: var(--gradient-color2);
+    background: rgba(255, 166, 0, 0.849);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .site-main .book-area .img a:hover img {
-    filter: brightness(1.1) drop-shadow(16px 16px 16px #b1afaf);
+    /* filter: brightness(1.1) drop-shadow(16px 16px 16px #b1afaf); */
+    -webkit-filter: opacity(.7);
+    filter: opacity(.7);
+    transition: .2s;
 }
 
 /* End Book Area */
@@ -333,7 +353,7 @@ header.sticky ul li a:hover {
     font-family: 'Abril Fatface', cursive;
 	font-size: 72px;
 	color: #FFF;
-}	
+}
 
 .parallax h2 {
     position: relative;
@@ -342,7 +362,7 @@ header.sticky ul li a:hover {
     margin-left: 44%;
     width: 10%;
     border-bottom: 2px solid rgb(255, 255, 255);
-}	
+}
 
 .parallax h3 {
     position: relative;
@@ -352,7 +372,7 @@ header.sticky ul li a:hover {
     padding-top: 2%;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-}	
+}
 
 /* End Stat Area */
 
@@ -433,7 +453,7 @@ header.sticky ul li a:hover {
     font-family: 'Abril Fatface', cursive;
 	font-size: 40px;
 	color: #FFF;
-}	
+}
 
 .parallax2 h2 {
     padding-right: 100px;
@@ -445,7 +465,7 @@ header.sticky ul li a:hover {
     width: 1px;
     border-bottom: 2px solid rgb(255, 255, 255);
     margin-bottom: 25px;
-}	
+}
 
 .parallax2 h3 {
     padding-right: 100px;
@@ -455,7 +475,7 @@ header.sticky ul li a:hover {
 	color: #FFF;
     padding-top: 2%;
     margin-bottom: 90px;
-}	
+}
 
 .parallax2 button {
     position: absolute;
@@ -504,7 +524,7 @@ header.sticky ul li a:hover {
     background: transparent;
     border: 1px solid black;
     color: black;
-}    
+}
 
 .subscribe-area .subscribe form .input-textbox input::placeholder {
     color: black;
@@ -523,7 +543,7 @@ header.sticky ul li a:hover {
 .subscribe-area .subscribe form .btn-submit button:hover {
     background: rgba(255, 181, 43, 0.747);
 }
- 
+
 /* End Subscribe Area */
 
 /* Start Footer Area */
@@ -585,6 +605,190 @@ header.sticky ul li a:hover {
 
 /* End Scroll-to-top button */
 
+/* ==================================================== Books =========================================================== */
+
+/* Start Books Area */
+
+.site-banner-services .bg-image-services {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url(../img/services-bg.jpg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+
+.site-banner-services .services-title {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 85px;
+	color: #FFF;
+    transform: translate(37%, -450%);
+    z-index: 2;
+}
+
+.site-banner-services h2 {
+    position: relative;
+    content: " ";
+    display: block;
+    margin-left: 44%;
+    width: 10%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(380%, -22000%);
+    z-index: 2;
+}
+
+.row {
+    display: flex;
+}
+
+.column-right,
+.column-left {
+    flex: 50%;
+}
+
+.site-banner-services .services-title h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 90px;
+	color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    margin-top: 975px;
+    margin-left: -150px;
+}
+
+.site-banner-services .ask-a-librarian h4 {
+    font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	color: rgb(214, 195, 142);
+    font-weight: 700;
+    line-height: 35px;
+    margin-top: -800px;
+    margin-left: 80px;
+}
+
+.site-banner-services .ask-a-librarian p {
+    font: var(--roboto);
+	font-size: 18px;
+	color: rgb(100, 100, 100);
+    margin-left: 80px;
+    padding-top: 10px;
+}
+
+.site-banner-services .ask-a-librarian .link-to-contact {
+    font: var(--roboto);
+	font-size: 18px;
+	color: rgb(100, 100, 100);
+    margin-left: 80px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.site-banner-services .ask-a-librarian .link-to-contact:hover {
+    color: rgb(214, 195, 142);
+    text-decoration: underline;
+}
+
+.site-banner-services .services-video1 {
+    padding-left: 90px;
+    margin-top: -840px;
+}
+
+.site-banner-services .study-booth h4 {
+    font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	color: rgb(214, 195, 142);
+    font-weight: 700;
+    line-height: 35px;
+    margin-top: -310px;
+    margin-left: 750px;
+}
+
+.site-banner-services .study-booth p {
+    font: var(--roboto);
+	font-size: 18px;
+	color: rgb(100, 100, 100);
+    margin-left: 750px;
+    padding-top: 10px;
+}
+
+.site-banner-services .services-video2 {
+    padding-left: 90px;
+    margin-top: -350px;
+}
+
+.site-banner-services .recycle h4 {
+    font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	color: rgb(214, 195, 142);
+    font-weight: 700;
+    line-height: 35px;
+    margin-top: 145px;
+    margin-left: 80px;
+}
+
+.site-banner-services .recycle p {
+    font: var(--roboto);
+	font-size: 18px;
+	color: rgb(100, 100, 100);
+    margin-left: 80px;
+    padding-top: 10px;
+}
+
+.site-banner-services .recycle .link-to-contact {
+    font: var(--roboto);
+	font-size: 18px;
+	color: rgb(100, 100, 100);
+    margin-left: 80px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.site-banner-services .recycle .link-to-contact:hover {
+    color: rgb(214, 195, 142);
+    text-decoration: underline;
+}
+
+.site-banner-services .services-video3 {
+    padding-left: 90px;
+    margin-top: 100px;
+}
+
+.site-banner-services .book-club h4 {
+    font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	color: rgb(214, 195, 142);
+    font-weight: 700;
+    line-height: 35px;
+    margin-left: 750px;
+    margin-top: 180px;
+}
+
+.site-banner-services .book-club p {
+    font: var(--roboto);
+	font-size: 18px;
+	color: rgb(100, 100, 100);
+    margin-left: 750px;
+    padding-top: 10px;
+}
+
+.site-banner-services .services-video4 {
+    padding-left: 70px;
+    margin-top: -400px;
+}
+
+.padding-for-bottom {
+    margin-top: 200px;
+}
+
+/* End Books Area */
+
 /* ==================================================== About us =========================================================== */
 
 /* Start About Us Area */
@@ -620,7 +824,7 @@ header.sticky ul li a:hover {
 .row {
     display: flex;
 }
-  
+
 .column-right,
 .column-left {
     flex: 50%;
@@ -793,7 +997,7 @@ header.sticky ul li a:hover {
 .row {
     display: flex;
 }
-  
+
 .column-right,
 .column-left {
     flex: 50%;
@@ -981,14 +1185,14 @@ a:link {
 .wrap {
     width: 100%;
     }
-    
+
     .floatleft {
-        float: left; 
+        float: left;
         width: 50%;
         background-color: rgb(250, 250, 250);
         height: 600px;
     }
-    
+
     .floatright {
         float: right;
         background-color: rgb(250, 250, 250);
