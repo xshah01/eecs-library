@@ -72,7 +72,7 @@
 
             <section class="book-search">
                 <div class="container">
-                    <form action="" class="search-bar">
+                    <form action="" class="search-bar text-center">
                         <input type="search" name="search" placeholder="Search for your book here ... ">
                         <input type="submit" name="submit" value="›">
                     </form>
@@ -86,24 +86,25 @@
             <section class="categories">
                 <div class="container">
                     <h1>Categories</h1>
+                        <a href="#">
+                            <div class="boxes-category">
+                                <img src="img/categories/calculus.png" alt="calculus">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="boxes-category">
+                                <img src="img/categories/database.png" alt="database">
+                            </div>
                         <div class="boxes-category">
-                            Box 1
+                            <img src="img/categories/network.png" alt="network">
                         </div>
-                        <div class="boxes-category">
-                            Box 2
-                        </div>
-                        <div class="boxes-category">
-                            Box 3
-                        </div>
-                        <div class="boxes-category">
-                            Box 4
-                        </div>
-                        <div class="boxes-category">
-                            Box 5
-                        </div>
-                        <div class="boxes-category">
-                            Box 6
-                        </div>
+                        </a>
+                        <a href="#">
+                            <div class="boxes-category">
+                                <img src="img/categories/computer-science.png" alt="computer-science">
+                            </div>
+                        </a>
+                        <div class="clearfix"></div>
                 </div>
             </section>
 
@@ -111,21 +112,76 @@
 
             <!-- ==================== Start Book Area ==================== -->
 
-            <section class="categories">
+            <section class="books">
                 <div class="container">
                     <h1>Books</h1>
                         <div class="boxes-books">
-                            Box 1
+                            <div class="book-img">
+                                <img src="img/portfolio-books/p1.jpg" alt="">
+                            </div>
+                            <div class="book-description">
+                                <h4>Book title</h4>
+                                <p class="author">Author</p>
+                                <p class="version">Utgivningsår/Upplaga</p>
+                                <button type="button" class="btn-reserve-book" 
+                                    onclick="window.location.href='#';">Reserve Book
+                                </button>
+                            </div>
                         </div>
                         <div class="boxes-books">
-                            Box 2
+                            <div class="book-img">
+                                <img src="img/portfolio-books/p2.jpg" alt="">
+                            </div>
+                            <div class="book-description">
+                                <h4>Book title</h4>
+                                <p class="author">Author</p>
+                                <p class="version">Utgivningsår/Upplaga</p>
+                                <button type="button" class="btn-reserve-book" 
+                                    onclick="window.location.href='#';">Reserve Book
+                                </button>
+                            </div>
                         </div>
                         <div class="boxes-books">
-                            Box 3
+                            <div class="book-img">
+                                <img src="img/portfolio-books/p3.jpg" alt="">
+                            </div>
+                            <div class="book-description">
+                                <h4>Book title</h4>
+                                <p class="author">Author</p>
+                                <p class="version">Utgivningsår/Upplaga</p>
+                                <button type="button" class="btn-reserve-book" 
+                                    onclick="window.location.href='#';">Reserve Book
+                                </button>
+                            </div>
                         </div>
                         <div class="boxes-books">
-                            Box 4
+                            <div class="book-img">
+                                <img src="img/portfolio-books/p4.jpg" alt="">
+                            </div>
+                            <div class="book-description">
+                                <h4>Book title</h4>
+                                <p class="author">Author</p>
+                                <p class="version">Utgivningsår/Upplaga</p>
+                                <button type="button" class="btn-reserve-book" 
+                                    onclick="window.location.href='#';">Reserve Book
+                                </button>
+                            </div>
                         </div>
+                        <div class="boxes-books">
+                            <div class="book-img">
+                                <img src="img/portfolio-books/p5.jpg" alt="">
+                            </div>
+                            <div class="book-description">
+                                <h4>Book title</h4>
+                                <p class="author">Author</p>
+                                <p class="version">Utgivningsår/Upplaga</p>
+                                <button type="button" class="btn-reserve-book" 
+                                    onclick="window.location.href='#';">Reserve Book
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
                 </div>
             </section>
 

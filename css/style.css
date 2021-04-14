@@ -638,11 +638,123 @@ header.sticky ul li a:hover {
 }
 
 .site-banner-books .container {
-    border: 1px solid red;
     width: 80%;
-    margin: 5% auto;
     padding: 5%;
 }
+
+.site-banner-books .book-search input[type=search] {
+    width: 50%;
+    padding: .7%;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+.site-banner-books .book-search input[type=submit] {
+    width: 6%;
+    padding: .7%;
+    border-radius: 2px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.site-banner-books .book-search input[type=submit]:hover {
+    width: 6%;
+    padding: .7%;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    transition: background .4s ease;
+}
+
+.site-banner-books h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 65px;
+	color: rgb(49, 49, 49);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.site-banner-books .categories {
+    padding-top: 6% 0;
+}
+
+.site-banner-books .categories .boxes-category {
+    width: 30%;
+    float: left;
+    margin: 1%;
+    padding-left: 3%;
+}
+
+.site-banner-books .categories .boxes-category:hover {
+    -webkit-filter: opacity(.7);
+    filter: opacity(.7);
+    transition: background .4s ease;
+}
+
+.site-banner-books .books {
+    background-color: #ececec;
+}
+
+.site-banner-books .books .boxes-books {
+    width: 48%;
+    float: left;
+    margin: 1%;
+    padding-left: 7%;
+    padding-bottom: 5%;
+    background-color: transparent;
+}
+
+.site-banner-books .books .boxes-books .btn-reserve-book {
+    padding: 2.5%;
+    font: var(--roboto);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: transparent;
+    background-clip: padding-box;
+    color: black;
+}
+
+.site-banner-books .books .boxes-books .btn-reserve-book:hover {
+    padding: 2.5%;
+    font: var(--roboto);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: black;
+    background-clip: padding-box;
+    color: white;
+    transition: background .4s ease; 
+}
+
+.site-banner-books .books .boxes-books .book-img {
+    float: left;
+}
+
+.site-banner-books .books .boxes-books .book-description {
+    width: 50%;
+    float: left;
+    margin-left: 8%;
+}
+
+.site-banner-books .books .boxes-books .book-description h4 {
+    font-size: 1.5rem;
+}
+
+.site-banner-books .books .boxes-books .book-description .author {
+    font-size: 1rem;
+}
+
+
 
 /* End Books Area */
 
