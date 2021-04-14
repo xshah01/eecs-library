@@ -189,7 +189,7 @@
                                 }
                                         }
                                         else {
-                                            exit(); // Exit, no data in database
+                                            exit(); // No data in database
                                         }
                     
                         }

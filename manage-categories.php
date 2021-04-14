@@ -112,8 +112,10 @@
                     <table class="tbl-full">
                         <tr>
                             <th>ID</th>
-                            <th>Full Name</th>
-                            <th>E-mail</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Featured</th>
+                            <th>Active</th>
                             <th>Manage</th>
                         </tr>
 
@@ -122,7 +124,7 @@
                         include('config.php');
                         include('login-check.php');
                         
-                        $sql = "SELECT * FROM tbl_admin";
+                        $sql = "SELECT * FROM tbl_category";
 
                         //Execute query
                         $res = mysqli_query($conn, $sql);
@@ -140,26 +142,27 @@
                                 //We have data in database
                                 //While loop get all data from database and will run as long as there is data to fetch
                                 while($rows = mysqli_fetch_assoc($res)) {
-                                    $id = $rows['id'];  //Get individual data
-                                    $full_name = $rows['full_name'];
-                                    $email = $rows['email'];
+                                    $id = $rows['id'];  //Get data
+                                    $title = $rows['title'];
+                                    $image_name = $rows['image_name'];
+                                    $featured = $rows['featured'];
+                                    $active = $rows['active'];
 
                         ?>
                                     
                                 <!-- Display the values in our table -->
                                 <tr>
                                     <td><?php echo $sn++; ?></td>
-                                    <td><?php echo $full_name; ?></td>
-                                    <td><?php echo $email; ?></td>
+                                    <td><?php echo $title; ?></td>
+                                    <td><?php echo $image_name; ?></td>
+                                    <td><?php echo $featured; ?></td>
+                                    <td><?php echo $active; ?></td>
                                     <td>
-                                        <a href="<?php echo SITEURL; ?>change-password.php?id=<?php echo $id; ?>">
-                                            <button type="button" class="btn-change-password mr-4">change password</button>
+                                        <a href="<?php echo SITEURL; ?>update-category.php?id=<?php echo $id; ?>">
+                                            <button type="button" class="btn-update-category mr-4">update category</button>
                                         </a>
-                                        <a href="<?php echo SITEURL; ?>update-admin.php?id=<?php echo $id; ?>">
-                                            <button type="button" class="btn-update-admin mr-4">update admin</button>
-                                        </a>
-                                        <a href="<?php echo SITEURL; ?>delete-admin.php?id=<?php echo $id; ?>">
-                                            <button type="button" class="btn-delete-admin mr-4">delete admin</button>
+                                        <a href="<?php echo SITEURL; ?>delete-category.php?id=<?php echo $id; ?>">
+                                            <button type="button" class="btn-delete-category mr-4">delete category</button>
                                         </a>
                                     </td>
                                 </tr>
@@ -169,7 +172,7 @@
                                 }
                                         }
                                         else {
-                                            exit(); // Exit, no data in database
+                                            exit(); // No data in database
                                         }
                     
                         }

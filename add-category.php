@@ -18,15 +18,17 @@
                 //Upload the image
                 $image_name = $_FILES['image']['name']; //Get the image name
                 $source_path = $_FILES['image']['tmp_name'];   //Get the source path
-                $destination_path = "/img/categories".$image_name;    //Set the destination path
+                $destination_path = "/img/categories/".$image_name;    //Set the destination path
                 $upload = move_uploaded_file($source_path, $destination_path);  //Upload the image
 
                 //Check whether the image is uploaded or not
+                /*
                 if($upload == FALSE) {
                     $_SESSION['upload'] = "Failed to upload image";   //Create a session variable to display message
                     header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
                     die();  //Stop the process
                 }
+                */
                 
             }
             else {
