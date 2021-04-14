@@ -609,16 +609,16 @@ header.sticky ul li a:hover {
 
 /* Start Books Area */
 
-.site-banner-services .bg-image-services {
+.site-banner-books .bg-image-books {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/services-bg.jpg);
+    background: url(../img/books1-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
 
-.site-banner-services .services-title {
+.site-banner-books .books-title {
     font-family: 'Abril Fatface', cursive;
 	font-size: 85px;
 	color: #FFF;
@@ -626,7 +626,7 @@ header.sticky ul li a:hover {
     z-index: 2;
 }
 
-.site-banner-services h2 {
+.site-banner-books h2 {
     position: relative;
     content: " ";
     display: block;
@@ -637,154 +637,11 @@ header.sticky ul li a:hover {
     z-index: 2;
 }
 
-.row {
-    display: flex;
-}
-
-.column-right,
-.column-left {
-    flex: 50%;
-}
-
-.site-banner-services .services-title h1 {
-    font-family: 'Abril Fatface', cursive;
-	font-size: 90px;
-	color: rgb(49, 49, 49);
-    text-transform: uppercase;
-    margin-top: 975px;
-    margin-left: -150px;
-}
-
-.site-banner-services .ask-a-librarian h4 {
-    font-family: 'Playfair Display', serif;
-	font-size: 32px;
-	color: rgb(214, 195, 142);
-    font-weight: 700;
-    line-height: 35px;
-    margin-top: -800px;
-    margin-left: 80px;
-}
-
-.site-banner-services .ask-a-librarian p {
-    font: var(--roboto);
-	font-size: 18px;
-	color: rgb(100, 100, 100);
-    margin-left: 80px;
-    padding-top: 10px;
-}
-
-.site-banner-services .ask-a-librarian .link-to-contact {
-    font: var(--roboto);
-	font-size: 18px;
-	color: rgb(100, 100, 100);
-    margin-left: 80px;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-.site-banner-services .ask-a-librarian .link-to-contact:hover {
-    color: rgb(214, 195, 142);
-    text-decoration: underline;
-}
-
-.site-banner-services .services-video1 {
-    padding-left: 90px;
-    margin-top: -840px;
-}
-
-.site-banner-services .study-booth h4 {
-    font-family: 'Playfair Display', serif;
-	font-size: 32px;
-	color: rgb(214, 195, 142);
-    font-weight: 700;
-    line-height: 35px;
-    margin-top: -310px;
-    margin-left: 750px;
-}
-
-.site-banner-services .study-booth p {
-    font: var(--roboto);
-	font-size: 18px;
-	color: rgb(100, 100, 100);
-    margin-left: 750px;
-    padding-top: 10px;
-}
-
-.site-banner-services .services-video2 {
-    padding-left: 90px;
-    margin-top: -350px;
-}
-
-.site-banner-services .recycle h4 {
-    font-family: 'Playfair Display', serif;
-	font-size: 32px;
-	color: rgb(214, 195, 142);
-    font-weight: 700;
-    line-height: 35px;
-    margin-top: 145px;
-    margin-left: 80px;
-}
-
-.site-banner-services .recycle p {
-    font: var(--roboto);
-	font-size: 18px;
-	color: rgb(100, 100, 100);
-    margin-left: 80px;
-    padding-top: 10px;
-}
-
-.site-banner-services .recycle .link-to-contact {
-    font: var(--roboto);
-	font-size: 18px;
-	color: rgb(100, 100, 100);
-    margin-left: 80px;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-.site-banner-services .recycle .link-to-contact:hover {
-    color: rgb(214, 195, 142);
-    text-decoration: underline;
-}
-
-.site-banner-services .services-video3 {
-    padding-left: 90px;
-    margin-top: 100px;
-}
-
-.site-banner-services .book-club h4 {
-    font-family: 'Playfair Display', serif;
-	font-size: 32px;
-	color: rgb(214, 195, 142);
-    font-weight: 700;
-    line-height: 35px;
-    margin-left: 750px;
-    margin-top: 180px;
-}
-
-.site-banner-services .book-club p {
-    font: var(--roboto);
-	font-size: 18px;
-	color: rgb(100, 100, 100);
-    margin-left: 750px;
-    padding-top: 10px;
-}
-
-.site-banner-services .services-video4 {
-    padding-left: 70px;
-    margin-top: -400px;
-}
-
-.padding-for-bottom {
-    margin-top: 200px;
+.site-banner-books .container {
+    border: 1px solid red;
+    width: 80%;
+    margin: 5% auto;
+    padding: 5%;
 }
 
 /* End Books Area */

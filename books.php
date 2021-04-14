@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/all.css">
 
     <!-- custom css file -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -59,19 +59,79 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-services">
-            <div class="bg-image-services"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <h3 class="services-title text-center">Books</h3>
-                            <h2></h2>
-                        </div>
-                    </div>
+        <section id="scroll" class="site-banner-books">
+            <div class="bg-image-books"></div>
+                <div class="col-lg-7">
+                    <h3 class="books-title text-center">Books</h3>
+                    <h2></h2>
                 </div>
+
+        <!-- ==================== End Banner Area ==================== -->
+
+            <!-- ==================== Start Book Search Area ==================== -->
+
+            <section class="book-search">
+                <div class="container">
+                    <form action="" class="search-bar">
+                        <input type="search" name="search" placeholder="Search for your book here ... ">
+                        <input type="submit" name="submit" value="›">
+                    </form>
+                </div>
+            </section>
+
+            <!-- ==================== End Book Search Area ==================== -->
+
+            <!-- ==================== Start Categories Area ==================== -->
+
+            <section class="categories">
+                <div class="container">
+                    <h1>Categories</h1>
+                        <div class="boxes-category">
+                            Box 1
+                        </div>
+                        <div class="boxes-category">
+                            Box 2
+                        </div>
+                        <div class="boxes-category">
+                            Box 3
+                        </div>
+                        <div class="boxes-category">
+                            Box 4
+                        </div>
+                        <div class="boxes-category">
+                            Box 5
+                        </div>
+                        <div class="boxes-category">
+                            Box 6
+                        </div>
+                </div>
+            </section>
+
+            <!-- ==================== End Categories Area ==================== -->
+
+            <!-- ==================== Start Book Area ==================== -->
+
+            <section class="categories">
+                <div class="container">
+                    <h1>Books</h1>
+                        <div class="boxes-books">
+                            Box 1
+                        </div>
+                        <div class="boxes-books">
+                            Box 2
+                        </div>
+                        <div class="boxes-books">
+                            Box 3
+                        </div>
+                        <div class="boxes-books">
+                            Box 4
+                        </div>
+                </div>
+            </section>
+
         </section>
-        
-        <section class="padding-for-bottom"></section>
+
+    <!-- ==================== End Book Area ==================== -->
 
     </main>
     
