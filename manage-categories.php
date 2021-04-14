@@ -1,51 +1,10 @@
-    <!-- ========================= Start PHP MyAdmin Area ========================= -->
-
-    <?php 
-
-        include('config.php');
-    
-        //Process the value from Form and save it in database
-
-        //When submit button is clicked:
-
-        if (isset($_POST['submit'])) {
-
-            //Get all data from form to update
-            $id = $_POST['id'];
-            $full_name = $_POST['full_name'];
-            $email = $_POST['email'];
-
-            //SQL query 
-            $sql = "UPDATE tbl_admin SET
-                full_name = '$full_name',
-                email = '$email' 
-                WHERE id='$id' ";
-
-            //Execute query and save new data into database
-            $res = mysqli_query($conn, $sql) or die(mysqli_error());
-
-            if($res == TRUE) {
-                $_SESSION['update'] = "Admin Updated Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
-            }
-            else {
-                $_SESSION['update'] = "Failed to Update Admin";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-accounts.php');
-            }
-
-        }
-
-    ?>
-
-    <!-- ========================= End PHP MyAdmin Area ========================= -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Admin</title>
+    <title>Add Category</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -76,7 +35,7 @@
      <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/4d29e9b01e.js" crossorigin="anonymous"></script>
 
-</head>
+</head> 
 <body>
     
     <!-- ========================= Start Header Area ========================= -->
@@ -102,12 +61,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-add-admin">
+        <section id="scroll" class="site-banner-add-category">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="admin-title text-center">Accounts</h3>
+                            <h3 class="category-title text-center">Categories</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -115,58 +74,23 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="add-admin-title">
-                        <h1 class="title">Update Admin</h1>
+                    <div class="add-category-title">
+                        <h1 class="title">Add Category</h1>
                     </div>
 
-                    <?php 
-
-                    include('config.php');
-
-                        //Get the id of selected admin
-                        $id=$_GET['id'];
-
-                        //Create SQL query to retrieve the details
-                        $sql="SELECT * FROM tbl_admin WHERE id=$id";
-
-                        //Execute the query
-                        $res=mysqli_query($conn, $sql);
-
-                        //Check whether query is executed or not
-                        if($res == TRUE) {
-
-                            $count = mysqli_num_rows($res); //Check whether data is available or not
-
-                            //Check whether admin data has been retrieved or not
-                            if($count == 1) {
-
-                                //Retrieve the details
-                                $row = mysqli_fetch_assoc($res);
-                                
-                                $full_name = $row['full_name'];
-                                $email = $row['email'];
-
-                            }
-                            else {
-                                header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
-                            }
-                        }
-
-                    ?>
-                    
                     <form action="" method="POST">
                         <table>
                             <tr>
-                                <td><input type="text" class="form-control" name="full_name" value ="<?php echo $full_name; ?>"><br></td>
+                                <td><input type="text" class="form-control" name="full_name" placeholder="Enter your full name"><br></td>
                             </tr>
                             <tr>
-                                <td><input type="text" class="form-control" name="email" value ="<?php echo $email; ?>"><br></td>
+                                <td><input type="text" class="form-control" name="email" placeholder="Enter your e-mail"><br></td>
                             </tr>
                             <tr>
-                                <td>
-                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                    <input type="submit" class="form-control-submit" name="submit" value="update admin"><br>
-                                </td>
+                                <td><input type="password" class="form-control" name="password" placeholder="Enter your password"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="form-control-submit" name="submit" value="Add Category"><br></td>
                             </tr>
                         </table>
                     </form>
