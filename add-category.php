@@ -12,10 +12,31 @@
         if (isset($_POST['submit'])) {
 
             $title = $_POST['title'];
+
+            //For file input, check whether image is selected or not 
+            if(isset($_FILES['image']['name'])) {
+                //Upload the image
+                $image_name = $_FILES['image']['name']; //Get the image name
+                $source_path = $_FILES['image']['tmp_name'];   //Get the source path
+                $destination_path = "/img/categories".$image_name;    //Set the destination path
+                $upload = move_uploaded_file($source_path, $destination_path);  //Upload the image
+
+                //Check whether the image is uploaded or not
+                if($upload == FALSE) {
+                    $_SESSION['upload'] = "Failed to upload image";   //Create a session variable to display message
+                    header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
+                    die();  //Stop the process
+                }
+                
+            }
+            else {
+                //Do not upload the image and set the image_name value as blank
+                $image_name = "";
+            }
             
             //For radio input, check whether the button is selected or not
             if (isset($_POST['featured'])) {
-                //Get the value from form
+                //Get the value from form            
                 $featured = $_POST['featured'];
             }
             else {
@@ -35,6 +56,7 @@
             //SQL query 
             $sql = "INSERT INTO tbl_category SET
                 title = '$title',
+                image_name = '$image_name',
                 featured = '$featured',
                 active = '$active' ";
 
@@ -43,7 +65,7 @@
 
             if($res == TRUE) {
                 $_SESSION['add'] = "Category Added Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Accounts
+                header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
             }
             else {
                 $_SESSION['add'] = "Failed to Add Category";   //Create a session variable to display message
@@ -136,10 +158,15 @@
                         <h1 class="title">Add Category</h1>
                     </div>
 
-                    <form action="" method="POST">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         <table>
                             <tr>
                                 <td><input type="text" class="form-control" name="title" placeholder="Enter the category title"></td>
+                            </tr>
+                            <tr>
+                                <td>Select Image:
+                                    <input type="file" name="image">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Featured: 

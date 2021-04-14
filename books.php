@@ -88,20 +88,20 @@
                     <h1>Categories</h1>
                         <a href="#">
                             <div class="boxes-category">
-                                <img src="img/categories/calculus.png" alt="calculus">
+                                <img src="img/portfolio-categories/calculus.png" alt="calculus">
                             </div>
                         </a>
                         <a href="#">
                             <div class="boxes-category">
-                                <img src="img/categories/database.png" alt="database">
+                                <img src="img/portfolio-categories/database.png" alt="database">
                             </div>
                         <div class="boxes-category">
-                            <img src="img/categories/network.png" alt="network">
+                            <img src="img/portfolio-categories/network.png" alt="network">
                         </div>
                         </a>
                         <a href="#">
                             <div class="boxes-category">
-                                <img src="img/categories/computer-science.png" alt="computer-science">
+                                <img src="img/portfolio-categories/computer-science.png" alt="computer-science">
                             </div>
                         </a>
                         <div class="clearfix"></div>

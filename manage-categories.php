@@ -91,29 +91,9 @@
                             unset($_SESSION['add']);   //Remove session message
                         }
 
-                        if(isset($_SESSION['delete'])) {
-                            echo $_SESSION['delete'];  //Display session message
-                            unset($_SESSION['delete']);   //Remove session message
-                        }
-
-                        if(isset($_SESSION['update'])) {
-                            echo $_SESSION['update'];  //Display session message
-                            unset($_SESSION['update']);   //Remove session message
-                        }
-
-                        if(isset($_SESSION['admin-not-found'])) {
-                            echo $_SESSION['admin-not-found'];  //Display session message
-                            unset($_SESSION['admin-not-found']);   //Remove session message
-                        }
-
-                        if(isset($_SESSION['password-not-match'])) {
-                            echo $_SESSION['password-not-match'];  //Display session message
-                            unset($_SESSION['password-not-match']);   //Remove session message
-                        }
-                        
-                        if(isset($_SESSION['change-password'])) {
-                            echo $_SESSION['change-password'];  //Display session message
-                            unset($_SESSION['change-password']);   //Remove session message
+                        if(isset($_SESSION['upload'])) {
+                            echo $_SESSION['upload'];  //Display session message
+                            unset($_SESSION['upload']);   //Remove session message
                         }
 
                     ?>
