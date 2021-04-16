@@ -96,6 +96,17 @@
                             unset($_SESSION['upload']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['remove'])) {
+                            echo $_SESSION['remove'];  //Display session message
+                            unset($_SESSION['remove']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['delete'])) {
+                            echo $_SESSION['delete'];  //Display session message
+                            unset($_SESSION['delete']);   //Remove session message
+                        }
+
+
                     ?>
 
                     </div>
@@ -178,7 +189,7 @@
                                         <a href="<?php echo SITEURL; ?>update-category.php?id=<?php echo $id; ?>">
                                             <button type="button" class="btn-update-category mr-4">update category</button>
                                         </a>
-                                        <a href="<?php echo SITEURL; ?>delete-category.php?id=<?php echo $id; ?>">
+                                        <a href="<?php echo SITEURL; ?>delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>">
                                             <button type="button" class="btn-delete-category mr-4">delete category</button>
                                         </a>
                                     </td>
