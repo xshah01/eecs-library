@@ -1718,7 +1718,7 @@ table {
     padding-left: 175px;
 }
 
-.btn-add-category {
+.site-banner-categories .btn-add-category {
     padding: 1.5%;
     font: var(--roboto);
     font-size: 12px;
@@ -1731,37 +1731,19 @@ table {
     text-transform: uppercase;
 }
 
-.btn-add-category:hover {
+.site-banner-categories .btn-add-category:hover {
     background: white;
     color:  black;
     border: 1px solid black;
     margin: -1px;
 }
 
-.admin-message {
+.site-banner-categories .admin-message {
     padding-left: 175px;
     color:rgb(6, 82, 221);
 }
 
-.btn-change-password {
-    padding: 6px;
-    font: var(--roboto);
-    font-size: 12px;
-    position: relative;
-    border: none;
-    background: rgb(247, 183, 49);
-    background-clip: padding-box;
-    color: black;
-    text-transform: uppercase;
-}
-
-.btn-change-password:hover {
-    background: rgb(247, 183, 49);
-    color:  white;
-    margin: -.01px;
-}
-
-.btn-update-admin {
+.site-banner-categories .btn-update-category {
     padding: 6px;
     font: var(--roboto);
     font-size: 12px;
@@ -1773,13 +1755,13 @@ table {
     text-transform: uppercase;
 }
 
-.btn-update-admin:hover {
+.site-banner-categories .btn-update-category:hover {
     background: rgb(11, 232, 129);
     color:  white;
     margin: -.01px;
 }
 
-.btn-delete-admin {
+.site-banner-categories .btn-delete-category {
     padding: 6px;
     font: var(--roboto);
     font-size: 12px;
@@ -1791,25 +1773,25 @@ table {
     text-transform: uppercase;
 }
 
-.btn-delete-admin:hover {
+.site-banner-categories .btn-delete-category:hover {
     background: rgb(255, 63, 52);
     color:  white;
     margin: -.01px;
 }
 
-table tr th {
+.site-banner-categories table tr th {
     padding-top: 100px;
-    padding-left: 175px;
+    padding-left: 120px;
     padding-bottom: 35px;
     text-align: left;
 }
 
-table tr td {
-    padding-left: 175px;
+.site-banner-categories table tr td {
+    padding-left: 120px;
     padding-bottom: 15px;
 }
 
-table {
+.site-banner-categories table {
     margin-bottom: 125px;
 }
 

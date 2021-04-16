@@ -135,7 +135,7 @@
                             //Count rows to check whether we have data in database or not
                             $count = mysqli_num_rows($res);  //Function to get all rows in database
 
-                            $sn = 1001;
+                            $sn = 2001;
 
                             //Check the number of rows
                             if($count > 0) {
@@ -154,7 +154,24 @@
                                 <tr>
                                     <td><?php echo $sn++; ?></td>
                                     <td><?php echo $title; ?></td>
-                                    <td><?php echo $image_name; ?></td>
+                                    
+                                    <td>
+                                        <?php
+                                        
+                                            //Check whether the image is available or not
+                                            if($image_name != "") {
+                                                //Display the image
+                                                ?>
+                                                <img src="<?php echo SITEURL; ?>img/categories/<?php echo $image_name; ?>"width="140px">
+                                                <?php
+                                            }
+                                            else {
+                                                echo "Image not added"; //Display message
+                                            }
+
+                                        ?>
+                                    </td>
+
                                     <td><?php echo $featured; ?></td>
                                     <td><?php echo $active; ?></td>
                                     <td>
