@@ -106,6 +106,11 @@
                             unset($_SESSION['delete']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['no-category-found'])) {
+                            echo $_SESSION['no-category-found'];  //Display session message
+                            unset($_SESSION['no-category-found']);   //Remove session message
+                        }
+
 
                     ?>
 
@@ -173,7 +178,7 @@
                                             if($image_name != "") {
                                                 //Display the image
                                                 ?>
-                                                <img src="<?php echo SITEURL; ?>img/categories/<?php echo $image_name; ?>"width="140px">
+                                                    <img src="<?php echo SITEURL; ?>img/categories/<?php echo $image_name; ?>"width="140px">
                                                 <?php
                                             }
                                             else {
