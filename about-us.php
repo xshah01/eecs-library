@@ -44,7 +44,7 @@
         <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
                 <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Books</a></li>
+                <li><a href="books.php">Books</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="about-us.php">About us</a></li>
                 <li><a href="contact.php">Contact us</a></li>
