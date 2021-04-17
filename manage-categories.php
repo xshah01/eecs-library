@@ -111,6 +111,15 @@
                             unset($_SESSION['no-category-found']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['update'])) {
+                            echo $_SESSION['update'];  //Display session message
+                            unset($_SESSION['update']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['failed-to-remove-current-image'])) {
+                            echo $_SESSION['failed-to-remove-current-image'];  //Display session message
+                            unset($_SESSION['failed-to-remove-current-image']);   //Remove session message
+                        }
 
                     ?>
 

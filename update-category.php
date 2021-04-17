@@ -11,7 +11,88 @@
 
         if (isset($_POST['submit'])) {
 
-            echo "Clicked";
+            /* Get values from Form */
+            $id = $_POST['id'];
+            $title = $_POST['title'];
+            $current_image = $_POST['current_image'];
+            $featured = $_POST['featured'];
+            $active = $_POST['active'];
+
+            /* Update the image if selected */
+            if(isset($_FILES['image']['name'])) {
+
+                $image_name = $_FILES['image']['name'];
+
+                /* Check whether image is available or not */
+                if($image_name != "") {
+
+                    $ext = end(explode('.', $image_name));   //Get the extension for the image (.png, .jpg ect.)
+
+                    $image_name = "image_category_".rand(000, 999).'.'.$ext; //Rename the image
+
+                    $source_path = $_FILES['image']['tmp_name'];   //Get the source path
+
+                    $destination_path = "img/categories/".$image_name;    //Set the destination path
+
+                    $upload = move_uploaded_file($source_path, $destination_path);  //Upload the image
+
+                    //Check whether the image is uploaded or not
+                    if($upload == FALSE) {
+
+                        $_SESSION['upload'] = "Failed to upload image";   //Create a session variable to display message
+                        header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
+                        die();  //Stop the process
+                        
+                    }
+
+                    /* Remove the current image if available */
+                    if($current_image != "") {
+                        
+                        $remove_path = "img/categories/".$current_image;  //Create path to access the folder
+                        $remove = unlink($remove_path); //Remove the current image
+
+                        /* Add error message and stop process if failed to remove image */
+                        if($remove == FALSE) {
+
+                            $_SESSION['failed-to-remove-current-image'] = "Failed to remove current image";    //Create a session variable to display message  
+                            header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
+                            die();  //Stop the process
+
+                        }
+
+                    }
+
+                }
+
+                else {
+                    $image_name = $current_image;
+                }
+
+            }
+
+            else {
+                $image_name = $current_image;
+            }
+
+            /* Update database */
+            $sql2 = "UPDATE tbl_category SET 
+                title = '$title',
+                image_name = '$image_name',
+                featured = '$featured',
+                active = '$active' WHERE id = $id ";
+
+            /* Execute the query */
+            $res2 = mysqli_query($conn, $sql2) or die(mysqli_error());
+
+            /* Check whether query is executed or not */
+            if($res2 == TRUE) {
+                $_SESSION['update'] = "Category Updated Succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
+            }
+            else {
+                $_SESSION['update'] = "Failed to Update Category";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-categories.php');
+            }       
 
         }
 
@@ -187,7 +268,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><input type="submit" class="form-control-submit" name="submit" value="Update Category"><br></td>
+                                <td>
+                                    <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <input type="submit" class="form-control-submit" name="submit" value="Update Category"><br>
+                                </td>
                             </tr>
                         </table>
                     </form>
