@@ -5,13 +5,17 @@
         include('config.php');
         include('login-check.php');
     
-        //Process the value from Form and save it in database
+        /* Process the value from Form and save it in database */
 
         //When submit button is clicked:
 
         if (isset($_POST['submit'])) {
 
+            /* Get data from Form */
             $title = $_POST['title'];
+            $author = $_POST['author'];
+            $edition = $_POST['edition'];
+            $category = $_POST['category'];
 
             //For file input, check whether image is selected or not 
             if(isset($_FILES['image']['name'])) {
@@ -24,11 +28,11 @@
                     
                     $ext = end(explode('.', $image_name));   //Get the extension for the image (.png, .jpg ect.)
 
-                    $image_name = "image_category_".rand(000, 999).'.'.$ext; //Rename the image
+                    $image_name = "image_book_".rand(000, 999).'.'.$ext; //Rename the image
 
                     $source_path = $_FILES['image']['tmp_name'];   //Get the source path
 
-                    $destination_path = "img/categories/".$image_name;    //Set the destination path
+                    $destination_path = "img/books/".$image_name;    //Set the destination path
 
                     $upload = move_uploaded_file($source_path, $destination_path);  //Upload the image
 
@@ -36,7 +40,7 @@
                     if($upload == FALSE) {
 
                         $_SESSION['upload'] = "Failed to upload image";   //Create a session variable to display message
-                        header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
+                        header("location: ".SITEURL.'manage-books.php'); //Redirect to Manage Books
                         die();  //Stop the process
                         
                     }
@@ -69,22 +73,25 @@
             }
 
             //SQL query 
-            $sql = "INSERT INTO tbl_category SET
+            $sql2 = "INSERT INTO tbl_book SET
                 title = '$title',
+                author = '$author',
+                edition = '$edition',
                 image_name = '$image_name',
+                category_id = $category,
                 featured = '$featured',
                 active = '$active' ";
 
             //Execute query and save data into database
-            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+            $res2 = mysqli_query($conn, $sql2);
 
-            if($res == TRUE) {
-                $_SESSION['add'] = "Category Added Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
+            if($res2 == TRUE) {
+                $_SESSION['add'] = "Book Added Succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-books.php'); //Redirect to Manage Categories
             }
             else {
-                $_SESSION['add'] = "Failed to Add Category";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-categories.php');
+                $_SESSION['add'] = "Failed to Add Book";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-books.php');
             }
 
         }
@@ -99,7 +106,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Category</title>
+    <title>Add Book</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -176,11 +183,57 @@
                     <form action="" method="POST" enctype="multipart/form-data">
                         <table>
                             <tr>
-                                <td><input type="text" class="form-control" name="title" placeholder="Enter the category title"></td>
+                                <td><input type="text" class="form-control" name="title" placeholder="Enter the book title"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="author" placeholder="Enter the author(s)"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="edition" placeholder="Enter the year of publication and/or edition"></td>
                             </tr>
                             <tr>
                                 <td>Select Image:
                                     <input type="file" name="image">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Select Category:
+                                    <select name="category">
+
+                                        <?php 
+
+                                        include('config.php');
+
+                                            /* PHP to display available categories added in database */
+                                            $sql = "SELECT * FROM tbl_category WHERE active='Yes' ";
+
+                                            $res = mysqli_query($conn, $sql);   //Execute query
+
+                                            $count = mysqli_num_rows($res); //Count rows
+
+                                            /* Count rows to check whether we have available categories or not */
+                                            if($count > 0) {
+
+                                                while($row=mysqli_fetch_assoc($res)) {
+                                                    $id=$row['id'];
+                                                    $title=$row['title'];
+                                                    ?>
+                                                    <option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                                                    <?php
+                                                }
+
+                                            }
+
+                                            else {
+
+                                                ?>
+                                                    <option value="0">No categories available</option>
+                                                <?php
+
+                                            }
+
+                                        ?>
+
                                 </td>
                             </tr>
                             <tr>

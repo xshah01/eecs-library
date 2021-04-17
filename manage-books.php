@@ -78,6 +78,30 @@
                         <h1 class="title">Manage Books</h1>
                     </div>
 
+                    <div class="admin-message">
+
+                    <!-- Display message Admin message -->
+                    <?php 
+
+                    include('config.php');
+                    include('login-check.php');
+
+                        if(isset($_SESSION['upload'])) {
+                            echo $_SESSION['upload'];  //Display session message
+                            unset($_SESSION['upload']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['add'])) {
+                            echo $_SESSION['add'];  //Display session message
+                            unset($_SESSION['add']);   //Remove session message
+                        }
+
+                    ?>
+
+                    </div>
+
+                    <br><br>
+
                     <div class="add-account-button">
                     <!-- Button to add admin -->
                     <button type="button" class="btn-add-admin mr-4" 

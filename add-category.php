@@ -76,7 +76,7 @@
                 active = '$active' ";
 
             //Execute query and save data into database
-            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+            $res = mysqli_query($conn, $sql);
 
             if($res == TRUE) {
                 $_SESSION['add'] = "Category Added Succesfully";   //Create a session variable to display message
