@@ -11,74 +11,7 @@
 
         if (isset($_POST['submit'])) {
 
-            $title = $_POST['title'];
-
-            //For file input, check whether image is selected or not 
-            if(isset($_FILES['image']['name'])) {
-
-                /* Upload the image */
-                $image_name = $_FILES['image']['name']; //Get the image name
-
-                $ext = end(explode('.', $image_name));   //Get the extension for the image (.png, .jpg ect.)
-
-                $image_name = "image_category_".rand(000, 999).'.'.$ext; //Rename the image
-
-                $source_path = $_FILES['image']['tmp_name'];   //Get the source path
-
-                $destination_path = "img/categories/".$image_name;    //Set the destination path
-
-                $upload = move_uploaded_file($source_path, $destination_path);  //Upload the image
-
-                //Check whether the image is uploaded or not
-                if($upload == FALSE) {
-                    $_SESSION['upload'] = "Failed to upload image";   //Create a session variable to display message
-                    header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
-                    die();  //Stop the process
-                }
-                
-            }
-            else {
-                //Do not upload the image and set the image_name value as blank
-                $image_name = "";
-            }
-            
-            //For radio input, check whether the button is selected or not
-            if (isset($_POST['featured'])) {
-                //Get the value from form            
-                $featured = $_POST['featured'];
-            }
-            else {
-                //Set the default value
-                $featured = "No";
-            }
-
-            if (isset($_POST['active'])) {
-                //Get the value from form
-                $active = $_POST['active'];
-            }
-            else {
-                //Set the default value
-                $active = "No";
-            }
-
-            //SQL query 
-            $sql = "INSERT INTO tbl_category SET
-                title = '$title',
-                image_name = '$image_name',
-                featured = '$featured',
-                active = '$active' ";
-
-            //Execute query and save data into database
-            $res = mysqli_query($conn, $sql) or die(mysqli_error());
-
-            if($res == TRUE) {
-                $_SESSION['add'] = "Category Added Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
-            }
-            else {
-                $_SESSION['add'] = "Failed to Add Category";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-categories.php');
-            }
+            echo "Clicked";
 
         }
 
@@ -220,7 +153,20 @@
                             </tr>
                             <tr>
                                 <td>Current Image:
-                                    Image will be displayed here
+                                    <?php 
+                                     
+                                        if($current_image != "") {
+
+                                            //Display the image
+                                            ?>
+                                                <img src="<?php echo SITEURL; ?>img/categories/<?php echo $current_image; ?>"width="140px">
+                                            <?php
+                                        }
+                                        else {
+                                            echo "Image not added";
+                                        }
+                                    
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
@@ -230,14 +176,14 @@
                             </tr>
                             <tr>
                                 <td>Featured: 
-                                    <input type="radio" name="featured" value="Yes">   Yes
-                                    <input type="radio" name="featured" value="No">   No
+                                    <input <?php if($featured == "Yes") {echo "checked";} ?> type="radio" name="featured" value="Yes">   Yes
+                                    <input <?php if($featured == "No") {echo "checked";} ?> type="radio" name="featured" value="No">   No
                                 </td>
                             </tr>
                             <tr>
                                 <td>Active:
-                                    <input type="radio" name="active" value="Yes">   Yes
-                                    <input type="radio" name="active" value="No">   No
+                                    <input <?php if($active == "Yes") {echo "checked";} ?> type="radio" name="active" value="Yes">   Yes
+                                    <input <?php if($active == "No") {echo "checked";} ?> type="radio" name="active" value="No">   No
                                 </td>
                             </tr>
                             <tr>
