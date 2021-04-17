@@ -61,12 +61,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-accounts">
+        <section id="scroll" class="site-banner-categories-books">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="accounts-title text-center">Books</h3>
+                            <h3 class="categories-books-title text-center">Books</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -74,7 +74,7 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="manage-accounts-title">
+                    <div class="manage-categories-books-title">
                         <h1 class="title">Manage Books</h1>
                     </div>
 
@@ -102,59 +102,100 @@
 
                     <br><br>
 
-                    <div class="add-account-button">
+                    <div class="add-category-book-button">
                     <!-- Button to add admin -->
-                    <button type="button" class="btn-add-admin mr-4" 
-                        onclick="window.location.href='add-book.php';">add book
+                    <button type="button" class="btn-add-category-book mr-4" 
+                        onclick="window.location.href='add-category.php';">add book
                     </button>
                     </div>
 
                     <table class="tbl-full">
                         <tr>
                             <th>ID</th>
-                            <th>Full Name</th>
-                            <th>E-mail</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Featured</th>
+                            <th>Active</th>
                             <th>Manage</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Shadab Ahmed</td>
-                            <td>shadaba@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Hamed Khavari</td>
-                            <td>hkhavari@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Rami Achkoudir</td>
-                            <td>ramiac@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
+
+                        <?php 
+
+                        include('config.php');
+                        include('login-check.php');
+
+                        $sql = "SELECT * FROM tbl_book";
+
+                        //Execute query
+                        $res = mysqli_query($conn, $sql);
+
+                        //Check whether query is executed or not
+                        if($res == TRUE) {
+
+                            //Count rows to check whether we have data in database or not
+                            $count = mysqli_num_rows($res);  //Function to get all rows in database
+
+                            $sn = 3001;
+
+                            //Check the number of rows
+                            if($count > 0) {
+                                //We have data in database
+                                //While loop get all data from database and will run as long as there is data to fetch
+                                while($rows = mysqli_fetch_assoc($res)) {
+                                    $id = $rows['id'];  //Get data
+                                    $title = $rows['title'];
+                                    $image_name = $rows['image_name'];
+                                    $featured = $rows['featured'];
+                                    $active = $rows['active'];
+
+                        ?>
+                                    
+                                <!-- Display the values in our table -->
+                                <tr>
+                                    <td><?php echo $sn++; ?></td>
+                                    <td><?php echo $title; ?></td>
+                                    
+                                    <td>
+                                        <?php
+                                        
+                                            //Check whether the image is available or not
+                                            if($image_name != "") {
+                                                //Display the image
+                                                ?>
+                                                    <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>"width="80px">
+                                                <?php
+                                            }
+                                            else {
+                                                echo "Image not added"; //Display message
+                                            }
+
+                                        ?>
+                                    </td>
+
+                                    <td><?php echo $featured; ?></td>
+                                    <td><?php echo $active; ?></td>
+                                    <td>
+                                        <a href="<?php echo SITEURL; ?>update-category.php?id=<?php echo $id; ?>">
+                                            <button type="button" class="btn-update-category-book mr-4">update book</button>
+                                        </a>
+                                        <a href="<?php echo SITEURL; ?>delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>">
+                                            <button type="button" class="btn-delete-category-book mr-4">delete book</button>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <?php
+
+                                }
+                                        }
+                                        else {
+                                            exit(); // No data in database
+                                        }
+
+                        }
+
+                        ?>
+
                     </table>
                     <div class="clearfix"></div>
                 </div>

@@ -1668,14 +1668,14 @@ table {
 
 /* =================================================== Categories ========================================================== */
 
-/* Start Categories Area */
+/* Start Categories and Books Area */
 
 .clearfix {
     float: none;
     clear: both;
 }
 
-.site-banner-categories .bg-image-accounts {
+.site-banner-categories-books .bg-image-accounts {
     position: relative;
     width: 100%;
     height: 75vh;
@@ -1684,7 +1684,7 @@ table {
     filter: brightness(80%);
 }
 
-.site-banner-categories .categories-title {
+.site-banner-categories-books .categories-books-title {
     font-family: 'Abril Fatface', cursive;
 	font-size: 85px;
 	color: #FFF;
@@ -1692,7 +1692,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-categories h2 {
+.site-banner-categories-books h2 {
     position: relative;
     content: " ";
     display: block;
@@ -1703,7 +1703,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-categories .main-content .manage-categories-title h1 {
+.site-banner-categories-books .main-content .manage-categories-books-title h1 {
     padding-left: 175px;
     padding-bottom: 30px;
     color: rgb(0, 0, 0);
@@ -1714,11 +1714,11 @@ table {
     width: 100%;
 }
 
-.site-banner-categories .add-category-button {
+.site-banner-categories-books .add-category-book-button {
     padding-left: 175px;
 }
 
-.site-banner-categories .btn-add-category {
+.site-banner-categories-books .btn-add-category-book {
     padding: 1.5%;
     font: var(--roboto);
     font-size: 12px;
@@ -1731,19 +1731,19 @@ table {
     text-transform: uppercase;
 }
 
-.site-banner-categories .btn-add-category:hover {
+.site-banner-categories-books .btn-add-category-book:hover {
     background: white;
     color:  black;
     border: 1px solid black;
     margin: -1px;
 }
 
-.site-banner-categories .admin-message {
+.site-banner-categories-books .admin-message {
     padding-left: 175px;
     color:rgb(6, 82, 221);
 }
 
-.site-banner-categories .btn-update-category {
+.site-banner-categories-books .btn-update-category-book {
     padding: 6px;
     font: var(--roboto);
     font-size: 12px;
@@ -1755,13 +1755,13 @@ table {
     text-transform: uppercase;
 }
 
-.site-banner-categories .btn-update-category:hover {
+.site-banner-categories-books .btn-update-category-book:hover {
     background: rgb(11, 232, 129);
     color:  white;
     margin: -.01px;
 }
 
-.site-banner-categories .btn-delete-category {
+.site-banner-categories-books .btn-delete-category-book {
     padding: 6px;
     font: var(--roboto);
     font-size: 12px;
@@ -1773,25 +1773,25 @@ table {
     text-transform: uppercase;
 }
 
-.site-banner-categories .btn-delete-category:hover {
+.site-banner-categories-books .btn-delete-category-book:hover {
     background: rgb(255, 63, 52);
     color:  white;
     margin: -.01px;
 }
 
-.site-banner-categories table tr th {
+.site-banner-categories-books table tr th {
     padding-top: 100px;
     padding-left: 120px;
     padding-bottom: 35px;
     text-align: left;
 }
 
-.site-banner-categories table tr td {
+.site-banner-categories-books table tr td {
     padding-left: 120px;
     padding-bottom: 15px;
 }
 
-.site-banner-categories table {
+.site-banner-categories-books table {
     margin-bottom: 125px;
 }
 
@@ -1958,87 +1958,6 @@ table {
 }
 
 /* End Update Category Area */
-
-/* Start Add Books Area */
-
-.clearfix {
-    float: none;
-    clear: both;
-}
-
-.site-banner-add-book .bg-image-accounts {
-    position: relative;
-    width: 100%;
-    height: 75vh;
-    background: url(../img/accounts-bg.jpg);
-    background-size: cover;
-    filter: brightness(80%);
-}
-
-.site-banner-add-book .book-title {
-    font-family: 'Abril Fatface', cursive;
-	font-size: 85px;
-	color: #FFF;
-    transform: translate(37%, -450%);
-    z-index: 2;
-}
-
-.site-banner-add-book h2 {
-    position: relative;
-    content: " ";
-    display: block;
-    margin-left: 44%;
-    width: 10%;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    transform: translate(380%, -22000%);
-    z-index: 2;
-}
-
-.site-banner-add-book .main-content .add-book-title h1 {
-    padding-top: 100px;
-    padding-left: 175px;
-    padding-bottom: 30px;
-    color: rgb(0, 0, 0);
-    font-family: sans-serif;
-}
-
-.site-banner-add-book .form-control {
-    margin-left: -10px;
-    width: 400px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
-    border-radius: 0;
-    background: transparent;
-    outline: none;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-}
-
-.site-banner-add-book .form-control-submit {
-    padding: 1rem 3rem;
-    width: 100%;
-    font: var(--roboto);
-    font-size: 12px;
-    letter-spacing: 0.2125rem;
-    border: none;
-    background: black;
-    background-clip: padding-box;
-    color: white;
-    text-transform: uppercase;
-}
-
-.site-banner-add-book .form-control-submit:hover {
-    background: white;
-    color:  black;
-    border: 1px solid black;
-    margin: -1px;
-}
-
-.site-banner-add-book .clearfix {
-    padding-top: 200px;
-}
-
-/* End Add Books Area */
 
 
 

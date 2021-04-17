@@ -61,12 +61,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-categories">
+        <section id="scroll" class="site-banner-categories-books">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="categories-title text-center">Categories</h3>
+                            <h3 class="categories-books-title text-center">Categories</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -74,7 +74,7 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="manage-categories-title">
+                    <div class="manage-categories-books-title">
                         <h1 class="title">Manage Categories</h1>
                     </div>
 
@@ -127,9 +127,9 @@
 
                     <br><br>
 
-                    <div class="add-category-button">
+                    <div class="add-category-book-button">
                         <!-- Button to add admin -->
-                        <button type="button" class="btn-add-category mr-4" 
+                        <button type="button" class="btn-add-category-book mr-4" 
                             onclick="window.location.href='add-category.php';">add category ›
                         </button>
                     </div>
@@ -201,10 +201,10 @@
                                     <td><?php echo $active; ?></td>
                                     <td>
                                         <a href="<?php echo SITEURL; ?>update-category.php?id=<?php echo $id; ?>">
-                                            <button type="button" class="btn-update-category mr-4">update category</button>
+                                            <button type="button" class="btn-update-category-book mr-4">update category</button>
                                         </a>
                                         <a href="<?php echo SITEURL; ?>delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>">
-                                            <button type="button" class="btn-delete-category mr-4">delete category</button>
+                                            <button type="button" class="btn-delete-category-book mr-4">delete category</button>
                                         </a>
                                     </td>
                                 </tr>
