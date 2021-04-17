@@ -81,7 +81,7 @@
                     <div class="add-account-button">
                     <!-- Button to add admin -->
                     <button type="button" class="btn-add-admin mr-4" 
-                        onclick="window.location.href='home.php';">add book
+                        onclick="window.location.href='add-book.php';">add book
                     </button>
                     </div>
 
