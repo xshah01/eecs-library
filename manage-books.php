@@ -121,6 +121,11 @@
                             unset($_SESSION['failed-to-remove-current-image']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['update'])) {
+                            echo $_SESSION['update'];  //Display session message
+                            unset($_SESSION['update']);   //Remove session message
+                        }
+
                     ?>
 
                     </div>

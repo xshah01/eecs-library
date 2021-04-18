@@ -78,25 +78,26 @@
             }
 
             /* Update database */
-            $sql2 = "UPDATE tbl_book SET 
+            $sql3 = "UPDATE tbl_book SET 
                 title = '$title',
                 author = '$author',
                 edition = '$edition',
                 image_name = '$image_name',
+                category_id = '$category',
                 featured = '$featured',
                 active = '$active' WHERE id = $id ";
 
             /* Execute the query */
-            $res2 = mysqli_query($conn, $sql2) or die(mysqli_error());
+            $res3 = mysqli_query($conn, $sql3);
 
             /* Check whether query is executed or not */
-            if($res2 == TRUE) {
-                $_SESSION['update'] = "Category Updated Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
+            if($res3 == TRUE) {
+                $_SESSION['update'] = "Book Updated Succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-books.php'); //Redirect to Manage Categories
             }
             else {
-                $_SESSION['update'] = "Failed to Update Category";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-categories.php');
+                $_SESSION['update'] = "Failed to Update Book";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-books.php');
             }       
 
         }
