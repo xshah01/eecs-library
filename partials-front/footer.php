@@ -1,3 +1,9 @@
+<?php
+
+include('config.php');
+
+?>
+
 <!-- ========================= Start Footer Area ========================= -->
 
 <footer class="footer-area">

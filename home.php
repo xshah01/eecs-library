@@ -174,7 +174,7 @@
                 <div class="owl-carousel owl-theme">
                     <div class="author row">
                         <div class="col-sm-2 author-img">
-                            <img src="./img/testimonials/t1.jpg" alt="img1" class="img-fluid">
+                            <img src="img/testimonials/t1.jpg" alt="img1" class="img-fluid">
                         </div>
                         <div class="col-md-6 quote">
                         <h4 class="text-uppsercase">"Description begins in the writer’s imagination but should finish in the reader’s."</h4>
@@ -183,7 +183,7 @@
                     </div>
                     <div class="author row">
                         <div class="col-sm-2 author-img">
-                            <img src="./img/testimonials/t2.jpg" alt="img1" class="img-fluid">
+                            <img src="img/testimonials/t2.jpg" alt="img1" class="img-fluid">
                         </div>
                         <div class="col-md-6 quote">
                         <h4 class="text-uppsercase">"Words are our most inexhaustible source of magic."</h4>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="author row">
                         <div class="col-sm-2 author-img">
-                            <img src="./img/testimonials/t3.jpg" alt="img1" class="img-fluid">
+                            <img src="img/testimonials/t3.jpg" alt="img1" class="img-fluid">
                         </div>
                         <div class="col-md-6 quote">
                         <h4 class="text-uppsercase">“Think before you speak. Read before you think.”</h4>
