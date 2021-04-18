@@ -1,4 +1,4 @@
-    <?php 
+<?php 
     
     include('partials-front/header.php');
 
@@ -13,7 +13,7 @@
         <section id="scroll" class="site-banner-books">
             <div class="bg-image-books"></div>
                 <div class="col-lg-7">
-                    <h3 class="books-title text-center">Books</h3>
+                    <h3 class="books-title text-center">Books on your search</h3>
                     <h2></h2>
                 </div>
 
@@ -32,71 +32,8 @@
 
             <!-- ==================== End Book Search Area ==================== -->
 
-            <!-- ==================== Start Categories Area ==================== -->
-
-            <section class="categories">
-                <div class="container">
-                    <h1>Categories</h1>
-
-                    <?php 
-                    
-                        /* Display all categories that are active */
-
-                        $sql = "SELECT * FROM tbl_category WHERE featured='Yes' AND active='Yes'"; //SQL query
-
-                        $res = mysqli_query($conn, $sql);   //Execute the query
-
-                        $count = mysqli_num_rows($res); //Count rows
-
-                        /* Check whether categories are available or not */
-                        if($count > 0) {
-
-                            while($row=mysqli_fetch_assoc($res)) {
-
-                                /* Get the values */
-                                $id = $row['id'];
-                                $title = $row['title'];
-                                $image_name = $row['image_name'];
-
-                                /* Display the categories */
-                                
-                                ?>
-                            
-                                <a href="#">
-                                    <div class="boxes-category">
-                                        <?php
-                                            if($image_name != "") {
-                                                ?>
-                                                    <img src="<?php echo SITEURL; ?>img/categories/<?php echo $image_name; ?>" alt="">
-                                                <?php
-                                            }
-                                            else {
-                                                echo "Image not found";
-                                            }
-                                        ?>
-                                    </div>
-                                </a>
-
-                                <?php
-
-                            }
-
-                        }
-
-                        else {
-
-                            echo "Category not found";
-
-                        }
-
-                    ?>
-
-                        <div class="clearfix"></div>
-                </div>
-            </section>
-
-            <!-- ==================== End Categories Area ==================== -->
-
+            <br><br><br><br><br>
+            
             <!-- ==================== Start Book Area ==================== -->
 
             <section class="books">
