@@ -1,6 +1,6 @@
     <?php 
     
-    include('header.php');
+    include('partials-front/header.php');
 
     ?>
 
@@ -279,6 +279,6 @@
 
     <?php 
     
-    include('footer.php');
+    include('partials-front/footer.php');
 
     ?>
