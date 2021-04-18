@@ -37,24 +37,60 @@
             <section class="categories">
                 <div class="container">
                     <h1>Categories</h1>
-                        <a href="#">
-                            <div class="boxes-category">
-                                <img src="img/portfolio-categories/calculus.png" alt="calculus">
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="boxes-category">
-                                <img src="img/portfolio-categories/database.png" alt="database">
-                            </div>
-                        <div class="boxes-category">
-                            <img src="img/portfolio-categories/network.png" alt="network">
-                        </div>
-                        </a>
-                        <a href="#">
-                            <div class="boxes-category">
-                                <img src="img/portfolio-categories/computer-science.png" alt="computer-science">
-                            </div>
-                        </a>
+
+                    <?php 
+                    
+                        /* Display all categories that are active */
+
+                        $sql = "SELECT * FROM tbl_category WHERE featured='Yes' AND active='Yes'"; //SQL query
+
+                        $res = mysqli_query($conn, $sql);   //Execute the query
+
+                        $count = mysqli_num_rows($res); //Count rows
+
+                        /* Check whether categories are available or not */
+                        if($count > 0) {
+
+                            while($row=mysqli_fetch_assoc($res)) {
+
+                                /* Get the values */
+                                $id = $row['id'];
+                                $title = $row['title'];
+                                $image_name = $row['image_name'];
+
+                                /* Display the categories */
+                                
+                                ?>
+                            
+                                <a href="#">
+                                    <div class="boxes-category">
+                                        <?php
+                                            if($image_name != "") {
+                                                ?>
+                                                    <img src="<?php echo SITEURL; ?>img/categories/<?php echo $image_name; ?>" alt="">
+                                                <?php
+                                            }
+                                            else {
+                                                echo "Image not found";
+                                            }
+                                        ?>
+                                    </div>
+                                </a>
+
+                                <?php
+
+                            }
+
+                        }
+
+                        else {
+
+                            echo "Category not found";
+
+                        }
+
+                    ?>
+
                         <div class="clearfix"></div>
                 </div>
             </section>
@@ -66,71 +102,70 @@
             <section class="books">
                 <div class="container">
                     <h1>Books</h1>
-                        <div class="boxes-books">
-                            <div class="book-img">
-                                <img src="img/portfolio-books/p1.jpg" alt="">
-                            </div>
-                            <div class="book-description">
-                                <h4>Book title</h4>
-                                <p class="author">Author</p>
-                                <p class="version">Utgivningsår/Upplaga</p>
-                                <button type="button" class="btn-reserve-book" 
-                                    onclick="window.location.href='#';">Reserve Book
-                                </button>
-                            </div>
-                        </div>
-                        <div class="boxes-books">
-                            <div class="book-img">
-                                <img src="img/portfolio-books/p2.jpg" alt="">
-                            </div>
-                            <div class="book-description">
-                                <h4>Book title</h4>
-                                <p class="author">Author</p>
-                                <p class="version">Utgivningsår/Upplaga</p>
-                                <button type="button" class="btn-reserve-book" 
-                                    onclick="window.location.href='#';">Reserve Book
-                                </button>
-                            </div>
-                        </div>
-                        <div class="boxes-books">
-                            <div class="book-img">
-                                <img src="img/portfolio-books/p3.jpg" alt="">
-                            </div>
-                            <div class="book-description">
-                                <h4>Book title</h4>
-                                <p class="author">Author</p>
-                                <p class="version">Utgivningsår/Upplaga</p>
-                                <button type="button" class="btn-reserve-book" 
-                                    onclick="window.location.href='#';">Reserve Book
-                                </button>
-                            </div>
-                        </div>
-                        <div class="boxes-books">
-                            <div class="book-img">
-                                <img src="img/portfolio-books/p4.jpg" alt="">
-                            </div>
-                            <div class="book-description">
-                                <h4>Book title</h4>
-                                <p class="author">Author</p>
-                                <p class="version">Utgivningsår/Upplaga</p>
-                                <button type="button" class="btn-reserve-book" 
-                                    onclick="window.location.href='#';">Reserve Book
-                                </button>
-                            </div>
-                        </div>
-                        <div class="boxes-books">
-                            <div class="book-img">
-                                <img src="img/portfolio-books/p5.jpg" alt="">
-                            </div>
-                            <div class="book-description">
-                                <h4>Book title</h4>
-                                <p class="author">Author</p>
-                                <p class="version">Utgivningsår/Upplaga</p>
-                                <button type="button" class="btn-reserve-book" 
-                                    onclick="window.location.href='#';">Reserve Book
-                                </button>
-                            </div>
-                        </div>
+
+                        <?php 
+                    
+                            /* Display all books that are active */
+
+                            $sql2 = "SELECT * FROM tbl_book WHERE active='Yes'"; //SQL query
+
+                            $res2 = mysqli_query($conn, $sql2);   //Execute the query
+
+                            $count2 = mysqli_num_rows($res2); //Count rows
+
+                            /* Check whether books are available or not */
+                            if($count2 > 0) {
+
+                                while($row=mysqli_fetch_assoc($res2)) {
+
+                                    /* Get the values */
+                                    $id = $row['id'];
+                                    $title = $row['title'];
+                                    $author = $row['title'];
+                                    $edition = $row['edition'];
+                                    $image_name = $row['image_name'];
+
+                                    /* Display the books */
+
+                                    ?>
+
+                                        <div class="boxes-books">
+                                            <div class="book-img">
+                                                <?php
+                                                    if($image_name != "") {
+                                                        ?>
+                                                            <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>" alt="">
+                                                        <?php
+                                                    }
+                                                    else {
+                                                        echo "Image not found";
+                                                    }
+                                                ?>
+                                            </div>
+                                            <div class="book-description">
+                                                <h4><?php echo $title; ?></h4>
+                                                <p class="author"><?php echo $author; ?></p>
+                                                <p class="edition"><?php echo $edition; ?></p>
+                                                <button type="button" class="btn-reserve-book" 
+                                                    onclick="window.location.href='#';">Reserve Book
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    <?php
+
+
+                                }
+
+                            }
+
+                            else {
+
+                                echo "Books not found";
+            
+                            }
+
+                        ?>
 
                         <div class="clearfix"></div>
                 </div>

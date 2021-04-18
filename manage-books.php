@@ -143,6 +143,8 @@
                         <tr>
                             <th>ID</th>
                             <th>Title</th>
+                            <th>Author</th>
+                            <th>Edition</th>
                             <th>Image</th>
                             <th>Featured</th>
                             <th>Active</th>
@@ -174,6 +176,8 @@
                                 while($rows = mysqli_fetch_assoc($res)) {
                                     $id = $rows['id'];  //Get data
                                     $title = $rows['title'];
+                                    $author = $rows['author'];
+                                    $edition = $rows['edition'];
                                     $image_name = $rows['image_name'];
                                     $featured = $rows['featured'];
                                     $active = $rows['active'];
@@ -184,6 +188,8 @@
                                 <tr>
                                     <td><?php echo $sn++; ?></td>
                                     <td><?php echo $title; ?></td>
+                                    <td><?php echo $author; ?></td>
+                                    <td><?php echo $edition; ?></td>
                                     
                                     <td>
                                         <?php

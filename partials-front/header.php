@@ -52,14 +52,14 @@ include('config.php');
     <!-- ========================= Start Header Area ========================= -->
 
     <header>
-        <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
+        <a href="<?php echo SITEURL; ?>home.php" class="logo"href="<?php echo SITEURL; ?>home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
-                <li><a href="home.php">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="books.php">Books</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="about-us.php">About us</a></li>
-                <li><a href="contact.php">Contact us</a></li>
-                <li><a id="admin" href="login.php">Admin</a></li>
+                <li><a href="<?php echo SITEURL; ?>home.php">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="<?php echo SITEURL; ?>books.php">Books</a></li>
+                <li><a href="<?php echo SITEURL; ?>services.php">Services</a></li>
+                <li><a href="<?php echo SITEURL; ?>about-us.php">About us</a></li>
+                <li><a href="<?php echo SITEURL; ?>contact.php">Contact us</a></li>
+                <li><a id="admin" href="<?php echo SITEURL; ?>login.php">Admin</a></li>
             </ul>
     </header>
 

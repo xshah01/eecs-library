@@ -312,11 +312,12 @@ header.sticky ul li a:hover {
     background-clip: text;
 }
 
-.site-main .book-area .img a:hover img {
+.site-main .book-area .img img:hover {
     /* filter: brightness(1.1) drop-shadow(16px 16px 16px #b1afaf); */
     -webkit-filter: opacity(.7);
     filter: opacity(.7);
     transition: .2s;
+    cursor: pointer;
 }
 
 /* End Book Area */
@@ -1781,13 +1782,13 @@ table {
 
 .site-banner-categories-books table tr th {
     padding-top: 100px;
-    padding-left: 120px;
+    padding-left: 60px;
     padding-bottom: 35px;
     text-align: left;
 }
 
 .site-banner-categories-books table tr td {
-    padding-left: 120px;
+    padding-left: 60px;
     padding-bottom: 15px;
 }
 
