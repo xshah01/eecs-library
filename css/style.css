@@ -1795,16 +1795,16 @@ table {
     margin-bottom: 125px;
 }
 
-/* End Categories Area */
+/* End Categories and Books Area */
 
-/* Start Add Category Area */
+/* Start Add Category and Book Area */
 
 .clearfix {
     float: none;
     clear: both;
 }
 
-.site-banner-add-category .bg-image-accounts {
+.site-banner-add-category-book .bg-image-accounts {
     position: relative;
     width: 100%;
     height: 75vh;
@@ -1813,7 +1813,7 @@ table {
     filter: brightness(80%);
 }
 
-.site-banner-add-category .category-title {
+.site-banner-add-category-book .category-book-title {
     font-family: 'Abril Fatface', cursive;
 	font-size: 85px;
 	color: #FFF;
@@ -1821,7 +1821,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-add-category h2 {
+.site-banner-add-category-book h2 {
     position: relative;
     content: " ";
     display: block;
@@ -1832,7 +1832,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-add-category .main-content .add-category-title h1 {
+.site-banner-add-category-book .main-content .add-category-book-title h1 {
     padding-top: 100px;
     padding-left: 175px;
     padding-bottom: 30px;
@@ -1840,7 +1840,7 @@ table {
     font-family: sans-serif;
 }
 
-.site-banner-add-category .form-control {
+.site-banner-add-category-book .form-control {
     margin-left: -10px;
     width: 400px;
     border: none;
@@ -1852,7 +1852,7 @@ table {
     font-size: 15px;
 }
 
-.site-banner-add-category .form-control-submit {
+.site-banner-add-category-book .form-control-submit {
     padding: 1rem 3rem;
     width: 100%;
     font: var(--roboto);
@@ -1865,27 +1865,27 @@ table {
     text-transform: uppercase;
 }
 
-.site-banner-add-category .form-control-submit:hover {
+.site-banner-add-category-book .form-control-submit:hover {
     background: white;
     color:  black;
     border: 1px solid black;
     margin: -1px;
 }
 
-.site-banner-add-category .clearfix {
+.site-banner-add-category-book .clearfix {
     padding-top: 200px;
 }
 
-/* End Add Category Area */
+/* End Add Category and Book Area */
 
-/* Start Update Category Area */
+/* Start Update Category and Book Area */
 
 .clearfix {
     float: none;
     clear: both;
 }
 
-.site-banner-update-category .bg-image-accounts {
+.site-banner-update-category-book .bg-image-accounts {
     position: relative;
     width: 100%;
     height: 75vh;
@@ -1894,7 +1894,7 @@ table {
     filter: brightness(80%);
 }
 
-.site-banner-update-category .category-title {
+.site-banner-update-category-book .category-book-title {
     font-family: 'Abril Fatface', cursive;
 	font-size: 85px;
 	color: #FFF;
@@ -1902,7 +1902,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-update-category h2 {
+.site-banner-update-category-book h2 {
     position: relative;
     content: " ";
     display: block;
@@ -1913,7 +1913,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-update-category .main-content .update-category-title h1 {
+.site-banner-update-category-book .main-content .update-category-book-title h1 {
     padding-top: 100px;
     padding-left: 175px;
     padding-bottom: 30px;
@@ -1921,7 +1921,7 @@ table {
     font-family: sans-serif;
 }
 
-.site-banner-update-category .form-control {
+.site-banner-update-category-book .form-control {
     margin-left: -10px;
     width: 400px;
     border: none;
@@ -1933,7 +1933,7 @@ table {
     font-size: 15px;
 }
 
-.site-banner-update-category .form-control-submit {
+.site-banner-update-category-book .form-control-submit {
     padding: 1rem 3rem;
     width: 100%;
     font: var(--roboto);
@@ -1946,18 +1946,18 @@ table {
     text-transform: uppercase;
 }
 
-.site-banner-update-category .form-control-submit:hover {
+.site-banner-update-category-book .form-control-submit:hover {
     background: white;
     color:  black;
     border: 1px solid black;
     margin: -1px;
 }
 
-.site-banner-update-category .clearfix {
+.site-banner-update-category-book .clearfix {
     padding-top: 200px;
 }
 
-/* End Update Category Area */
+/* End Update Category and Books Area */
 
 
 

@@ -26,7 +26,7 @@
                 /* Check whether image is available or not */
                 if($image_name != "") {
 
-                    $ext = end(explode('.', $image_name));   //Get the extension for the image (.png, .jpg ect.)
+                    $ext = end(explode('.', $image_name));   //Get the extension for the image (.png, .jpg etc.)
 
                     $image_name = "image_category_".rand(000, 999).'.'.$ext; //Rename the image
 
@@ -163,12 +163,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-update-category">
+        <section id="scroll" class="site-banner-update-category-book">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="category-title text-center">Categories</h3>
+                            <h3 class="category-book-title text-center">Categories</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -176,7 +176,7 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="update-category-title">
+                    <div class="update-category-book-title">
                         <h1 class="title">Update Category</h1>
                     </div>
 

@@ -101,9 +101,24 @@
                             unset($_SESSION['delete']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['no-book-found'])) {
+                            echo $_SESSION['no-book-found'];  //Display session message
+                            unset($_SESSION['no-book-found']);   //Remove session message
+                        }
+
                         if(isset($_SESSION['remove'])) {
                             echo $_SESSION['remove'];  //Display session message
                             unset($_SESSION['remove']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['upload'])) {
+                            echo $_SESSION['upload'];  //Display session message
+                            unset($_SESSION['upload']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['failed-to-remove-current-image'])) {
+                            echo $_SESSION['failed-to-remove-current-image'];  //Display session message
+                            unset($_SESSION['failed-to-remove-current-image']);   //Remove session message
                         }
 
                     ?>
@@ -115,7 +130,7 @@
                     <div class="add-category-book-button">
                     <!-- Button to add admin -->
                     <button type="button" class="btn-add-category-book mr-4" 
-                        onclick="window.location.href='add-category.php';">add book
+                        onclick="window.location.href='add-book.php';">add book
                     </button>
                     </div>
 

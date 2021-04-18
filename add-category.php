@@ -156,12 +156,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-add-category">
+        <section id="scroll" class="site-banner-add-category-book">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="category-title text-center">Categories</h3>
+                            <h3 class="category-book-title text-center">Categories</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -169,7 +169,7 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="add-category-title">
+                    <div class="add-category-book-title">
                         <h1 class="title">Add Category</h1>
                     </div>
 

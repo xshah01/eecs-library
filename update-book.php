@@ -5,28 +5,31 @@
         include('config.php');
         include('login-check.php');
     
-        /* Process the value from Form and save it in database */
+        //Process the value from Form and save it in database
 
         //When submit button is clicked:
 
         if (isset($_POST['submit'])) {
 
-            /* Get data from Form */
+            /* Get values from Form */
+            $id = $_POST['id'];
             $title = $_POST['title'];
             $author = $_POST['author'];
             $edition = $_POST['edition'];
+            $current_image = $_POST['current_image'];
             $category = $_POST['category'];
+            $featured = $_POST['featured'];
+            $active = $_POST['active'];
 
-            //For file input, check whether image is selected or not 
+            /* Update the image if selected */
             if(isset($_FILES['image']['name'])) {
 
-                /* Upload the image */
-                $image_name = $_FILES['image']['name']; //Get the image name
+                $image_name = $_FILES['image']['name'];
 
-                /* Upload image only if the image is selected */
+                /* Check whether image is available or not */
                 if($image_name != "") {
-                    
-                    $ext = end(explode('.', $image_name));   //Get the extension for the image (.png, .jpg ect.)
+
+                    $ext = end(explode('.', $image_name));   //Get the extension for the image (.png, .jpg etc.)
 
                     $image_name = "image_book_".rand(000, 999).'.'.$ext; //Rename the image
 
@@ -45,68 +48,70 @@
                         
                     }
 
+                    /* Remove the current image if available */
+                    if($current_image != "") {
+                        
+                        $remove_path = "img/books/".$current_image;  //Create path to access the folder
+                        $remove = unlink($remove_path); //Remove the current image
+
+                        /* Add error message and stop process if failed to remove image */
+                        if($remove == FALSE) {
+
+                            $_SESSION['failed-to-remove-current-image'] = "Failed to remove current image";    //Create a session variable to display message  
+                            header("location: ".SITEURL.'manage-books.php'); //Redirect to Manage Books
+                            die();  //Stop the process
+
+                        }
+
+                    }
+
                 }
-                
-            }
-            else {
-                //Do not upload the image and set the image_name value as blank
-                $image_name = "";
-            }
-            
-            //For radio input, check whether the button is selected or not
-            if (isset($_POST['featured'])) {
-                //Get the value from form            
-                $featured = $_POST['featured'];
-            }
-            else {
-                //Set the default value
-                $featured = "No";
+
+                else {
+                    $image_name = $current_image;
+                }
+
             }
 
-            if (isset($_POST['active'])) {
-                //Get the value from form
-                $active = $_POST['active'];
-            }
             else {
-                //Set the default value
-                $active = "No";
+                $image_name = $current_image;
             }
 
-            //SQL query 
-            $sql2 = "INSERT INTO tbl_book SET
+            /* Update database */
+            $sql2 = "UPDATE tbl_book SET 
                 title = '$title',
                 author = '$author',
                 edition = '$edition',
                 image_name = '$image_name',
-                category_id = $category,
                 featured = '$featured',
-                active = '$active' ";
+                active = '$active' WHERE id = $id ";
 
-            //Execute query and save data into database
-            $res2 = mysqli_query($conn, $sql2);
+            /* Execute the query */
+            $res2 = mysqli_query($conn, $sql2) or die(mysqli_error());
 
+            /* Check whether query is executed or not */
             if($res2 == TRUE) {
-                $_SESSION['add'] = "Book Added Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-books.php'); //Redirect to Manage Categories
+                $_SESSION['update'] = "Category Updated Succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-categories.php'); //Redirect to Manage Categories
             }
             else {
-                $_SESSION['add'] = "Failed to Add Book";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-books.php');
-            }
+                $_SESSION['update'] = "Failed to Update Category";   //Create a session variable to display message
+                header("location: ".SITEURL.'manage-categories.php');
+            }       
 
         }
 
     ?>
 
     <!-- ========================= End PHP MyAdmin Area ========================= -->
-
-<!DOCTYPE html>
+    
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Book</title>
+    <title>Update Book</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -163,7 +168,7 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-add-category-book">
+        <section id="scroll" class="site-banner-update-category-book">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
@@ -176,80 +181,144 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="add-category-book-title">
-                        <h1 class="title">Add Book</h1>
+                    <div class="update-category-book-title">
+                        <h1 class="title">Update Book</h1>
                     </div>
+
+                    <?php 
+
+                    include('config.php');
+
+                        //Check whether the id is set or not
+                        if(isset($_GET['id'])) {
+
+                            //Get the id of selected book
+                            $id = $_GET['id'];
+
+                            //Create SQL query to retrieve the details
+                            $sql2 = "SELECT * FROM tbl_book WHERE id=$id";
+
+                            //Execute the query
+                            $res2 = mysqli_query($conn, $sql2);
+
+                            $count = mysqli_num_rows($res2); //Count the rows to check whether the id is valid or not
+
+                            if($count == 1) {
+
+                                //Retrieve the details
+                                $row2 = mysqli_fetch_assoc($res2);
+                                
+                                $title = $row2['title'];
+                                $author = $row2['author'];
+                                $edition = $row2['edition'];
+                                $current_image = $row2['image_name'];
+                                $current_category = $row2['category_id'];
+                                $featured = $row2['featured'];
+                                $active = $row2['active'];
+
+                            }
+
+                            else {
+
+                                $_SESSION['no-book-found'] = "Book not found";
+                                header("location: ".SITEURL.'manage-books.php'); //Redirect to Manage Books
+
+                            }
+
+                        }
+
+                        else {
+
+                            header("location: ".SITEURL.'manage-books.php'); //Redirect to Manage Books
+
+                        }
+
+                    ?>
 
                     <form action="" method="POST" enctype="multipart/form-data">
                         <table>
                             <tr>
-                                <td><input type="text" class="form-control" name="title" placeholder="Enter the book title"></td>
+                                <td><input type="text" class="form-control" name="title" value="<?php echo $title ?>"></td>
                             </tr>
                             <tr>
-                                <td><input type="text" class="form-control" name="author" placeholder="Enter the author(s)"></td>
+                                <td><input type="text" class="form-control" name="author" value="<?php echo $author ?>"></td>
                             </tr>
                             <tr>
-                                <td><input type="text" class="form-control" name="edition" placeholder="Enter the year of publication and/or edition"></td>
+                                <td><input type="text" class="form-control" name="edition" value="<?php echo $edition ?>"></td>
                             </tr>
                             <tr>
-                                <td>Select Image:
+                                <td>Current Image:
+                                    <?php 
+                                     
+                                        if($current_image != "") {
+
+                                            //Display the image
+                                            ?>
+                                                <img src="<?php echo SITEURL; ?>img/books/<?php echo $current_image; ?>"width="80px">
+                                            <?php
+                                        }
+                                        else {
+                                            echo "Image not added";
+                                        }
+                                    
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Select New Image:
                                     <input type="file" name="image">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Select Category:
+                                <td>Category:
                                     <select name="category">
 
-                                        <?php 
+                                        <?php
 
-                                        include('config.php');
+                                            include('config.php');
 
-                                            /* PHP to display available categories added in database */
-                                            $sql = "SELECT * FROM tbl_category WHERE active='Yes' ";
+                                            $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
 
-                                            $res = mysqli_query($conn, $sql);   //Execute query
+                                            $res = mysqli_query($conn, $sql);
 
-                                            $count = mysqli_num_rows($res); //Count rows
+                                            $count = mysqli_num_rows($res);
 
-                                            /* Count rows to check whether we have available categories or not */
                                             if($count > 0) {
-
                                                 while($row=mysqli_fetch_assoc($res)) {
-                                                    $id=$row['id'];
-                                                    $title=$row['title'];
-                                                    ?>
-                                                    <option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                                                    $category_title=$row['title'];
+                                                    $category_id=$row['id'];
+                                                    ?>  
+                                                        <option <?php if($current_category==$category_id) { echo "Selected"; } ?> value="<?php echo $category_id; ?>"><?php echo $category_title; ?></option>
                                                     <?php
                                                 }
-
                                             }
-
                                             else {
-
-                                                ?>
-                                                    <option value="0">No categories available</option>
-                                                <?php
-
+                                                echo "<option value='0'>Category not available</option>";
                                             }
 
                                         ?>
-
+                                        
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Featured: 
-                                    <input type="radio" name="featured" value="Yes">   Yes
-                                    <input type="radio" name="featured" value="No">   No
+                                    <input <?php if($featured == "Yes") {echo "checked";} ?> type="radio" name="featured" value="Yes">   Yes
+                                    <input <?php if($featured == "No") {echo "checked";} ?> type="radio" name="featured" value="No">   No
                                 </td>
                             </tr>
                             <tr>
                                 <td>Active:
-                                    <input type="radio" name="active" value="Yes">   Yes
-                                    <input type="radio" name="active" value="No">   No
+                                    <input <?php if($active == "Yes") {echo "checked";} ?> type="radio" name="active" value="Yes">   Yes
+                                    <input <?php if($active == "No") {echo "checked";} ?> type="radio" name="active" value="No">   No
                                 </td>
                             </tr>
                             <tr>
-                                <td><input type="submit" class="form-control-submit" name="submit" value="Add Book"><br></td>
+                                <td>
+                                    <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <input type="submit" class="form-control-submit" name="submit" value="Update Book"><br>
+                                </td>
                             </tr>
                         </table>
                     </form>
