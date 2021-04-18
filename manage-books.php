@@ -96,6 +96,16 @@
                             unset($_SESSION['add']);   //Remove session message
                         }
 
+                        if(isset($_SESSION['delete'])) {
+                            echo $_SESSION['delete'];  //Display session message
+                            unset($_SESSION['delete']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['remove'])) {
+                            echo $_SESSION['remove'];  //Display session message
+                            unset($_SESSION['remove']);   //Remove session message
+                        }
+
                     ?>
 
                     </div>
@@ -175,10 +185,10 @@
                                     <td><?php echo $featured; ?></td>
                                     <td><?php echo $active; ?></td>
                                     <td>
-                                        <a href="<?php echo SITEURL; ?>update-category.php?id=<?php echo $id; ?>">
+                                        <a href="<?php echo SITEURL; ?>update-book.php?id=<?php echo $id; ?>">
                                             <button type="button" class="btn-update-category-book mr-4">update book</button>
                                         </a>
-                                        <a href="<?php echo SITEURL; ?>delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>">
+                                        <a href="<?php echo SITEURL; ?>delete-book.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>">
                                             <button type="button" class="btn-delete-category-book mr-4">delete book</button>
                                         </a>
                                     </td>
