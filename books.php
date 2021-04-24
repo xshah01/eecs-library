@@ -23,7 +23,7 @@
 
             <section class="book-search">
                 <div class="container">
-                    <form action="<?php echo SITEURL; ?>book-search.php" class="search-bar text-center">
+                    <form action="<?php echo SITEURL; ?>book-search.php" class="search-bar text-center" method="POST">
                         <input type="search" name="search" placeholder="Search for your book here ... ">
                         <input type="submit" name="submit" value="›">
                     </form>
@@ -62,7 +62,7 @@
                                 
                                 ?>
                             
-                                <a href="#">
+                                <a href="<?php echo SITEURL; ?>category-search.php?category_id=<?php echo $id; ?>">
                                     <div class="boxes-category">
                                         <?php
                                             if($image_name != "") {
@@ -121,7 +121,7 @@
                                     /* Get the values */
                                     $id = $row['id'];
                                     $title = $row['title'];
-                                    $author = $row['title'];
+                                    $author = $row['author'];
                                     $edition = $row['edition'];
                                     $image_name = $row['image_name'];
 
@@ -168,6 +168,8 @@
                         ?>
 
                         <div class="clearfix"></div>
+
+                        <br><br><br>
                 </div>
             </section>
 

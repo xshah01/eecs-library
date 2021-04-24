@@ -4,6 +4,37 @@
 
     ?>
 
+    <?php  
+
+    include('config.php');
+
+        /* Check whether id is passed or not */
+        if(isset($_GET['category_id'])) {
+
+            $category_id = $_GET['category_id'];    //Category id is set, get the id
+            
+            /* Get the category title based on category id */
+            $sql = "SELECT title FROM tbl_category WHERE id=$category_id";
+
+            /* Execute the query */
+            $res = mysqli_query($conn, $sql);
+            
+            /* Get the value from database*/
+            $row = mysqli_fetch_assoc($res);
+
+            /* Get the title */
+            $category_title = $row['title'];
+
+        }
+
+        else {
+
+            header("location: ".SITEURL.'books.php');   //Redirect to book page
+
+        }
+
+    ?>
+
     <!-- ========================= Start Main Area ========================= -->
 
     <main class="site-main">
@@ -13,15 +44,7 @@
         <section id="scroll" class="site-banner-category-book-search">
             <div class="bg-image-books"></div>
                 <div class="col-lg-7">
-                    <?php 
-                    
-                    include('config.php');
-
-                        /* Get the search key word */
-                        $search = $_POST['search'];
-
-                    ?>
-                    <h3 class="books-title text-center">"<?php echo $search; ?>"</h3>
+                    <h3 class="books-title text-center">"<?php echo $category_title; ?>"</h3>
                     <h2></h2>
                 </div>
 
@@ -36,30 +59,26 @@
                         <?php 
 
                         include('config.php');
-                    
-                            /* Get the search key word */
-                            $search = $_POST['search'];
 
-                            /* SQL query to get the books based on search key word */
-                            $sql = "SELECT * FROM tbl_book WHERE title LIKE '%$search%' OR author LIKE '%$search%'";  
+                            /* SQL query to get the books based on category */
+                            $sql2 = "SELECT * FROM tbl_book WHERE category_id=$category_id";  
 
                             /* Execute the query */
-                            $res = mysqli_query($conn, $sql);
+                            $res2 = mysqli_query($conn, $sql2);
 
                             /* Count rows */
-                            $count = mysqli_num_rows($res);
+                            $count2 = mysqli_num_rows($res2);
 
                             /* Check whether the books are available or not */
-                            if($count > 0) {
+                            if($count2 > 0) {
 
-                                while($row=mysqli_fetch_assoc($res)) {
+                                while($row2=mysqli_fetch_assoc($res2)) {
 
                                     /* Get the values */
-                                    $id = $row['id'];
-                                    $title = $row['title'];
-                                    $author = $row['author'];
-                                    $edition = $row['edition'];
-                                    $image_name = $row['image_name'];
+                                    $title = $row2['title'];
+                                    $author = $row2['author'];
+                                    $edition = $row2['edition'];
+                                    $image_name = $row2['image_name'];
 
                                     /* Display the books */
 
