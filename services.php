@@ -80,7 +80,7 @@
                             <div class="recycle">
                                 <div class="col-xl-11">
                                 <h4>Book recycle</h4>
-                                <p>Books are an important part of our lives but many of us still struggle with old and 
+                                <p>Books are an important part of our lives but. Yet, many of us still struggle with old and 
                                     unwanted books that takes up space in our shelves. When you decide it's time to part with them, 
                                     we want you to know that they can go to a nice home where they can continue to enrich and improve 
                                     other student's education. We gracefully accept all kinds of books.</p>

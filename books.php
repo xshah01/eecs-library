@@ -147,7 +147,7 @@
                                                 <p class="author"><?php echo $author; ?></p>
                                                 <p class="edition"><?php echo $edition; ?></p>
                                                 <button type="button" class="btn-reserve-book" 
-                                                    onclick="window.location.href='#';">Reserve Book
+                                                    onclick="window.location.href='reservation-page.php';">Reserve Book
                                                 </button>
                                             </div>
                                         </div>

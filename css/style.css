@@ -857,6 +857,127 @@ header.sticky ul li a:hover {
 
 /* End Book-search Area */
 
+/* ============================================== Reservation Page ===================================================== */
+
+/* Start Reservation Area */
+
+.site-banner-reservation-page .bg-image-books {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url(../img/books3-bg.jpg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+
+.site-banner-reservation-page .books-title {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 85px;
+	color: #FFF;
+    transform: translate(37%, -450%);
+    z-index: 2;
+}
+
+.site-banner-reservation-page h2 {
+    position: relative;
+    content: " ";
+    display: block;
+    margin-left: 44%;
+    width: 10%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(380%, -22000%);
+    z-index: 2;
+}
+
+.site-banner-reservation-page .container {
+    width: 80%;
+    padding: 5%;
+}
+
+.site-banner-reservation-page .boxes-books {
+    width: 80%;
+    float: left;
+    margin: 1%;
+    padding-left: 11%;
+    padding-bottom: 5%;
+    background-color: transparent;
+}
+
+.site-banner-reservation-page h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 65px;
+	color: rgb(49, 49, 49);
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.site-banner-reservation-page .book-img {
+    float: left;
+}
+
+.site-banner-reservation-page .book-description {
+    width: 50%;
+    float: left;
+    margin-left: 8%;
+}
+
+.site-banner-reservation-page .book-description h4 {
+    font-size: 2.5rem;
+    color: rgb(206, 182, 116, 0.774);
+}
+
+.site-banner-reservation-page .book-description .author {
+    font-size: 1.5rem;
+    color: rgb(49, 49, 49);
+}
+
+.site-banner-reservation-page .book-description .edition {
+    font-size: 1.25rem;
+    color: rgb(100, 100, 100);
+}
+
+.site-banner-reservation-page .contact-form {
+    width: 88%;
+    padding-left: 11%;
+    float: left;
+}
+
+.site-banner-reservation-page legend {
+    padding-bottom: 2%;
+    color: rgb(49, 49, 49);
+}
+
+.site-banner-reservation-page .form-control {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.site-banner-reservation-page .submit {
+    padding: 1rem 3rem;
+    font: var(--roboto);
+    font-size: 12px;
+    letter-spacing: 0.2125rem;
+    border: none;
+    background: rgb(206, 182, 116, 0.774);
+    background-clip: padding-box;
+    color: rgba(0, 0, 0, 0.774);
+    transition: background .6s ease;
+    text-transform: uppercase;
+}
+
+.site-banner-reservation-page .submit:hover {
+    background: var(206, 182, 116, 0.774);
+    color:  rgba(255, 255, 255, 0.774);
+    box-shadow: var(--box-shadow);
+}
+
+/* End Reservation Area */
+
 /* ==================================================== About us =========================================================== */
 
 /* Start About Us Area */
