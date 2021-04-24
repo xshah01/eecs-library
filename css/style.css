@@ -943,6 +943,7 @@ header.sticky ul li a:hover {
 }
 
 .site-banner-reservation-page legend {
+    padding-left: 10px;
     padding-bottom: 2%;
     color: rgb(49, 49, 49);
 }
