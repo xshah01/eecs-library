@@ -1054,7 +1054,6 @@ header.sticky ul li a:hover {
 	font-size: 20px;
 	color: rgb(59, 59, 59);
     text-align: center;
-    padding-bottom: 100px;
 }
 
 .site-banner-confirmation-page .confirmation-page a {
@@ -1062,7 +1061,6 @@ header.sticky ul li a:hover {
 	font-size: 20px;
 	color: rgb(206, 182, 116, 0.774);
     text-align: center;
-    padding-bottom: 100px;
 }
 
 .site-banner-confirmation-page .confirmation-page a:hover {
@@ -1070,9 +1068,31 @@ header.sticky ul li a:hover {
 	font-size: 20px;
 	color: rgb(59, 59, 59);
     text-align: center;
-    padding-bottom: 100px;
 }
-
+  
+  #clockdiv{
+      font-family: sans-serif;
+      color: #fff;
+      display: inline-block;
+      font-weight: 100;
+      text-align: center;
+      font-size: 30px;
+  }
+  
+  #clockdiv > div{
+      padding: 10px;
+      border-radius: 3px;
+      background: rgb(206, 182, 116, 0.774);
+      display: inline-block;
+  }
+  
+  #clockdiv div > span{
+      padding: 15px;
+      border-radius: 3px;
+      background: rgba(192, 154, 51, 0.774);
+      display: inline-block;
+  }
+  
 /* End Confirmation Area */
 
 /* ==================================================== About us =========================================================== */
