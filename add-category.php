@@ -50,15 +50,6 @@
             }
             
             //For radio input, check whether the button is selected or not
-            if (isset($_POST['featured'])) {
-                //Get the value from form            
-                $featured = $_POST['featured'];
-            }
-            else {
-                //Set the default value
-                $featured = "No";
-            }
-
             if (isset($_POST['active'])) {
                 //Get the value from form
                 $active = $_POST['active'];
@@ -72,7 +63,6 @@
             $sql = "INSERT INTO tbl_category SET
                 title = '$title',
                 image_name = '$image_name',
-                featured = '$featured',
                 active = '$active' ";
 
             //Execute query and save data into database
@@ -181,12 +171,6 @@
                             <tr>
                                 <td>Select Image:
                                     <input type="file" name="image">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Featured: 
-                                    <input type="radio" name="featured" value="Yes">   Yes
-                                    <input type="radio" name="featured" value="No">   No
                                 </td>
                             </tr>
                             <tr>

@@ -105,6 +105,8 @@
                             <th>Book</th>
                             <th>Author</th>
                             <th>Edition</th>
+                            <th>ISBN</th>
+                            <th>Language</th>
                             <th>Student Name</th>
                             <th>Student Email</th>
                             <th>Student Phone</th>
@@ -139,6 +141,8 @@
                                         $book = $rows['book'];
                                         $author = $rows['author'];
                                         $edition = $rows['edition'];
+                                        $ISBN = $rows['ISBN'];
+                                        $language = $rows['language'];
                                         $student_name = $rows['student_name'];
                                         $student_email = $rows['student_email'];
                                         $student_phone = $rows['student_phone'];
@@ -153,6 +157,8 @@
                             <td><?php echo $book; ?></td>
                             <td><?php echo $author; ?></td>
                             <td><?php echo $edition; ?></td>
+                            <td><?php echo $ISBN; ?></td>
+                            <td><?php echo $language; ?></td>
                             <td><?php echo $student_name; ?></td>
                             <td><?php echo $student_email; ?></td>
                             <td><?php echo $student_phone; ?></td>
@@ -177,10 +183,10 @@
                             <td><?php echo $reservation_date; ?></td>
                             <td>
                             <a href="<?php echo SITEURL; ?>update-reservation.php?id=<?php echo $id; ?>">
-                                <button type="button" class="btn-update-reservation mr-4">update rvn</button>
+                                <button type="button" class="btn-update-reservation mr-4">update reservation</button>
                             </a>
                             <a href="<?php echo SITEURL; ?>delete-reservation.php?id=<?php echo $id; ?>">
-                                <button type="button" class="btn-delete-reservation mr-4">delete rvn</button>
+                                <button type="button" class="btn-delete-reservation mr-4">delete reservation</button>
                             </a>
                             </td>
                         </tr>

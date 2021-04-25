@@ -61,12 +61,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-categories-books">
+        <section id="scroll" class="site-banner-books">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="categories-books-title text-center">Books</h3>
+                            <h3 class="books-title text-center">Books</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -74,8 +74,8 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="manage-categories-books-title">
-                        <h1 class="title">Manage Books</h1>
+                    <div class="manage-books-title">
+                        <h4 class="title">Manage Books</h4>
                     </div>
 
                     <div class="admin-message">
@@ -132,9 +132,9 @@
 
                     <br><br>
 
-                    <div class="add-category-book-button">
+                    <div class="add-book-button">
                     <!-- Button to add admin -->
-                    <button type="button" class="btn-add-category-book mr-4" 
+                    <button type="button" class="btn-add-book mr-4" 
                         onclick="window.location.href='add-book.php';">add book
                     </button>
                     </div>
@@ -145,8 +145,9 @@
                             <th>Title</th>
                             <th>Author</th>
                             <th>Edition</th>
+                            <th>ISBN</th>
+                            <th>Language</th>
                             <th>Image</th>
-                            <th>Featured</th>
                             <th>Active</th>
                             <th>Manage</th>
                         </tr>
@@ -178,8 +179,9 @@
                                     $title = $rows['title'];
                                     $author = $rows['author'];
                                     $edition = $rows['edition'];
+                                    $ISBN = $rows['ISBN'];
+                                    $language = $rows['language'];
                                     $image_name = $rows['image_name'];
-                                    $featured = $rows['featured'];
                                     $active = $rows['active'];
 
                         ?>
@@ -190,6 +192,8 @@
                                     <td><?php echo $title; ?></td>
                                     <td><?php echo $author; ?></td>
                                     <td><?php echo $edition; ?></td>
+                                    <td><?php echo $ISBN; ?></td>
+                                    <td><?php echo $language; ?></td>
                                     
                                     <td>
                                         <?php
@@ -208,14 +212,13 @@
                                         ?>
                                     </td>
 
-                                    <td><?php echo $featured; ?></td>
                                     <td><?php echo $active; ?></td>
                                     <td>
                                         <a href="<?php echo SITEURL; ?>update-book.php?id=<?php echo $id; ?>">
-                                            <button type="button" class="btn-update-category-book mr-4">update book</button>
+                                            <button type="button" class="btn-update-book mr-4">update book</button>
                                         </a>
                                         <a href="<?php echo SITEURL; ?>delete-book.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>">
-                                            <button type="button" class="btn-delete-category-book mr-4">delete book</button>
+                                            <button type="button" class="btn-delete-book mr-4">delete book</button>
                                         </a>
                                     </td>
                                 </tr>

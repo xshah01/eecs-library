@@ -16,9 +16,10 @@
             $title = $_POST['title'];
             $author = $_POST['author'];
             $edition = $_POST['edition'];
+            $ISBN = $_POST['ISBN'];
+            $language = $_POST['language'];
             $current_image = $_POST['current_image'];
             $category = $_POST['category'];
-            $featured = $_POST['featured'];
             $active = $_POST['active'];
 
             /* Update the image if selected */
@@ -82,9 +83,10 @@
                 title = '$title',
                 author = '$author',
                 edition = '$edition',
+                ISBN = '$ISBN',
+                language = '$language',
                 image_name = '$image_name',
                 category_id = '$category',
-                featured = '$featured',
                 active = '$active' WHERE id = $id ";
 
             /* Execute the query */
@@ -212,9 +214,10 @@
                                 $title = $row2['title'];
                                 $author = $row2['author'];
                                 $edition = $row2['edition'];
+                                $ISBN = $row2['ISBN'];
+                                $language = $row2['language'];
                                 $current_image = $row2['image_name'];
                                 $current_category = $row2['category_id'];
-                                $featured = $row2['featured'];
                                 $active = $row2['active'];
 
                             }
@@ -246,6 +249,12 @@
                             </tr>
                             <tr>
                                 <td><input type="text" class="form-control" name="edition" value="<?php echo $edition ?>"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="ISBN" value="<?php echo $ISBN ?>"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="language" value="<?php echo $language ?>"></td>
                             </tr>
                             <tr>
                                 <td>Current Image:
@@ -300,12 +309,6 @@
                                         ?>
                                         
                                     </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Featured: 
-                                    <input <?php if($featured == "Yes") {echo "checked";} ?> type="radio" name="featured" value="Yes">   Yes
-                                    <input <?php if($featured == "No") {echo "checked";} ?> type="radio" name="featured" value="No">   No
                                 </td>
                             </tr>
                             <tr>

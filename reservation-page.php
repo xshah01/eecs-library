@@ -31,6 +31,8 @@
                 $title = $row['title'];
                 $author = $row['author'];
                 $edition = $row['edition'];
+                $ISBN = $row['ISBN'];
+                $language = $row['language'];
                 $image_name = $row['image_name'];
 
             }
@@ -105,6 +107,10 @@
                                         <input type="hidden" name="author" value="<?php echo $author; ?>">
                                         <p class="edition"><?php echo $edition; ?></p>
                                         <input type="hidden" name="edition" value="<?php echo $edition; ?>">
+                                        <p class="ISBN"><?php echo $ISBN; ?></p>
+                                        <input type="hidden" name="ISBN" value="<?php echo $ISBN; ?>">
+                                        <p class="language"><?php echo $language; ?></p>
+                                        <input type="hidden" name="language" value="<?php echo $language; ?>">
                                 </div>
                         </div>
                                 <div class="contact-form">
@@ -130,6 +136,8 @@
                                         $book = $_POST['book'];
                                         $author = $_POST['author'];
                                         $edition = $_POST['edition'];
+                                        $ISBN = $_POST['ISBN'];
+                                        $language = $_POST['language'];
                                         $status = "Reserved";   //Reserved, Active, Inactive
                                         $student_name = $_POST['full-name'];
                                         $student_email = $_POST['email'];
@@ -140,6 +148,8 @@
                                                 book = '$book',
                                                 author = '$author',
                                                 edition = '$edition',
+                                                ISBN = '$ISBN',
+                                                language = '$language',
                                                 status = '$status',
                                                 student_name = '$student_name',
                                                 student_email = '$student_email',

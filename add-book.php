@@ -15,6 +15,8 @@
             $title = $_POST['title'];
             $author = $_POST['author'];
             $edition = $_POST['edition'];
+            $ISBN = $_POST['ISBN'];
+            $language = $_POST['language'];
             $category = $_POST['category'];
 
             //For file input, check whether image is selected or not 
@@ -54,15 +56,6 @@
             }
             
             //For radio input, check whether the button is selected or not
-            if (isset($_POST['featured'])) {
-                //Get the value from form            
-                $featured = $_POST['featured'];
-            }
-            else {
-                //Set the default value
-                $featured = "No";
-            }
-
             if (isset($_POST['active'])) {
                 //Get the value from form
                 $active = $_POST['active'];
@@ -77,6 +70,8 @@
                 title = '$title',
                 author = '$author',
                 edition = '$edition',
+                ISBN = '$ISBN',
+                language = '$language',
                 image_name = '$image_name',
                 category_id = $category,
                 featured = '$featured',
@@ -192,6 +187,12 @@
                                 <td><input type="text" class="form-control" name="edition" placeholder="Enter the year of publication and/or edition"></td>
                             </tr>
                             <tr>
+                                <td><input type="text" class="form-control" name="ISBN" placeholder="Enter the ISBN"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="language" placeholder="Enter the book language"></td>
+                            </tr>
+                            <tr>
                                 <td>Select Image:
                                     <input type="file" name="image">
                                 </td>
@@ -234,12 +235,6 @@
 
                                         ?>
 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Featured: 
-                                    <input type="radio" name="featured" value="Yes">   Yes
-                                    <input type="radio" name="featured" value="No">   No
                                 </td>
                             </tr>
                             <tr>

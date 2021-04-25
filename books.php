@@ -42,7 +42,7 @@
                     
                         /* Display all categories that are active */
 
-                        $sql = "SELECT * FROM tbl_category WHERE featured='Yes' AND active='Yes'"; //SQL query
+                        $sql = "SELECT * FROM tbl_category WHERE active='Yes'"; //SQL query
 
                         $res = mysqli_query($conn, $sql);   //Execute the query
 
