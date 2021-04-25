@@ -43,7 +43,7 @@ include('partials-front-admin/header.php');
                         <h1 class="title text-center">Dashboard</h1>
                     </div>            
                     <div class="col-3">
-                        <div class="box text-center ">
+                        <div class="box1 text-center">
 
                             <?php 
                             
@@ -56,13 +56,13 @@ include('partials-front-admin/header.php');
                                 $count = mysqli_num_rows($res); //Count rows
 
                             ?>
-
+                            <a href="manage-categories.php">
                             <h1><?php echo $count ?></h1>
                             <br />
-                            Categories
+                            <p>Categories</p>
                         </div>
-                        <div class="box text-center ">
-
+                            </a>
+                        <div class="box2 text-center ">
                             <?php 
                             
                             include('config.php');
@@ -74,31 +74,54 @@ include('partials-front-admin/header.php');
                                 $count2 = mysqli_num_rows($res2); //Count rows
 
                             ?>
-
+                            <a href="manage-books.php">
                             <h1><?php echo $count2 ?></h1>
                             <br />
-                            Books
+                            <p>Books</p>
                         </div>
-                        <div class="box text-center ">
+                            </a>
+                        
+                        <div class="box3 text-center ">
+                                <?php 
+                                
+                                include('config.php');
 
-                            <?php 
-                            
-                            include('config.php');
+                                    $sql3 = "SELECT * FROM tbl_reservation WHERE status='Reserved' ";    //SQL query
 
-                                $sql3 = "SELECT * FROM tbl_reservation WHERE status='Reserved' ";    //SQL query
+                                    $res3 = mysqli_query($conn, $sql3);   //Execute query
 
-                                $res3 = mysqli_query($conn, $sql3);   //Execute query
+                                    $count3 = mysqli_num_rows($res3); //Count rows
 
-                                $count3 = mysqli_num_rows($res3); //Count rows
+                                ?>
+                                <a href="manage-reservations.php">
+                                <h1><?php echo $count3 ?></h1>
+                                <br />
+                                <p>Reservations</p>
+                            </div>
+                                </a>
 
-                            ?>
-                            <h1><?php echo $count3 ?></h1>
-                            <br />
-                            Reservations
-                        </div>
+                                <div class="box4 text-center ">
+                                <?php 
+                                
+                                include('config.php');
+
+                                    $sql4 = "SELECT * FROM tbl_admin ";    //SQL query
+
+                                    $res4 = mysqli_query($conn, $sql4);   //Execute query
+
+                                    $count4 = mysqli_num_rows($res4); //Count rows
+
+                                ?>
+                                <a href="manage-accounts.php">
+                                <h1><?php echo $count4 ?></h1>
+                                <br />
+                                <p>Accounts</p>
+                            </div>
+                                </a>
+
                     </div>
                     
-                    <br><br><br>
+                    <br><br><br><br><br>
                     
                     <div class="clearfix"></div>
                 </div>

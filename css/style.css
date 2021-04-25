@@ -1680,12 +1680,69 @@ a:link {
     justify-content: center;
 }
 
-.site-banner-admin .main-content .box {
+.site-banner-admin .main-content h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: lighter;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: -6px;
+}
+
+.site-banner-admin .main-content p {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.site-banner-admin .main-content .box1 {
+    border-radius: 10px;
     width: 250px;
-    background-color: rgb(255, 172, 172);
     margin: 50px;
     padding: 20px;
     float: left;
+    background: #2193b0;
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+.site-banner-admin .main-content .box2 {
+    border-radius: 10px;
+    width: 250px;
+    margin: 50px;
+    padding: 20px;
+    float: left;
+    background: #11998e;
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    background: linear-gradient(to right, #38ef7d, #11998e);    
+}
+
+.site-banner-admin .main-content .box3 {
+    border-radius: 10px;
+    width: 250px;
+    margin: 50px;
+    padding: 20px;
+    float: left;
+    background: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
+}
+
+.site-banner-admin .main-content .box4 {
+    border-radius: 10px;
+    width: 250px;
+    margin: 50px;
+    padding: 20px;
+    float: left;
+    background: #ED213A;
+    background: -webkit-linear-gradient(to left, #93291E, #ED213A);
+    background: linear-gradient(to left, #93291E, #ED213A);
 }
 
 /* End Admin Area */
