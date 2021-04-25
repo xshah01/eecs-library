@@ -144,7 +144,18 @@
                             <h3>Books available</h3>
                         </div>
                         <div class="col-sm-3">
-                            <h1 class="num">128</h1>
+                            <?php 
+                            
+                            include('config.php');
+
+                                $sql = "SELECT * FROM tbl_reservation WHERE status='Reserved' ";    //SQL query
+
+                                $res = mysqli_query($conn, $sql);   //Execute query
+
+                                $count = mysqli_num_rows($res); //Count rows
+
+                            ?>
+                            <h1><?php echo $count ?></h1>
                             <h2></h2>
                             <h3>Total Reservations</h3>
                         </div>
@@ -217,7 +228,7 @@
                             <div class="col-lg-4 text-center"></div>
                             <div class="col-lg-4 text-center"></div>
                             <div class="col-lg-4 text-center">
-                                <h1 class="num">Recycle your books</h1>
+                                <h1>Recycle your books</h1>
                                 <h2></h2>
                                 <h3 style="text-align: justify;">Books are an important part of our lives but many 
                                     of us still struggle with old and unwanted books that takes up space in our 

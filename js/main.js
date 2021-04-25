@@ -17,23 +17,23 @@ $(window).load(function(){
   })
 
 /* Fixed Navbar */
-const toTop = document.querySelector(".to-top");
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 1000) {
-      toTop.classList.add("active");
-    } else {
-      toTop.classList.remove("active");
-    }
-
-  })
-
-/* Fixed Navbar */
 window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
       header.classList.toggle("sticky", window.scrollY > 0);
   })
 
-/* Scroll to Top */
+  /* Scroll to Top */
+const toTop = document.querySelector(".to-top");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 1000) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+
+})
+
+/* Scroll to Top - används? */
 $(function() {
     $('a[href*=#]').on('click', function(e) {
       e.preventDefault();

@@ -64,17 +64,5 @@ include('config.php');
         })
     </script>
 
-    <!-- Number CounterUp OBS! FUNGERAR EJ-->
-    <script src="../VisualStudio/Counter-Up-master/jquery.counterup.min.js"></script>
-    <script src="../VisualStudio/imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $('.num').counterUp ({
-                delay: 1000,
-                time: 1000
-            });
-        });
-    </script>
-
 </body>
 </html>
