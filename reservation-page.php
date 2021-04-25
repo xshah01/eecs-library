@@ -121,7 +121,9 @@
                                         <br>
                                         <input name="phone" type="text" class="form-control" placeholder="Phone">
                                         <br>
-                                        <input name="submit" type="submit" class="form-control submit" value="Reserve your book">
+                                        <a href="<?php echo SITEURL; ?>confirmation-page.php?book_id=<?php echo $book_id; ?>">
+                                            <input name="submit" type="submit" class="form-control submit" value="Reserve your book">  
+                                        </a>
                                     </form>
                                 </div>
 
@@ -159,11 +161,10 @@
                                         /* Execute the query */
                                         $res2 = mysqli_query($conn, $sql2);
 
-                                        /* Check whether query is executed successfullt or not */
+                                        /* Check whether query is executed successfully or not */
                                         if($res2 == TRUE) {
 
-                                            $_SESSION['reservation'] = "Book reserved succesfully";
-                                            header("location: ".SITEURL.'books.php');    //Display message on the same page
+                                            echo "<script>window.location.href='confirmation-page.php';</script>";    //Display message on confirmation page
 
                                         }
 

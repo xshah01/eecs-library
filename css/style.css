@@ -1033,7 +1033,7 @@ header.sticky ul li a:hover {
     background-color: transparent;
 }
 
-.site-banner-confirmation-page h1 {
+.site-banner-confirmation-page .confirmation-page h1 {
     font-family: 'Abril Fatface', cursive;
 	font-size: 65px;
 	color: rgb(49, 49, 49);
@@ -1041,80 +1041,36 @@ header.sticky ul li a:hover {
     padding-bottom: 100px;
 }
 
-.site-banner-confirmation-page .book-img {
-    float: left;
+.site-banner-confirmation-page .confirmation-page h4 {
+    font-family: sans-serif;
+	font-size: 30px;
+	color: rgb(59, 59, 59);
+    text-align: center;
+    padding-bottom: 10px;
 }
 
-.site-banner-confirmation-page .book-description {
-    width: 65%;
-    float: left;
-    margin-left: 5%;
+.site-banner-confirmation-page .confirmation-page p {
+    font-family: sans-serif;
+	font-size: 20px;
+	color: rgb(59, 59, 59);
+    text-align: center;
+    padding-bottom: 100px;
 }
 
-.site-banner-confirmation-page .book-description h4 {
-    font-size: 2rem;
-    color: rgb(206, 182, 116, 0.774);
+.site-banner-confirmation-page .confirmation-page a {
+    font-family: sans-serif;
+	font-size: 20px;
+	color: rgb(206, 182, 116, 0.774);
+    text-align: center;
+    padding-bottom: 100px;
 }
 
-.site-banner-confirmation-page .book-description .author {
-    font-size: 1.5rem;
-    color: rgb(49, 49, 49);
-}
-
-.site-banner-confirmation-page .book-description .edition {
-    font-size: 1.25rem;
-    color: rgb(100, 100, 100);
-}
-
-.site-banner-confirmation-page .book-description .ISBN {
-    font-size: 1rem;
-    color: rgb(100, 100, 100);
-}
-
-.site-banner-confirmation-page .book-description .language {
-    font-size: 1rem;
-    color: rgb(100, 100, 100);
-}
-
-.site-banner-confirmation-page .contact-form {
-    width: 88%;
-    padding-left: 11%;
-    float: left;
-}
-
-.site-banner-confirmation-page legend {
-    padding-left: 10px;
-    padding-bottom: 2%;
-    color: rgb(49, 49, 49);
-}
-
-.site-banner-confirmation-page .form-control {
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
-    border-radius: 0;
-    background: transparent;
-    outline: none;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-}
-
-.site-banner-confirmation-page .submit {
-    padding: 1rem 3rem;
-    font: var(--roboto);
-    font-size: 12px;
-    letter-spacing: 0.2125rem;
-    border: none;
-    background: rgb(206, 182, 116, 0.774);
-    background-clip: padding-box;
-    color: rgba(0, 0, 0, 0.774);
-    transition: background .6s ease;
-    text-transform: uppercase;
-}
-
-.site-banner-confirmation-page .submit:hover {
-    background: var(206, 182, 116, 0.774);
-    color:  rgba(255, 255, 255, 0.774);
-    box-shadow: var(--box-shadow);
+.site-banner-confirmation-page .confirmation-page a:hover {
+    font-family: sans-serif;
+	font-size: 20px;
+	color: rgb(59, 59, 59);
+    text-align: center;
+    padding-bottom: 100px;
 }
 
 /* End Confirmation Area */
