@@ -4,7 +4,6 @@
     <?php 
 
         include('config.php');
-        include('login-check.php');
 
         //When submit button is clicked:
 

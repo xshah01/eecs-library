@@ -3,7 +3,6 @@
     <?php 
 
         include('config.php');
-        include('login-check.php');
     
         /* Process the value from Form and save it in database */
 

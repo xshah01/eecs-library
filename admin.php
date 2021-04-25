@@ -29,7 +29,6 @@ include('partials-front-admin/header.php');
                     <?php 
 
                         include('config.php');
-                        include('login-check.php');
 
                         if(isset($_SESSION['login'])) {
                             echo $_SESSION['login'];  //Display session message

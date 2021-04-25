@@ -27,7 +27,6 @@
                 $_SESSION['login'] = "Welcome Admin"; //Admin available and login success
                 $_SESSION['admin'] = $email;    //Check whether admin is logged in or not. Logout will unset it
                 header("location: ".SITEURL.'admin.php'); //Redirect to Admin
-                exit(0);
 
             }
 

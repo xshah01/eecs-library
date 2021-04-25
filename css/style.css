@@ -1070,23 +1070,23 @@ header.sticky ul li a:hover {
     text-align: center;
 }
   
-  #clockdiv{
-      font-family: sans-serif;
-      color: #fff;
-      display: inline-block;
-      font-weight: 100;
-      text-align: center;
-      font-size: 30px;
+#clockdiv {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
   }
   
-  #clockdiv > div{
-      padding: 10px;
-      border-radius: 3px;
-      background: rgb(206, 182, 116, 0.774);
-      display: inline-block;
+#clockdiv > div {
+    padding: 10px;
+    border-radius: 3px;
+    background: rgb(206, 182, 116, 0.774);
+    display: inline-block;
   }
   
-  #clockdiv div > span{
+#clockdiv div > span {
       padding: 15px;
       border-radius: 3px;
       background: rgba(192, 154, 51, 0.774);
@@ -1631,7 +1631,7 @@ a:link {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/admin-bg.jpg);
+    background: url(../img/accounts-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }

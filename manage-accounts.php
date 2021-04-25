@@ -33,7 +33,6 @@ include('partials-front-admin/header.php');
                     <?php 
 
                     include('config.php');
-                    include('login-check.php');
 
                         if(isset($_SESSION['add'])) {
                             echo $_SESSION['add'];  //Display session message

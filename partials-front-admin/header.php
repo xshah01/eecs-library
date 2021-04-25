@@ -2,6 +2,8 @@
 
 include('config.php');
 
+include('login-check.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +57,7 @@ include('config.php');
                 <li><a id="books" href="manage-books.php">Books</a></li>
                 <li><a id="reservations" href="manage-reservations.php">Reservations</a></li>
                 <li><a id="admin" href="admin.php">Admin</a></li>
-                <li><a id="logout" href="login.php">Logout</a></li>
+                <li><a id="logout" href="logout.php">Logout</a></li>
             </ul>
     </header>
 

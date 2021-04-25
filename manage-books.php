@@ -33,7 +33,6 @@ include('partials-front-admin/header.php');
                     <?php 
 
                     include('config.php');
-                    include('login-check.php');
 
                         if(isset($_SESSION['upload'])) {
                             echo $_SESSION['upload'];  //Display session message
@@ -104,7 +103,6 @@ include('partials-front-admin/header.php');
                         <?php 
 
                         include('config.php');
-                        include('login-check.php');
 
                         $sql = "SELECT * FROM tbl_book";
 
