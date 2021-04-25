@@ -75,6 +75,7 @@
                                 while($row2=mysqli_fetch_assoc($res2)) {
 
                                     /* Get the values */
+                                    $id = $row['id'];
                                     $title = $row2['title'];
                                     $author = $row2['author'];
                                     $edition = $row2['edition'];
