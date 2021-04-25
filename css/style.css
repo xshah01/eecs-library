@@ -865,7 +865,7 @@ header.sticky ul li a:hover {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/books3-bg.jpg);
+    background: url(../img/books2-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
