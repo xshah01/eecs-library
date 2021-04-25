@@ -2,7 +2,7 @@
     
     include('partials-front/header.php');
 
-    ?>
+?>
 
     <!-- ========================= Start Main Area ========================= -->
 
@@ -41,7 +41,10 @@
                             $search = $_POST['search'];
 
                             /* SQL query to get the books based on search key word */
-                            $sql = "SELECT * FROM tbl_book WHERE title LIKE '%$search%' OR author LIKE '%$search%'";  
+                            $sql = "SELECT * FROM tbl_book WHERE 
+                            title LIKE '%$search%' OR 
+                            ISBN LIKE '%$search%' OR 
+                            author LIKE '%$search%' ";  
 
                             /* Execute the query */
                             $res = mysqli_query($conn, $sql);
@@ -82,9 +85,11 @@
                                                 <h4><?php echo $title; ?></h4>
                                                 <p class="author"><?php echo $author; ?></p>
                                                 <p class="edition"><?php echo $edition; ?></p>
-                                                <button type="button" class="btn-reserve-book" 
-                                                    onclick="window.location.href='reservation-page.php?book_id=<?php echo $id; ?>';">Reserve Book
-                                                </button>
+                                                <a href="<?php echo SITEURL; ?>reservation-page.php?book_id=<?php echo $id; ?>">
+                                                    <button 
+                                                        type="button" class="btn-reserve-book">Reserve Book
+                                                    </button>   
+                                                </a>
                                             </div>
                                         </div>
 

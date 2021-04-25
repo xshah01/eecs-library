@@ -146,9 +146,11 @@
                                                 <h4><?php echo $title; ?></h4>
                                                 <p class="author"><?php echo $author; ?></p>
                                                 <p class="edition"><?php echo $edition; ?></p>
-                                                <button type="button" class="btn-reserve-book" 
-                                                    onclick="window.location.href='reservation-page.php?book_id=<?php echo $id; ?>';">Reserve Book
-                                                </button>
+                                                <a href="<?php echo SITEURL; ?>reservation-page.php?book_id=<?php echo $id; ?>">
+                                                    <button 
+                                                        type="button" class="btn-reserve-book">Reserve Book
+                                                    </button>   
+                                                </a>
                                             </div>
                                         </div>
 

@@ -2,38 +2,7 @@
     
     include('partials-front/header.php');
 
-    ?>
-
-    <?php  
-
-    include('config.php');
-
-        /* Check whether id is passed or not */
-        if(isset($_GET['category_id'])) {
-
-            $category_id = $_GET['category_id'];    //Category id is set, get the id
-            
-            /* Get the category title based on category id */
-            $sql = "SELECT title FROM tbl_category WHERE id=$category_id";
-
-            /* Execute the query */
-            $res = mysqli_query($conn, $sql);
-            
-            /* Get the value from database*/
-            $row = mysqli_fetch_assoc($res);
-
-            /* Get the title */
-            $category_title = $row['title'];
-
-        }
-
-        else {
-
-            header("location: ".SITEURL.'books.php');   //Redirect to book page
-
-        }
-
-    ?>
+?>
 
     <!-- ========================= Start Main Area ========================= -->
 
@@ -44,6 +13,36 @@
         <section id="scroll" class="site-banner-category-book-search">
             <div class="bg-image-books"></div>
                 <div class="col-lg-7">
+                <?php  
+
+                include('config.php');
+
+                    /* Check whether id is passed or not */
+                    if(isset($_GET['category_id'])) {
+
+                        $category_id = $_GET['category_id'];    //Category id is set, get the id
+                        
+                        /* Get the category title based on category id */
+                        $sql = "SELECT title FROM tbl_category WHERE id=$category_id";
+
+                        /* Execute the query */
+                        $res = mysqli_query($conn, $sql);
+                        
+                        /* Get the value from database */
+                        $row = mysqli_fetch_assoc($res);
+
+                        /* Get the title */
+                        $category_title = $row['title'];
+
+                    }
+
+                    else {
+
+                        header("location: ".SITEURL.'books.php');   //Redirect to book page
+
+                    }
+
+                ?>
                     <h3 class="books-title text-center">"<?php echo $category_title; ?>"</h3>
                     <h2></h2>
                 </div>
@@ -75,7 +74,7 @@
                                 while($row2=mysqli_fetch_assoc($res2)) {
 
                                     /* Get the values */
-                                    $id = $row['id'];
+                                    $id = $row2['id'];
                                     $title = $row2['title'];
                                     $author = $row2['author'];
                                     $edition = $row2['edition'];
@@ -102,9 +101,11 @@
                                                 <h4><?php echo $title; ?></h4>
                                                 <p class="author"><?php echo $author; ?></p>
                                                 <p class="edition"><?php echo $edition; ?></p>
-                                                <button type="button" class="btn-reserve-book" 
-                                                    onclick="window.location.href='reservation-page.php?book_id=<?php echo $id; ?>';">Reserve Book
-                                                </button>
+                                                <a href="<?php echo SITEURL; ?>reservation-page.php?book_id=<?php echo $id; ?>">
+                                                    <button 
+                                                        type="button" class="btn-reserve-book">Reserve Book
+                                                    </button>   
+                                                </a>
                                             </div>
                                         </div>
 

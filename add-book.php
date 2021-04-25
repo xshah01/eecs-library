@@ -74,7 +74,6 @@
                 language = '$language',
                 image_name = '$image_name',
                 category_id = $category,
-                featured = '$featured',
                 active = '$active' ";
 
             //Execute query and save data into database
