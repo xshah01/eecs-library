@@ -102,7 +102,7 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-add-admin">
+        <section id="scroll" class="site-banner-add-update-admin">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
@@ -115,7 +115,7 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="add-admin-title">
+                    <div class="add-update-admin-title">
                         <h1 class="title">Update Admin</h1>
                     </div>
 

@@ -1723,14 +1723,14 @@ table {
 
 /* End Accounts Area */
 
-/* Start Add Admin Area */
+/* Start Add and Update Admin Area */
 
 .clearfix {
     float: none;
     clear: both;
 }
 
-.site-banner-add-admin .bg-image-accounts {
+.site-banner-add-update-admin .bg-image-accounts {
     position: relative;
     width: 100%;
     height: 75vh;
@@ -1739,7 +1739,7 @@ table {
     filter: brightness(80%);
 }
 
-.site-banner-add-admin .admin-title {
+.site-banner-add-update-admin .admin-title {
     font-family: 'Abril Fatface', cursive;
 	font-size: 85px;
 	color: #FFF;
@@ -1747,7 +1747,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-add-admin h2 {
+.site-banner-add-update-admin h2 {
     position: relative;
     content: " ";
     display: block;
@@ -1758,7 +1758,7 @@ table {
     z-index: 2;
 }
 
-.site-banner-add-admin .main-content .add-admin-title h1 {
+.site-banner-add-update-admin .main-content .add-update-admin-title h1 {
     padding-top: 100px;
     padding-left: 175px;
     padding-bottom: 30px;
@@ -1766,7 +1766,7 @@ table {
     font-family: sans-serif;
 }
 
-.site-banner-add-admin .form-control {
+.site-banner-add-update-admin .form-control {
     margin-left: -10px;
     width: 400px;
     border: none;
@@ -1778,7 +1778,7 @@ table {
     font-size: 15px;
 }
 
-.site-banner-add-admin .form-control-submit {
+.site-banner-add-update-admin .form-control-submit {
     padding: 1rem 3rem;
     width: 100%;
     font: var(--roboto);
@@ -1791,18 +1791,18 @@ table {
     text-transform: uppercase;
 }
 
-.site-banner-add-admin .form-control-submit:hover {
+.site-banner-add-update-admin .form-control-submit:hover {
     background: white;
     color:  black;
     border: 1px solid black;
     margin: -1px;
 }
 
-.site-banner-add-admin .clearfix {
+.site-banner-add-update-admin .clearfix {
     padding-top: 200px;
 }
 
-/* End Add Admin Area */
+/* End Add and Update Admin Area */
 
 /* Start Change Password Area */
 
@@ -2177,3 +2177,215 @@ table {
 }
 
 /* End Update Category and Books Area */
+
+/* ================================================ Reservations ======================================================= */
+
+/* Start Update Reservation Area */
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.site-banner-reservations .bg-image-accounts {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url(../img/accounts-bg.jpg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+
+.site-banner-reservations .reservations-title {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 85px;
+	color: #FFF;
+    transform: translate(37%, -450%);
+    z-index: 2;
+}
+
+.site-banner-reservations h2 {
+    position: relative;
+    content: " ";
+    display: block;
+    margin-left: 44%;
+    width: 10%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(380%, -22000%);
+    z-index: 2;
+}
+
+.site-banner-reservations .main-content .manage-reservations-title h1 {
+    padding-left: 175px;
+    padding-bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+.tbl-full {
+    width: 100%;
+}
+
+.site-banner-reservations .add-reservation-button {
+    padding-left: 175px;
+}
+
+.btn-add-reservation {
+    padding: 1.5%;
+    font: var(--roboto);
+    font-size: 12px;
+    letter-spacing: 0.2rem;
+    position: relative;
+    border: none;
+    background: black;
+    background-clip: padding-box;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn-add-reservation:hover {
+    background: white;
+    color:  black;
+    border: 1px solid black;
+    margin: -1px;
+}
+
+.admin-message {
+    padding-left: 175px;
+    color:rgb(6, 82, 221);
+}
+
+.btn-update-reservation {
+    padding: 6px;
+    font: var(--roboto);
+    font-size: 12px;
+    position: relative;
+    border: none;
+    background: rgb(11, 232, 129);
+    background-clip: padding-box;
+    color: black;
+    text-transform: uppercase;
+}
+
+.btn-update-reservation:hover {
+    background: rgb(11, 232, 129);
+    color:  white;
+    margin: -.01px;
+}
+
+.btn-delete-reservation {
+    padding: 6px;
+    font: var(--roboto);
+    font-size: 12px;
+    position: relative;
+    border: none;
+    background: rgb(255, 63, 52);
+    background-clip: padding-box;
+    color: black;
+    text-transform: uppercase;
+}
+
+.btn-delete-reservation:hover {
+    background: rgb(255, 63, 52);
+    color:  white;
+    margin: -.01px;
+}
+
+.site-banner-reservations table tr th {
+    padding-top: 100px;
+    padding-left: 12px;
+    padding-bottom: 35px;
+    text-align: left;
+}
+
+.site-banner-reservations table tr td {
+    padding-left: 12px;
+    padding-bottom: 15px;
+}
+
+.site-banner-reservations table {
+    margin-bottom: 125px;
+}
+
+/* End Reservations Area */
+
+/* Start Add and Update Admin Area */
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.site-banner-update-reservation .bg-image-accounts {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url(../img/accounts-bg.jpg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+
+.site-banner-update-reservation .reservations-title {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 85px;
+	color: #FFF;
+    transform: translate(37%, -450%);
+    z-index: 2;
+}
+
+.site-banner-update-reservation h2 {
+    position: relative;
+    content: " ";
+    display: block;
+    margin-left: 44%;
+    width: 10%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(380%, -22000%);
+    z-index: 2;
+}
+
+.site-banner-update-reservation .main-content .update-reservation-title h1 {
+    padding-top: 100px;
+    padding-left: 175px;
+    padding-bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+.site-banner-update-reservation .form-control {
+    margin-left: -10px;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.site-banner-update-reservation .form-control-submit {
+    padding: 1rem 3rem;
+    width: 100%;
+    font: var(--roboto);
+    font-size: 12px;
+    letter-spacing: 0.2125rem;
+    border: none;
+    background: black;
+    background-clip: padding-box;
+    color: white;
+    text-transform: uppercase;
+}
+
+.site-banner-update-reservation .form-control-submit:hover {
+    background: white;
+    color:  black;
+    border: 1px solid black;
+    margin: -1px;
+}
+
+.site-banner-update-reservation .clearfix {
+    padding-top: 200px;
+}
+
+/* End Update Reservation Area */

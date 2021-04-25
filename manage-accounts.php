@@ -193,6 +193,9 @@
                                         }
                     
                         }
+                        else {
+                            echo "Accounts not available";
+                        }
 
                     ?>
 

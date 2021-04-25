@@ -168,7 +168,7 @@
                                                             
                                     else {
 
-                                        header("location: ".SITEURL.'books.php');    //Stay on same page
+                                        header("location: ".SITEURL.'books.php');    //Redirect to book page
 
                                     }
                                                             

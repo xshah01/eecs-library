@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounts</title>
+    <title>Categories</title>
 
     <!-- bootstrap file via jsDelivr -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
@@ -61,12 +61,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-accounts">
+        <section id="scroll" class="site-banner-reservations">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="accounts-title text-center">Reservations</h3>
+                            <h3 class="reservations-title text-center">Reservations</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -74,63 +74,133 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="manage-accounts-title">
+                    <div class="manage-reservations-title">
                         <h1 class="title">Manage Reservations</h1>
                     </div>
 
-                    <div class="add-account-button">
-                    <!-- Button to add admin -->
-                    <button type="button" class="btn-add-admin mr-4" 
-                        onclick="window.location.href='home.php';">add reservation
-                    </button>
+                    <div class="admin-message">
+
+                    <!-- Display message Admin message -->
+                    <?php 
+
+                    include('config.php');
+
+                        if(isset($_SESSION['delete'])) {
+                            echo $_SESSION['delete'];  //Display session message
+                            unset($_SESSION['delete']);   //Remove session message
+                        }
+
+                        if(isset($_SESSION['update'])) {
+                            echo $_SESSION['update'];  //Display session message
+                            unset($_SESSION['update']);   //Remove session message
+                        }
+
+                    ?>
+
                     </div>
 
                     <table class="tbl-full">
                         <tr>
                             <th>ID</th>
-                            <th>Full Name</th>
-                            <th>E-mail</th>
+                            <th>Book</th>
+                            <th>Author</th>
+                            <th>Edition</th>
+                            <th>Student Name</th>
+                            <th>Student Email</th>
+                            <th>Student Phone</th>
+                            <th>Status</th>
+                            <th>Reservation Date</th>
                             <th>Manage</th>
                         </tr>
+
+                        <?php
+
+                        include('config.php');
+                        
+                            $sql = "SELECT * FROM tbl_reservation";
+
+                            /* Execute query */
+                            $res = mysqli_query($conn, $sql);
+
+                            /* Check whether query is executed or not */
+                            if($res == TRUE) {
+
+                                /* Count rows to check whether we have data in database or not */
+                                $count = mysqli_num_rows($res);  //Function to get all rows in database
+
+                                $sn = 4001;
+
+                                /* Check the number of rows */
+                                if($count > 0) {
+                                    /* We have data in database */
+                                    /* While loop get all data from database and will run as long as there is data to fetch */
+                                    while($rows = mysqli_fetch_assoc($res)) {
+                                        $id = $rows['id'];  //Get individual data
+                                        $book = $rows['book'];
+                                        $author = $rows['author'];
+                                        $edition = $rows['edition'];
+                                        $student_name = $rows['student_name'];
+                                        $student_email = $rows['student_email'];
+                                        $student_phone = $rows['student_phone'];
+                                        $status = $rows['status'];
+                                        $reservation_date = $rows['reservation_date'];
+
+                        ?>
+
+                        <!-- Display the values in our table -->
                         <tr>
-                            <td>1</td>
-                            <td>Shadab Ahmed</td>
-                            <td>shadaba@kth.se</td>
+                            <td><?php echo $sn++; ?></td>
+                            <td><?php echo $book; ?></td>
+                            <td><?php echo $author; ?></td>
+                            <td><?php echo $edition; ?></td>
+                            <td><?php echo $student_name; ?></td>
+                            <td><?php echo $student_email; ?></td>
+                            <td><?php echo $student_phone; ?></td>
+
                             <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
+                                <?php 
+                                
+                                    /* Display "Reserved", "Active", "Inactive" in different colors */
+                                    if($status == "Reserved") {
+                                        echo "<label style='color: blue';>$status</label>";
+                                    }
+                                    elseif($status == "Active") {
+                                        echo "<label style='color: green';>$status</label>";
+                                    }
+                                    elseif($status == "Inactive") {
+                                        echo "<label style='color: red';>$status</label>";
+                                    }
+                                
+                                ?>
+                            </td>
+
+                            <td><?php echo $reservation_date; ?></td>
+                            <td>
+                            <a href="<?php echo SITEURL; ?>update-reservation.php?id=<?php echo $id; ?>">
+                                <button type="button" class="btn-update-reservation mr-4">update rvn</button>
+                            </a>
+                            <a href="<?php echo SITEURL; ?>delete-reservation.php?id=<?php echo $id; ?>">
+                                <button type="button" class="btn-delete-reservation mr-4">delete rvn</button>
+                            </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Hamed Khavari</td>
-                            <td>hkhavari@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Rami Achkoudir</td>
-                            <td>ramiac@kth.se</td>
-                            <td>
-                                <button type="button" class="btn-update-admin mr-4" 
-                                    onclick="window.location.href='home.php';">update admin
-                                </button>
-                                <button type="button" class="btn-delete-admin mr-4" 
-                                    onclick="window.location.href='home.php';">delete admin
-                                </button>
-                            </td>
-                        </tr>
+
+                        <?php
+
+                            }
+                                    }
+                                    else {
+                                        exit(); // No data in database
+                                    }
+
+                            }
+
+                            else {
+                                echo "Reservations not available";
+                            }
+
+                        ?>
+
                     </table>
                     <div class="clearfix"></div>
                 </div>
@@ -143,46 +213,8 @@
     
     <!-- ========================= End Main Area ========================= -->
 
-    <!-- ========================= Start Footer Area ========================= -->
-
-    <footer class="footer-area">
-        <div class="container">
-            <div class="">
-                <div class="site-logo text-center py-4">
-                    <a href="#"><img src="./img/eecslogofooter.png" alt="logo"></a>
-                </div>
-                <div class="footer-text text-center py-4">Book reservations made easy.</div>
-                <div class="copyright text-center">
-                    <p class="para">Copyright © 2021. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ========================= End Footer Area ========================= -->
-
-        <!-- ========================= Start Scrool to Top ========================= -->
-
-        <a href="#" class="to-top">
-            <i class="fas fa-chevron-up"></i>
-        </a>
-        
-        <!-- ========================= End Scroll to Top ========================= -->
-
-
-    <!--  Jquery js file  -->
-    <script src="./js/jquery.3.5.1.js"></script>
-
-    <!-- Bootstrap js file -->
-    <script src="./js/bootstrap.min.js"></script>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <?php 
     
-    <!-- Custom js file -->
-    <script src="./js/main.js"></script>
+    include('partials-front/footer.php');
 
-</body>
-</html>
+    ?>
