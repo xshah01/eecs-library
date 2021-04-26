@@ -137,6 +137,7 @@ body {
     color: rgb(247, 183, 49);
     letter-spacing: 0.3rem;
     font-weight: lighter;
+    transition: .1s ease-in-out;
   }
 
   .login-page footer .fp .icon {
