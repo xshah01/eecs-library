@@ -58,7 +58,7 @@ body {
     font-size: 40px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-left: 135px;
+    padding-left: 132px;
   }
 
   .login-page .headings h1 {
@@ -67,7 +67,7 @@ body {
     font-weight: lighter;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-left: 143px;
+    text-align: center;
     margin-bottom: -10px;
   }
   

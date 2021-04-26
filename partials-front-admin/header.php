@@ -55,7 +55,7 @@ include('login-check.php');
                 <li><a id="accounts" href="manage-accounts.php">Accounts</a></li>
                 <li><a id="categories" href="manage-categories.php">Categories</a></li>
                 <li><a id="books" href="manage-books.php">Books</a></li>
-                <li><a id="reservations" href="manage-reservations.php">Reservations</a></li>
+                <li><a id="reservations" href="manage-reservations.php">Reservations/Loans</a></li>
                 <li><a id="admin" href="admin.php">Admin</a></li>
                 <li><a id="logout" href="logout.php">Logout</a></li>
             </ul>

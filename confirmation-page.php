@@ -107,3 +107,7 @@
     include('partials-front/footer.php');
 
     ?>
+
+    <!-- Confetti js file -->
+    <script src="js/confetti.js"></script>
+

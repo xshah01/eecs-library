@@ -61,6 +61,7 @@ header ul li a {
     transition: 0.2s;
 }
 
+#student,
 #accounts,
 #categories,
 #books,
@@ -93,6 +94,7 @@ header ul li a:hover {
     color: black;
 }
 
+#student:hover,
 #accounts:hover,
 #categories:hover,
 #books:hover,
@@ -116,7 +118,7 @@ header.sticky ul li a:hover {
     color: rgb(255, 166, 0, 0.849);
 }
 
-.sticky #accounts:hover, .sticky #categories:hover, .sticky #books:hover, .sticky #reservations:hover, .sticky #admin:hover {
+.sticky #student:hover, .sticky #accounts:hover, .sticky #categories:hover, .sticky #books:hover, .sticky #reservations:hover, .sticky #admin:hover {
     color: rgb(255, 166, 0, 0.849);
 }
 
@@ -2669,3 +2671,154 @@ table {
 }
 
 /* End Add and Update Reservation Area */
+
+/* ==================================================== Student =========================================================== */
+
+/* Start Student Area */
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.row {
+    display: flex;
+}
+
+.column-right,
+.column-left {
+    flex: 50%;
+}
+
+.site-banner-student .bg-image-student {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url(../img/student-bg.jpg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+.site-banner-student .student-title {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 85px;
+	color: #FFF;
+    transform: translate(37%, -450%);
+    z-index: 2;
+}
+
+.site-banner-student h2 {
+    position: relative;
+    content: " ";
+    display: block;
+    margin-left: 44%;
+    width: 10%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(380%, -22000%);
+    z-index: 2;
+}
+
+.site-banner-student .main-content .account-title h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 50px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .account-title p {
+    content: " ";
+    display: block;
+    width: 7%;
+    margin-left: 47%;
+    padding-top: 14px;
+    border-bottom: 2px solid rgb(59, 59, 59);
+}
+
+.welcome-message {
+    font-family: sans-serif;
+	font-size: 25px;
+    color:rgb(6, 82, 221);
+    padding-left: 612px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.site-banner-student .main-content .container h4 {
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.site-banner-student .main-content .container p {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(100, 100, 100);
+}
+
+.site-banner-student .main-content .container .edit {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+.site-banner-student .main-content .container .edit:hover {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.site-banner-student .main-content .container a {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+.site-banner-student .main-content .container a:hover {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.site-banner-student .main-content .container button {
+    background-color: transparent;
+    border: 1px solid rgb(100, 100, 100);
+    padding: 6px 18px;
+    font-family: sans-serif;
+    color: rgb(100, 100, 100);
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.site-banner-student .main-content .container button:hover {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    transition: .1s ease-in;
+}
+
+.site-banner-student .main-content .my-information {
+    padding-top: 100px;
+    padding-left: 200px;
+}
+
+.site-banner-student .main-content .books {
+    padding-top: 100px;
+    padding-left: 250px;
+}
+
+.site-banner-student .main-content .reservations {
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* End Student Area */

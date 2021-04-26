@@ -230,11 +230,11 @@
                             <div class="col-lg-4 text-center">
                                 <h1>Recycle your books</h1>
                                 <h2></h2>
-                                <h3 style="text-align: justify;">Books are an important part of our lives but many 
-                                    of us still struggle with old and unwanted books that takes up space in our 
-                                    shelves. When you decide it's time to part with them, we want you to know that 
-                                    they can go to a nice home where they can continue to enrich and improve other 
-                                    student's education. We gracefully accept all kinds of books.</h3>
+                                <h3 style="text-align: justify;">Books are an important part of our lives but. 
+                                Yet, many of us still struggle with old and unwanted books that takes up space 
+                                in our shelves. When you decide it's time to part with them, we want you to know 
+                                that they can go to a nice home where they can continue to enrich and improve 
+                                other student's education. We gratefully accept all kinds of books.</h3>
                             </div>
                             <div class="d-flex flex-row flex-wrap">
                                 <a href="contact.php">
