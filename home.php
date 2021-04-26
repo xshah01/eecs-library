@@ -37,7 +37,7 @@
 
         <section id="Bookshelf" class="book-area">
             <div class="project-title">
-                <h1 class="title">Bookshelf</h1>
+                <h1 class="title text-center">Popular books</h1>
                 <h2></h2>
             </div>
             <div class="container text-center">
