@@ -54,7 +54,7 @@ include('config.php');
                 <li><a href="<?php echo SITEURL; ?>services.php">Services</a></li>
                 <li><a href="<?php echo SITEURL; ?>about-us.php">About us</a></li>
                 <li><a href="<?php echo SITEURL; ?>contact.php">Contact us</a></li>
-                <li><a id="admin" href="<?php echo SITEURL; ?>login.php">Admin</a></li>
+                <li><a id="admin" href="<?php echo SITEURL; ?>admin.php">Admin</a></li>
             </ul>
     </header>
 
