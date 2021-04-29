@@ -81,7 +81,7 @@ include('partials-front-admin/header.php');
                     <br><br>
 
                     <div class="add-book-button">
-                    <!-- Button to add admin -->
+                    <!-- Button to add book -->
                     <button type="button" class="btn-add-book mr-4" 
                         onclick="window.location.href='add-book.php';">add book
                     </button>

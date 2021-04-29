@@ -38,9 +38,52 @@ include('partials-front/header-student.php');
                             <div class="my-information">
                                 <div class="col-xl-11">
                                     <h4>My information</h4>
-                                        <p>Shadab Ahmed<p>
-                                        <p>shadaba@kth.se<p>
-                                        <p>073 896 55 42<p>
+
+                                    <?php 
+
+                                    include('config.php');
+
+                                        /* Check whether id is set or not */
+                                        if(isset($_SESSION['StudentID'])) {
+
+                                            
+
+                                            /* Get all details based on id */                   
+                                            $sql = "SELECT * FROM tbl_student WHERE id=$id"; //Create SQL query to retrieve the details
+
+                                            $res = mysqli_query($conn, $sql); //Execute the query
+
+                                            $count = mysqli_num_rows($res); //Check whether data is available or not
+
+                                            /* Check whether reservation data has been retrieved or not */
+                                            if($count == 1) {
+
+                                                $row = mysqli_fetch_assoc($res);   //Retrieve the details
+                                                                            
+                                                $student_name = $row['student_name'];
+                                                $student_email = $row['student_email'];
+                                                $student_phone = $row['student_phone'];
+                                            
+                                            }
+                                            
+                                            else {
+                                                
+                                                header("location: ".SITEURL.'home.php'); //Redirect to Home page
+                                            
+                                            }
+
+                                        }
+
+                                        else {
+
+                                            header("location: ".SITEURL.'home.php'); //Redirect to Home page
+
+                                        }
+
+                                    ?>
+                                        <p><?php echo $student_name; ?><p>
+                                        <p><?php echo $student_email; ?><p>
+                                        <p><?php echo $student_phone; ?><p>
                                         <br>
                                         <p>
                                             <a href="#" class="edit">

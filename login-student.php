@@ -24,6 +24,12 @@
             
             if($count == 1) {
 
+                session_register(email);
+                session_register(password);
+            
+                $_SESSION['email'] = $_POST['email']; // store email
+                $_SESSION['password'] = $_POST['password']; // store password
+
                 $_SESSION['admin'] = $email;    //Check whether student is logged in or not. Logout will unset it
                 header("location: ".SITEURL.'student.php'); //Redirect to Student
                 exit(0);
