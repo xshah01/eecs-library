@@ -11,7 +11,7 @@
 
             //Retrieve data from form
             $email = $_POST['email'];
-            $password = md5($_POST['password']);
+            $password = ($_POST['password']);
 
             //SQL to check whether admin with email and password exists or not
             $sql = "SELECT * FROM tbl_admin WHERE email = '$email' AND password = '$password'";
