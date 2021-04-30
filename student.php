@@ -115,6 +115,11 @@ include('partials-front/header-student.php');
                                             unset($_SESSION['password-not-match']);   //Remove session message
                                         }
 
+                                        if(isset($_SESSION['delete'])) {
+                                            echo $_SESSION['delete'];  //Display session message
+                                            unset($_SESSION['delete']);   //Remove session message
+                                        }
+
                                     ?>
 
                                     </div>
@@ -173,14 +178,13 @@ include('partials-front/header-student.php');
 
 
                                         <br>
-                                        <p>
-                                            <a href="<?php echo SITEURL; ?>update-student.php?id=<?php echo $id; ?>" class="edit">
-                                                Edit information ›</a>
-                                        </p>
-                                        <p>
-                                            <a href="<?php echo SITEURL; ?>change-password-student.php?id=<?php echo $id; ?>" class="edit">
-                                                Change password ›</a>
-                                        </p>
+                                        <a href="<?php echo SITEURL; ?>update-student.php?id=<?php echo $id; ?>"><p class="edit">
+                                                Account settings ›</p>
+                                        </a>
+                                        <a href="<?php echo SITEURL; ?>change-password-student.php?id=<?php echo $id; ?>"><p class="edit">
+                                                Change password ›</p>
+                                        </a>
+                                        <br><br><br>
                                         <button
                                             onclick="window.location.href='logout-student.php';">Logout
                                         </button>      
@@ -193,12 +197,11 @@ include('partials-front/header-student.php');
                                 <div class="col-xl-11">
                                     <br>
                                     <h4>Books</h4>
-                                        <a href="#" class="reservations-loans">
-                                            My reservations ›
+                                        <a href="#reservations"><p class="edit">
+                                            My reservations ›</p>
                                         </a>
-                                        <br><br>
-                                        <a href="#" class="reservations-loans">
-                                            My loans ›
+                                        <a href="#"><p class="edit">
+                                            My loans ›</p>
                                         </a>
                                 </div>
                             </div>
@@ -206,9 +209,9 @@ include('partials-front/header-student.php');
                     </div>
                 </div>
 
-                <br><br><br><br><br>
+                <br><br><br><br>
 
-                <div class="reservations">
+                <div class="reservations" id="reservations">
 
                 </div>
                     

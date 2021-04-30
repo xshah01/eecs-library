@@ -122,7 +122,14 @@
                                 </td>
                             </tr>
                         </table>
-                    </form>
+                    </form> 
+
+                    <div class="delete-account">
+                        <a href="<?php echo SITEURL; ?>delete-student.php?id=<?php echo $id; ?>" 
+                            onclick="return confirm('Are you sure you want to delete your account?');">
+                                <button class="delete-account-btn">delete account</button>
+                        </a>
+                    </div>
                     
                     <div class="clearfix"></div>
                 </div>

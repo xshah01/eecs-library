@@ -1,0 +1,21 @@
+<?php
+
+    include('config.php');
+
+    session_destroy();
+
+    $id = $_GET['id'];  //Get the id from student to be deleted
+
+    $sql = "DELETE FROM tbl_student WHERE id=$id";    //Create SQL query to delete admin from database
+
+     $res = mysqli_query($conn, $sql);  //Execute the query
+
+     if ($res == TRUE) {
+        header("location: ".SITEURL.'home.php'); //Redirect to Home page
+     }
+     else {
+        $_SESSION['delete'] = "Failed to Delete Student";   //Create a session variable to display message
+        header("location: ".SITEURL.'student.php');
+     }
+
+?>
