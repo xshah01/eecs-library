@@ -139,7 +139,18 @@
 	            <div class="parallax-inner">
                     <div class="row">
                         <div class="col-sm-3">
-                            <h1 class="num">584</h1>
+                        <?php 
+                            
+                            include('config.php');
+
+                                $sql = "SELECT * FROM tbl_book";    //SQL query
+
+                                $res = mysqli_query($conn, $sql);   //Execute query
+
+                                $count = mysqli_num_rows($res); //Count rows
+
+                            ?>
+                            <h1><?php echo $count ?></h1>
                             <h2></h2>
                             <h3>Books available</h3>
                         </div>
@@ -148,14 +159,14 @@
                             
                             include('config.php');
 
-                                $sql = "SELECT * FROM tbl_reservation WHERE status='Reserved' ";    //SQL query
+                                $sql2 = "SELECT * FROM tbl_reservation WHERE status='Reserved' ";    //SQL query
 
-                                $res = mysqli_query($conn, $sql);   //Execute query
+                                $res2 = mysqli_query($conn, $sql2);   //Execute query
 
-                                $count = mysqli_num_rows($res); //Count rows
+                                $count2 = mysqli_num_rows($res2); //Count rows
 
                             ?>
-                            <h1><?php echo $count ?></h1>
+                            <h1><?php echo $count2 ?></h1>
                             <h2></h2>
                             <h3>Total Reservations</h3>
                         </div>
