@@ -15,7 +15,53 @@ include('partials-front-admin/header.php');
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="admin-title text-center">Admin</h3>
+
+                        <?php 
+                            
+                            include('config.php');
+
+                                /* Check whether admin is set or not */
+                                if(isset($_SESSION['email'])) {
+
+                                    $email = $_SESSION['email'];
+                                    $password = $_SESSION['password'];
+
+                                    /* Get all details based on email and password */                   
+                                    $sql1 = "SELECT * FROM tbl_admin WHERE email = '$email' AND password = '$password'"; //Create SQL query to retrieve the name
+
+                                    $res1 = mysqli_query($conn, $sql1); //Execute the query
+
+                                    $count1 = mysqli_num_rows($res1); //Check whether data is available or not
+
+                                    /* Check whether reservation data has been retrieved or not */
+                                    if($count1 == 1) {
+
+                                        $row1 = mysqli_fetch_assoc($res1);   //Retrieve the details
+                                                                    
+                                        $full_name = $row1['full_name'];
+
+                                        ?>
+
+                                        <h3 class="admin-title text-center"><?php echo $full_name ?></h3>
+
+                                        <?php
+
+                                    }
+
+                                    else {
+                                                
+                                        
+                                        }
+
+                                }
+
+                                else {
+                                               
+                                        
+                                }
+
+                            ?>
+
                             <h2></h2>
                         </div>    
                     </div> 

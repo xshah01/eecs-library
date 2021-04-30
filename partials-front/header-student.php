@@ -2,6 +2,8 @@
 
 include('config.php');
 
+include('login-check-student.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -54,8 +56,8 @@ include('config.php');
                 <li><a href="<?php echo SITEURL; ?>services.php">Services</a></li>
                 <li><a href="<?php echo SITEURL; ?>about-us.php">About us</a></li>
                 <li><a href="<?php echo SITEURL; ?>contact.php">Contact us</a></li>
-                <li><a id="student" href="<?php echo SITEURL; ?>student.php">Student</a></li>
-                <li><a id="admin" href="<?php echo SITEURL; ?>admin.php">Admin</a></li>
+                <li><a id="student" href="student.php">Student</a></li>
+                <li><a id="logout" href="logout-student.php">Logout</a></li>
             </ul>
     </header>
 

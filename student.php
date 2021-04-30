@@ -15,7 +15,53 @@ include('partials-front/header-student.php');
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="student-title text-center">Student</h3>
+
+                            <?php 
+                            
+                            include('config.php');
+
+                                /* Check whether student is set or not */
+                                if(isset($_SESSION['email'])) {
+
+                                    $email = $_SESSION['email'];
+                                    $password = $_SESSION['password'];
+
+                                    /* Get all details based on email and password */                   
+                                    $sql2 = "SELECT * FROM tbl_student WHERE email = '$email' AND password = '$password'"; //Create SQL query to retrieve the name
+
+                                    $res2 = mysqli_query($conn, $sql2); //Execute the query
+
+                                    $count2 = mysqli_num_rows($res2); //Check whether data is available or not
+
+                                    /* Check whether reservation data has been retrieved or not */
+                                    if($count2 == 1) {
+
+                                        $row2 = mysqli_fetch_assoc($res2);   //Retrieve the details
+                                                                    
+                                        $full_name = $row2['full_name'];
+
+                                        ?>
+
+                                        <h3 class="student-title text-center"><?php echo $full_name ?></h3>
+
+                                        <?php
+
+                                    }
+
+                                    else {
+                                                
+                                        
+                                        }
+
+                                }
+
+                                else {
+                                            
+                                        
+                                }
+
+                            ?>
+
                             <h2></h2>
                         </div>    
                     </div> 
@@ -76,7 +122,6 @@ include('partials-front/header-student.php');
 
                                             else {
                                                 
-                                                header("location: ".SITEURL.'home.php'); //Redirect to Home page
                                             
                                             }
 
@@ -84,7 +129,6 @@ include('partials-front/header-student.php');
                                         
                                         else {
 
-                                            header("location: ".SITEURL.'home.php'); //Redirect to Home page
 
                                         }
 

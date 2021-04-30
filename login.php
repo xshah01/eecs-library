@@ -24,6 +24,9 @@
             
             if($count == 1) {
 
+                $_SESSION['email'] = $_POST['email']; // store email
+                $_SESSION['password'] = $_POST['password']; // store password
+                
                 $_SESSION['login'] = "Welcome Admin"; //Admin available and login success
                 $_SESSION['admin'] = $email;    //Check whether admin is logged in or not. Logout will unset it
                 header("location: ".SITEURL.'admin.php'); //Redirect to Admin
