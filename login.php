@@ -102,6 +102,11 @@
                             <i class="fas fa-users-cog"></i>
                         </h1>
                     </div>
+                    <a href="home.php">
+                        <div class="home-link">
+                            <p>Take me to home page</p>
+                        </div>
+                    </a>
                 </footer>
             </div>
             </div>
