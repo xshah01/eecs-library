@@ -68,6 +68,7 @@
                                             if($image_name != "") {
                                                 ?>
                                                     <img src="<?php echo SITEURL; ?>img/categories/<?php echo $image_name; ?>" alt="">
+                                                    <br><br>
                                                 <?php
                                             }
                                             else {
