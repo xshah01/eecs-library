@@ -116,7 +116,6 @@ include('partials-front-admin/header.php');
                                     $id = $rows['id'];  //Get data
                                     $title = $rows['title'];
                                     $image_name = $rows['image_name'];
-                                    $featured = $rows['featured'];
                                     $active = $rows['active'];
 
                         ?>

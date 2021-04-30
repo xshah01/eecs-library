@@ -269,7 +269,7 @@ include('partials-front-admin/header.php');
                         }
 
                         else {
-                            echo "Reservations not available";
+                            echo "Loans not available";
                         }
 
                     ?>

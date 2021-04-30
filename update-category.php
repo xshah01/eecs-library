@@ -14,7 +14,6 @@
             $id = $_POST['id'];
             $title = $_POST['title'];
             $current_image = $_POST['current_image'];
-            $featured = $_POST['featured'];
             $active = $_POST['active'];
 
             /* Update the image if selected */
@@ -77,7 +76,6 @@
             $sql2 = "UPDATE tbl_category SET 
                 title = '$title',
                 image_name = '$image_name',
-                featured = '$featured',
                 active = '$active' WHERE id = $id ";
 
             /* Execute the query */
@@ -153,7 +151,6 @@
                                 
                                 $title = $row['title'];
                                 $current_image = $row['image_name'];
-                                $featured = $row['featured'];
                                 $active = $row['active'];
 
                             }
@@ -201,12 +198,6 @@
                             <tr>
                                 <td>Select New Image:
                                     <input type="file" name="image">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Featured: 
-                                    <input <?php if($featured == "Yes") {echo "checked";} ?> type="radio" name="featured" value="Yes">   Yes
-                                    <input <?php if($featured == "No") {echo "checked";} ?> type="radio" name="featured" value="No">   No
                                 </td>
                             </tr>
                             <tr>

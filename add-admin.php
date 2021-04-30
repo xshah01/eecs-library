@@ -12,7 +12,7 @@
 
             $full_name = $_POST['full_name'];
             $email = $_POST['email'];
-            $password = md5($_POST['password']);    //Encrypted password
+            $password = ($_POST['password']);    //Encrypted password
 
             //SQL query 
             $sql = "INSERT INTO tbl_admin SET
