@@ -42,14 +42,16 @@ include('partials-front/header-student.php');
                                     <?php 
 
                                     include('config.php');
+                                    
+                                        /* Check whether student is set or not */
+                                        if(isset($_SESSION['email'])) {
 
-                                        /* Check whether id is set or not */
-                                        if(isset($_SESSION['StudentID'])) {
+                                            $email = $_SESSION['email'];
+                                            $password = $_SESSION['password'];
 
-                                            
 
-                                            /* Get all details based on id */                   
-                                            $sql = "SELECT * FROM tbl_student WHERE id=$id"; //Create SQL query to retrieve the details
+                                            /* Get all details based on email and password */                   
+                                            $sql = "SELECT * FROM tbl_student WHERE email = '$email' AND password = '$password'"; //Create SQL query to retrieve the details
 
                                             $res = mysqli_query($conn, $sql); //Execute the query
 
@@ -60,12 +62,18 @@ include('partials-front/header-student.php');
 
                                                 $row = mysqli_fetch_assoc($res);   //Retrieve the details
                                                                             
-                                                $student_name = $row['student_name'];
-                                                $student_email = $row['student_email'];
-                                                $student_phone = $row['student_phone'];
-                                            
+                                                $full_name = $row['full_name'];
+                                                $email = $row['email'];
+                                                $phone = $row['phone'];
+
+                                                ?>
+                                                    <p><?php echo $full_name; ?><p>
+                                                    <p><?php echo $email; ?><p>
+                                                    <p><?php echo $phone; ?><p>
+                                                <?php
+
                                             }
-                                            
+
                                             else {
                                                 
                                                 header("location: ".SITEURL.'home.php'); //Redirect to Home page
@@ -73,7 +81,7 @@ include('partials-front/header-student.php');
                                             }
 
                                         }
-
+                                        
                                         else {
 
                                             header("location: ".SITEURL.'home.php'); //Redirect to Home page
@@ -81,9 +89,8 @@ include('partials-front/header-student.php');
                                         }
 
                                     ?>
-                                        <p><?php echo $student_name; ?><p>
-                                        <p><?php echo $student_email; ?><p>
-                                        <p><?php echo $student_phone; ?><p>
+
+
                                         <br>
                                         <p>
                                             <a href="#" class="edit">
