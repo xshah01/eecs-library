@@ -24,10 +24,9 @@ include('partials-front/header-student.php');
                                 if(isset($_SESSION['email'])) {
 
                                     $email = $_SESSION['email'];
-                                    $password = $_SESSION['password'];
 
-                                    /* Get all details based on email and password */                   
-                                    $sql2 = "SELECT * FROM tbl_student WHERE email = '$email' AND password = '$password'"; //Create SQL query to retrieve the name
+                                    /* Get all details based on email */                   
+                                    $sql2 = "SELECT * FROM tbl_student WHERE email = '$email'"; //Create SQL query to retrieve the name
 
                                     $res2 = mysqli_query($conn, $sql2); //Execute the query
 
@@ -48,16 +47,16 @@ include('partials-front/header-student.php');
 
                                     }
 
-                                    else {
+                                    else {  
                                                 
-                                        
+ 
                                         }
 
                                 }
 
                                 else {
-                                            
-                                        
+
+
                                 }
 
                             ?>
@@ -70,8 +69,6 @@ include('partials-front/header-student.php');
             <div class="main-content">
                 <div class="wrapper">
 
-                <div class="welcome-message">
-
                 </div>
                     <div class="account-title">
                         <h1 class="title text-center">My account</h1>
@@ -83,6 +80,47 @@ include('partials-front/header-student.php');
                         <div class="column-left">
                             <div class="my-information">
                                 <div class="col-xl-11">
+
+                                <style>
+                                        div.ex1 { 
+                                        margin-left: -175px;
+                                        }
+                                    </style>
+
+                                    <div class="admin-message ex1">
+
+                                    <!-- Display message Admin message -->
+                                    <?php 
+
+                                    include('config.php');
+
+                                        if(isset($_SESSION['update'])) {
+                                            echo $_SESSION['update'];  //Display session message
+                                            unset($_SESSION['update']);   //Remove session message
+                                        }
+
+                                        if(isset($_SESSION['change-password'])) {
+                                            echo $_SESSION['change-password'];  //Display session message
+                                            unset($_SESSION['change-password']);   //Remove session message
+                                            
+                                        }
+                
+                                        if(isset($_SESSION['student-not-found'])) {
+                                            echo $_SESSION['student-not-found'];  //Display session message
+                                            unset($_SESSION['student-not-found']);   //Remove session message
+                                        }
+                
+                                        if(isset($_SESSION['password-not-match'])) {
+                                            echo $_SESSION['password-not-match'];  //Display session message
+                                            unset($_SESSION['password-not-match']);   //Remove session message
+                                        }
+
+                                    ?>
+
+                                    </div>
+
+                                    <br>
+                                
                                     <h4>My information</h4>
 
                                     <?php 
@@ -92,12 +130,10 @@ include('partials-front/header-student.php');
                                         /* Check whether student is set or not */
                                         if(isset($_SESSION['email'])) {
 
-                                            $email = $_SESSION['email'];
-                                            $password = $_SESSION['password'];
+                                            $email = $_SESSION['email'];                                       
 
-
-                                            /* Get all details based on email and password */                   
-                                            $sql = "SELECT * FROM tbl_student WHERE email = '$email' AND password = '$password'"; //Create SQL query to retrieve the details
+                                            /* Get all details based on email */                   
+                                            $sql = "SELECT * FROM tbl_student WHERE email = '$email'"; //Create SQL query to retrieve the details
 
                                             $res = mysqli_query($conn, $sql); //Execute the query
 
@@ -107,13 +143,14 @@ include('partials-front/header-student.php');
                                             if($count == 1) {
 
                                                 $row = mysqli_fetch_assoc($res);   //Retrieve the details
-                                                                            
+
+                                                $id = $row['id'];  //Get individual data                            
                                                 $full_name = $row['full_name'];
                                                 $email = $row['email'];
                                                 $phone = $row['phone'];
 
                                                 ?>
-                                                    <p><?php echo $full_name; ?><p>
+                                                    <p class="name"><?php echo $full_name; ?><p>
                                                     <p><?php echo $email; ?><p>
                                                     <p><?php echo $phone; ?><p>
                                                 <?php
@@ -137,11 +174,15 @@ include('partials-front/header-student.php');
 
                                         <br>
                                         <p>
-                                            <a href="#" class="edit">
+                                            <a href="<?php echo SITEURL; ?>update-student.php?id=<?php echo $id; ?>" class="edit">
                                                 Edit information ›</a>
                                         </p>
+                                        <p>
+                                            <a href="<?php echo SITEURL; ?>change-password-student.php?id=<?php echo $id; ?>" class="edit">
+                                                Change password ›</a>
+                                        </p>
                                         <button
-                                            onclick="window.location.href='#';">Logout
+                                            onclick="window.location.href='logout-student.php';">Logout
                                         </button>      
                                         <br><br><br>           
                                 </div>
@@ -150,6 +191,7 @@ include('partials-front/header-student.php');
                         <div class="column-right">                              
                             <div class="books"> 
                                 <div class="col-xl-11">
+                                    <br>
                                     <h4>Books</h4>
                                         <a href="#" class="reservations-loans">
                                             My reservations ›
@@ -172,7 +214,6 @@ include('partials-front/header-student.php');
                     
                     <div class="clearfix"></div>
                 </div>
-            </div>
         </section>   
 
     </main>

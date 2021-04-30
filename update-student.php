@@ -13,24 +13,24 @@
             //Get all data from form to update
             $id = $_POST['id'];
             $full_name = $_POST['full_name'];
-            $email = $_POST['email'];
+            $phone = $_POST['phone'];
 
             //SQL query 
-            $sql = "UPDATE tbl_admin SET
+            $sql2 = "UPDATE tbl_student SET
                 full_name = '$full_name',
-                email = '$email' 
+                phone = '$phone'
                 WHERE id='$id' ";
 
             //Execute query and save new data into database
-            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+            $res2 = mysqli_query($conn, $sql2) or die(mysqli_error());
 
-            if($res == TRUE) {
-                $_SESSION['update'] = "Admin Updated Succesfully";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
+            if($res2 == TRUE) {
+                $_SESSION['update'] = "Student Updated Succesfully";   //Create a session variable to display message
+                header("location: ".SITEURL.'student.php'); //Redirect to Student if update is successful
             }
             else {
-                $_SESSION['update'] = "Failed to Update Admin";   //Create a session variable to display message
-                header("location: ".SITEURL.'manage-accounts.php');
+                $_SESSION['update'] = "Failed to Update Information";   //Create a session variable to display message
+                header("location: ".SITEURL.'student.php');
             }
 
         }
@@ -41,7 +41,7 @@
 
     <?php 
 
-    include('partials-front/header.php');
+    include('partials-front/header-student.php');
 
     ?>
 
@@ -51,12 +51,12 @@
 
         <!-- ==================== Start Banner Area ==================== -->
 
-        <section id="scroll" class="site-banner-add-update-admin">
+        <section id="scroll" class="site-banner-update-student">
             <div class="bg-image-accounts"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="admin-title text-center">Accounts</h3>
+                            <h3 class="student-title text-center">Student</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -64,8 +64,8 @@
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-                    <div class="add-update-admin-title">
-                        <h1 class="title">Update Admin</h1>
+                    <div class="update-student-title">
+                        <h1 class="title">Update Information</h1>
                     </div>
 
                     <?php 
@@ -76,7 +76,7 @@
                         $id=$_GET['id'];
 
                         //Create SQL query to retrieve the details
-                        $sql="SELECT * FROM tbl_admin WHERE id=$id";
+                        $sql="SELECT * FROM tbl_student WHERE id=$id";
 
                         //Execute the query
                         $res=mysqli_query($conn, $sql);
@@ -94,10 +94,11 @@
                                 
                                 $full_name = $row['full_name'];
                                 $email = $row['email'];
+                                $phone = $row['phone'];
 
                             }
                             else {
-                                header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
+                                header("location: ".SITEURL.'student.php'); //Redirect to Student
                             }
                         }
 
@@ -109,12 +110,15 @@
                                 <td><input type="text" class="form-control" name="full_name" value ="<?php echo $full_name; ?>"><br></td>
                             </tr>
                             <tr>
-                                <td><input type="text" class="form-control" name="email" value ="<?php echo $email; ?>"><br></td>
+                                <td><input type="text" class="form-control" name="email" value ="<?php echo $email; ?>" disabled style="color:gray;"><br></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="phone" value ="<?php echo $phone; ?>"><br></td>
                             </tr>
                             <tr>
                                 <td>
                                     <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                    <input type="submit" class="form-control-submit" name="submit" value="update admin"><br>
+                                    <input type="submit" class="form-control-submit" name="submit" value="update information"><br>
                                 </td>
                             </tr>
                         </table>

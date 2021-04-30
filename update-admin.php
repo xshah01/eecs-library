@@ -16,15 +16,15 @@
             $email = $_POST['email'];
 
             //SQL query 
-            $sql = "UPDATE tbl_admin SET
+            $sql2 = "UPDATE tbl_admin SET
                 full_name = '$full_name',
                 email = '$email' 
                 WHERE id='$id' ";
 
             //Execute query and save new data into database
-            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+            $res2 = mysqli_query($conn, $sql2) or die(mysqli_error());
 
-            if($res == TRUE) {
+            if($res2 == TRUE) {
                 $_SESSION['update'] = "Admin Updated Succesfully";   //Create a session variable to display message
                 header("location: ".SITEURL.'manage-accounts.php'); //Redirect to Manage Accounts
             }
