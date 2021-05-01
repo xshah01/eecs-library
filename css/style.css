@@ -2814,6 +2814,78 @@ table {
 
 /* End Student Area */
 
+/* Start Reservation Area */
+
+.site-banner-student .main-content .reservations {
+    height: 100vh;
+    width: 100%;
+}
+
+.divider {
+    width   : 100%;
+    position: relative;
+    z-index : 1;
+  }
+  
+  .divider:before {
+    content : "";
+    position: absolute;
+    left    : 10%;
+    width   : 80%;
+    border-bottom:1px solid rgb(214, 214, 214);
+  }
+
+.site-banner-student .main-content .reservation-title h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 50px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .reservation-title p {
+    content: " ";
+    display: block;
+    width: 7%;
+    margin-left: 47%;
+    padding-top: 14px;
+    border-bottom: 2px solid rgb(59, 59, 59);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* End Reservation Area */
+
+/* Start Loans Area */
+
+.site-banner-student .main-content .loans {
+    height: 100vh;
+    width: 100%;
+}
+
+.site-banner-student .main-content .loans-title h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 50px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .loans-title p {
+    content: " ";
+    display: block;
+    width: 7%;
+    margin-left: 47%;
+    padding-top: 14px;
+    border-bottom: 2px solid rgb(59, 59, 59);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* End Loans Area */
+
 /* Start Update Student Area */
 
 .clearfix {
@@ -3000,33 +3072,3 @@ table {
 }
 
 /* End Change Password Area */
-
-/* Start Reservation Area */
-
-.site-banner-student .main-content .reservations {
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(245, 245, 245);
-}
-
-.site-banner-student .main-content .reservation-title h1 {
-    font-family: 'Abril Fatface', cursive;
-	font-size: 50px;
-	color: rgb(59, 59, 59);
-}
-
-.site-banner-student .main-content .reservation-title p {
-    content: " ";
-    display: block;
-    width: 7%;
-    margin-left: 47%;
-    padding-top: 14px;
-    border-bottom: 2px solid rgb(59, 59, 59);
-}
-
-.wrapper {
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* End Reservation Area */

@@ -132,10 +132,10 @@ include('partials-front-admin/header.php');
                             <td><?php echo $reservation_date; ?></td>
                             <td>
                             <a href="<?php echo SITEURL; ?>update-reservation.php?id=<?php echo $id; ?>">
-                                <button type="button" class="btn-update-reservation mr-4">update reservation</button>
+                                <button type="button" class="btn-update-reservation mr-4">update resv</button>
                             </a>
                             <a href="<?php echo SITEURL; ?>delete-reservation.php?id=<?php echo $id; ?>">
-                                <button type="button" class="btn-delete-reservation mr-4">delete reservation</button>
+                                <button type="button" class="btn-delete-reservation mr-4">delete resv</button>
                             </a>
                             </td>
                         </tr>
