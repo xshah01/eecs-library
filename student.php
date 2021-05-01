@@ -213,6 +213,78 @@ include('partials-front/header-student.php');
 
                 <div class="reservations" id="reservations">
 
+                <br><br><br><br>
+
+                    <div class="reservation-title">
+                            <h1 class="title text-center">Reservations</h1>
+                            <p></p>
+                    </div>   
+
+                    <?php 
+                    
+                            /* Display all books that are active */
+
+                            $sql2 = "SELECT * FROM tbl_book WHERE active='Yes'"; //SQL query
+
+                            $res2 = mysqli_query($conn, $sql2);   //Execute the query
+
+                            $count2 = mysqli_num_rows($res2); //Count rows
+
+                            /* Check whether books are available or not */
+                            if($count2 > 0) {
+
+                                while($row=mysqli_fetch_assoc($res2)) {
+
+                                    /* Get the values */
+                                    $id = $row['id'];
+                                    $title = $row['title'];
+                                    $author = $row['author'];
+                                    $edition = $row['edition'];
+                                    $image_name = $row['image_name'];
+
+                                    /* Display the books */
+
+                                    ?>
+
+                                        <div class="boxes-books">
+                                            <div class="book-img">
+                                                <?php
+                                                    if($image_name != "") {
+                                                        ?>
+                                                            <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>" alt="">
+                                                        <?php
+                                                    }
+                                                    else {
+                                                        echo "Image not found";
+                                                    }
+                                                ?>
+                                            </div>
+                                            <div class="book-description">
+                                                <h4><?php echo $title; ?></h4>
+                                                <p class="author"><?php echo $author; ?></p>
+                                                <p class="edition"><?php echo $edition; ?></p>
+                                                <a href="<?php echo SITEURL; ?>reservation-page.php?book_id=<?php echo $id; ?>">
+                                                    <button 
+                                                        type="button" class="btn-reserve-book">Reserve Book
+                                                    </button>   
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    <?php
+
+                                }
+
+                            }
+
+                            else {
+
+                                echo "Books not found";
+            
+                            }
+
+                        ?>
+
                 </div>
                     
                     <div class="clearfix"></div>

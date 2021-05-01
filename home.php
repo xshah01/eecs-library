@@ -58,7 +58,7 @@
                         <div class="book-container">
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all calculus">
                                 <div class="img">
-                                    <a class="popup-img" href="images/1.jpg">
+                                    <a class="popup-img" href="books.php">
                                         <img src="img/portfolio/p1.jpg" alt="img">
                                     </a>
                                 </div>
@@ -69,7 +69,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all network">
                                 <div class="img">
-                                    <a class="popup-img" href="images/2.jpg">
+                                    <a class="popup-img" href="books.php">
                                         <img src="img/portfolio/p2.jpg" alt="img">
                                     </a>
                                 </div>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all database">
                                 <div class="img">
-                                    <a class="popup-img" href="images/3.jpg">
+                                    <a class="popup-img" href="books.php">
                                         <img src="img/portfolio/p3.jpg" alt="img">
                                     </a>
                                 </div>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all computerscience">
                                 <div class="img">
-                                    <a class="popup-img" href="images/4.jpg">
+                                    <a class="popup-img" href="books.php">
                                         <img src="img/portfolio/p4.jpg" alt="img">
                                     </a>
                                 </div>
@@ -102,7 +102,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all database">
                                 <div class="img">
-                                    <a class="popup-img" href="images/5.jpg">
+                                    <a class="popup-img" href="books.php">
                                         <img src="img/portfolio/p5.jpg" alt="img">
                                     </a>
                                 </div>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all calculus">
                                 <div class="img">
-                                    <a class="popup-img" href="images/6.jpg">
+                                    <a class="popup-img" href="books.php">
                                         <img src="img/portfolio/p6.jpg" alt="img">
                                     </a>
                                 </div>

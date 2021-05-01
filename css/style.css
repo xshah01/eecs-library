@@ -2316,6 +2316,7 @@ table {
 }
 
 .site-banner-books table {
+    margin-left: -10px;
     margin-bottom: 125px;
 }
 
@@ -2806,12 +2807,6 @@ table {
     padding-left: 250px;
 }
 
-
-.site-banner-student .main-content .reservations {
-    height: 100vh;
-    background-color: rgb(245, 245, 245);
-}
-
 .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -2905,18 +2900,18 @@ table {
     font: var(--roboto);
     font-size: 12px;
     letter-spacing: 0.2125rem;
-    border: none;
-    background: red;
+    border: 1px solid red;
+    background: white;
     background-clip: padding-box;
-    color: white;
+    color: red;
     text-transform: uppercase;
 }
 
 .site-banner-update-student .delete-account-btn:hover {
     border: 1px solid red;
-    background: white;
-    color: red;
-    margin: -.9px;
+    background: red;
+    color: white;
+    margin: -.1px;
 }
 
 .site-banner-update-student .clearfix {
@@ -3005,3 +3000,33 @@ table {
 }
 
 /* End Change Password Area */
+
+/* Start Reservation Area */
+
+.site-banner-student .main-content .reservations {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+
+.site-banner-student .main-content .reservation-title h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 50px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .reservation-title p {
+    content: " ";
+    display: block;
+    width: 7%;
+    margin-left: 47%;
+    padding-top: 14px;
+    border-bottom: 2px solid rgb(59, 59, 59);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* End Reservation Area */
