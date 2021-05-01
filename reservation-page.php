@@ -164,7 +164,7 @@
                                         /* Check whether query is executed successfully or not */
                                         if($res2 == TRUE) {
 
-                                            echo "<script>window.location.href='confirmation-page.php';</script>";    //Display message on confirmation page
+                                            echo "<script>window.location.href='confirmation-page.php';</script>";    //Redirect to confirmation page
 
                                         }
 

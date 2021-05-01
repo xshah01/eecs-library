@@ -578,7 +578,7 @@ header.sticky ul li a:hover {
 /* Start Scroll-to-top button */
 
 .to-top {
-    background: rgb(255, 218, 150);
+    background: rgb(206, 182, 116, 0.774);
     position: fixed;
     bottom: 1px;
     right: 32px;
@@ -590,7 +590,7 @@ header.sticky ul li a:hover {
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     opacity: 0;
     pointer-events: none;
@@ -2817,7 +2817,7 @@ table {
 /* Start Reservation Area */
 
 .site-banner-student .main-content .reservations {
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -2832,7 +2832,7 @@ table {
     position: absolute;
     left    : 10%;
     width   : 80%;
-    border-bottom:1px solid rgb(214, 214, 214);
+    border-bottom:1px solid rgb(100, 100, 100);
   }
 
 .site-banner-student .main-content .reservation-title h1 {
@@ -2850,6 +2850,51 @@ table {
     border-bottom: 2px solid rgb(59, 59, 59);
 }
 
+.site-banner-student .reservations .boxes-books {
+    width: 80%;
+    float: left;
+    margin: 1%;
+    padding-top: 6%;
+    padding-left: 11%;
+    margin-bottom: -2%;
+    background-color: transparent;
+}
+
+.site-banner-student .reservations .book-img {
+    float: left;
+}
+
+.site-banner-student .reservations .book-description {
+    width: 65%;
+    float: left;
+    margin-left: 5%;
+}
+
+.site-banner-student .reservations .book-description h4 {
+    font-size: 2rem;
+    color: rgb(206, 182, 116, 0.774);
+}
+
+.site-banner-student .reservations .book-description .author {
+    font-size: 1.5rem;
+    color: rgb(49, 49, 49);
+}
+
+.site-banner-student .reservations .book-description .edition {
+    font-size: 1.25rem;
+    color: rgb(100, 100, 100);
+}
+
+.site-banner-student .reservations .book-description .ISBN {
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+}
+
+.site-banner-student .reservations .book-description .date {
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+}
+
 .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -2860,8 +2905,9 @@ table {
 /* Start Loans Area */
 
 .site-banner-student .main-content .loans {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    margin-top: 10%;
 }
 
 .site-banner-student .main-content .loans-title h1 {
@@ -2877,6 +2923,51 @@ table {
     margin-left: 47%;
     padding-top: 14px;
     border-bottom: 2px solid rgb(59, 59, 59);
+}
+
+.site-banner-student .loans .boxes-books {
+    width: 80%;
+    float: left;
+    margin: 1%;
+    padding-top: 6%;
+    padding-left: 11%;
+    margin-bottom: -2%;
+    background-color: transparent;
+}
+
+.site-banner-student .loans .book-img {
+    float: left;
+}
+
+.site-banner-student .loans .book-description {
+    width: 65%;
+    float: left;
+    margin-left: 5%;
+}
+
+.site-banner-student .loans .book-description h4 {
+    font-size: 2rem;
+    color: rgb(206, 182, 116, 0.774);
+}
+
+.site-banner-student .loans .book-description .author {
+    font-size: 1.5rem;
+    color: rgb(49, 49, 49);
+}
+
+.site-banner-student .loans .book-description .edition {
+    font-size: 1.25rem;
+    color: rgb(100, 100, 100);
+}
+
+.site-banner-student .loans .book-description .ISBN {
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+}
+
+.site-banner-student .loans .book-description .date {
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
 }
 
 .wrapper {

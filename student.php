@@ -67,13 +67,10 @@ include('partials-front/header-student.php');
                 </div>
             </div>    
             <div class="main-content">
-                <div class="wrapper">
-
-                </div>
-                    <div class="account-title">
-                        <h1 class="title text-center">My account</h1>
-                        <p></p>
-                    </div>            
+                <div class="account-title">
+                    <h1 class="title text-center">My account</h1>
+                    <p></p>
+                </div>            
                 
                 <div class="container">
                     <div class="row">
@@ -221,23 +218,189 @@ include('partials-front/header-student.php');
                         <p></p>
                     </div>   
 
-                    <!-- Display Reservations -->
-                    
+                        <?php
+
+                        include('config.php');
+                                    
+                            //SQL Query for reservations based on student_email        
+                            $sql3 = "SELECT * FROM tbl_reservation 
+                                INNER JOIN tbl_book 
+                                ON tbl_reservation.ISBN = tbl_book.ISBN 
+                                WHERE student_email = '$email'
+                                AND status = 'Reserved'";
+
+                                //Execute query
+                                $res3 = mysqli_query($conn, $sql3);
+
+                                //Check whether query is executed or not
+                                if($res3 == TRUE) {
+
+                                    //Count rows to check whether we have data in database or not
+                                    $count3 = mysqli_num_rows($res3);  //Function to get all rows in database
+
+                                    //Check the number of rows
+                                    if($count3 > 0) {
+                                        //We have data in database
+                                        //While loop get all data from database and will run as long as there is data to fetch
+                                        while($rows3 = mysqli_fetch_assoc($res3)) {
+                                            $title = $rows3['book'];
+                                            $author = $rows3['author'];
+                                            $edition = $rows3['edition'];
+                                            $ISBN = $rows3['ISBN'];
+                                            $image_name = $rows3['image_name'];
+                                            $reservation_date = $rows3['reservation_date'];
+
+                        ?>
+
+                        <!-- Display Reservations -->
+
+                        <div class="boxes-books">
+                            <div class="column-image">
+                                <div class="book-img">
+                                    <?php
+                                        if($image_name != "") {
+                                            ?>
+                                                <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>" alt="">
+                                            <?php
+                                        }
+                                        else {
+                                            echo "Image not found";
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="column-description">
+                                <div class="book-description">
+                                    <h4><?php echo $title; ?></h4>
+                                        <p class="author"><?php echo $author; ?></p>
+                                        <p class="edition"><?php echo $edition; ?></p> 
+                                        <p class="ISBN"><?php echo $ISBN; ?></p>
+                                        <p class="date"><?php echo $reservation_date; ?></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php
+
+                                        }       
+                                    }
+                                            
+                                    else {
+
+                                        exit(); // No data in database
+                                            
+                                    }
+                        
+                                }
+
+                                else {
+
+                                    echo "No Reservations";
+                                        
+                                }
+
+                        ?>
+
                 </div>
 
-                <div class="loans" id="loans">
+                <div class="clearfix"></div>
 
-                <div class="divider"></div>
+                <div class="loans">
 
-                <br><br><br><br><br>
+                    <div class="divider"></div>
+
+                    <br><br><br><br><br>
 
                     <div class="loans-title">
                         <h1 class="title text-center">Loans</h1>
                         <p></p>
                     </div>   
 
-                    <!-- Display Loans -->
-                    
+                    <?php
+
+                        include('config.php');
+                                    
+                            //SQL Query for reservations based on student_email        
+                            $sql4 = "SELECT * FROM tbl_reservation 
+                                INNER JOIN tbl_book 
+                                ON tbl_reservation.ISBN = tbl_book.ISBN 
+                                WHERE student_email = '$email'
+                                AND status = 'Active'";
+
+                                //Execute query
+                                $res4 = mysqli_query($conn, $sql4);
+
+                                //Check whether query is executed or not
+                                if($res4 == TRUE) {
+
+                                    //Count rows to check whether we have data in database or not
+                                    $count4 = mysqli_num_rows($res4);  //Function to get all rows in database
+
+                                    //Check the number of rows
+                                    if($count4 > 0) {
+                                        //We have data in database
+                                        //While loop get all data from database and will run as long as there is data to fetch
+                                        while($rows4 = mysqli_fetch_assoc($res4)) {
+                                            $title = $rows4['book'];
+                                            $author = $rows4['author'];
+                                            $edition = $rows4['edition'];
+                                            $ISBN = $rows4['ISBN'];
+                                            $image_name = $rows4['image_name'];
+                                            $reservation_date = $rows4['reservation_date'];
+
+                        ?>
+
+                        <!-- Display Loans -->
+
+                        <div class="boxes-books">
+                            <div class="column-image">
+                                <div class="book-img">
+                                    <?php
+                                        if($image_name != "") {
+                                            ?>
+                                                <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>" alt="">
+                                            <?php
+                                        }
+                                        else {
+                                            echo "Image not found";
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="column-description">
+                                <div class="book-description">
+                                    <h4><?php echo $title; ?></h4>
+                                        <p class="author"><?php echo $author; ?></p>
+                                        <p class="edition"><?php echo $edition; ?></p> 
+                                        <p class="ISBN"><?php echo $ISBN; ?></p>
+                                        <p class="date"><?php echo $reservation_date; ?></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php
+
+                                        }       
+                                    }
+                                            
+                                    else {
+
+                                        exit(); // No data in database
+                                            
+                                    }
+                        
+                                }
+
+                                else {
+
+                                    echo "No Reservations";
+                                        
+                                }
+
+                        ?>
+
                 </div>
                     
                     <div class="clearfix"></div>
