@@ -8,7 +8,7 @@
                 </div>
                 <div class="footer-text text-center py-4">Book reservations made easy.</div>
                 <div class="copyright text-center">
-                    <p class="para">Copyright © 2021. All rights reserved.</p>
+                    <p class="para">Copyright © 2021 KTH. All rights reserved.</p>
                 </div>
             </div>
         </div>
