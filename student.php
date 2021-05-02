@@ -279,7 +279,7 @@ include('partials-front/header-student.php');
                                         <p class="edition"><?php echo $edition; ?></p> 
                                         <p class="ISBN"><?php echo $ISBN; ?></p>
                                         <p class="date"><?php echo $reservation_date; ?>
-                                            (Pick up this book within 24h starting from this timestamp 
+                                            (Pick up this book no later than the next day 
                                             or you reservation will be terminated)</p>
 
                                 </div>
@@ -355,9 +355,15 @@ include('partials-front/header-student.php');
                                             $image_name = $rows4['image_name'];
                                             $reservation_date = $rows4['reservation_date'];
 
+                                            /* Calculate "remaining days of loan" */
+                                            $date1 = new DateTime('now');  //Current date
+                                            $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 60 days'))) ;   //Future date
+                                            $diff = $date2->diff($date1)->format("%a");  //Find difference
+                                            $days = intval($diff);   //Rounding days
+
                         ?>
 
-                        <!-- Display Loans -->
+                        <!-- Display Active Loans -->
 
                         <div class="boxes-books">
                             <div class="column-image">
@@ -380,7 +386,7 @@ include('partials-front/header-student.php');
                                         <p class="author"><?php echo $author; ?></p>
                                         <p class="edition"><?php echo $edition; ?></p> 
                                         <p class="ISBN"><?php echo $ISBN; ?></p>
-                                        <p class="date"><?php echo $reservation_date; ?></p>
+                                        <p class="date"><?php echo "Days remaining: <label style='color: blue';>$days</label>"; ?></p>
 
                                 </div>
                             </div>
@@ -407,6 +413,88 @@ include('partials-front/header-student.php');
 
                         ?>
 
+                        <?php
+
+                        include('config.php');
+                                    
+                            //SQL Query for reservations based on student_email        
+                            $sql5 = "SELECT * FROM tbl_reservation 
+                                INNER JOIN tbl_book 
+                                ON tbl_reservation.ISBN = tbl_book.ISBN 
+                                WHERE student_email = '$email'
+                                AND status = 'Inactive'";
+
+                                //Execute query
+                                $res5 = mysqli_query($conn, $sql5);
+
+                                //Check whether query is executed or not
+                                if($res5 == TRUE) {
+
+                                    //Count rows to check whether we have data in database or not
+                                    $count5 = mysqli_num_rows($res5);  //Function to get all rows in database
+
+                                    //Check the number of rows
+                                    if($count5 > 0) {
+                                        //We have data in database
+                                        //While loop get all data from database and will run as long as there is data to fetch
+                                        while($rows5 = mysqli_fetch_assoc($res5)) {
+                                            $title = $rows5['book'];
+                                            $author = $rows5['author'];
+                                            $edition = $rows5['edition'];
+                                            $ISBN = $rows5['ISBN'];
+                                            $image_name = $rows5['image_name'];
+
+                        ?>
+
+                        <!-- Display Inactive Loans -->
+
+                        <div class="boxes-books">
+                            <div class="column-image">
+                                <div class="book-img">
+                                    <?php
+                                        if($image_name != "") {
+                                            ?>
+                                                <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>" alt="">
+                                            <?php
+                                        }
+                                        else {
+                                            echo "Image not found";
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="column-description">
+                                <div class="book-description">
+                                    <h4><?php echo "<label style='color: red';>$title</label>"; ?></h4>
+                                        <p class="author"><?php echo "<label style='color: red';>$author</label>"; ?></p>
+                                        <p class="edition"><?php echo "<label style='color: red';>$edition</label>"; ?></p> 
+                                        <p class="ISBN"><?php echo "<label style='color: red';>$ISBN</label>"; ?></p>
+                                        <p class="date"><?php echo "Days remaining: <label style='color: red';>0</label> 
+                                        (Return this book as soon as possible to avoid late fee)"; ?></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php
+
+                                        }       
+                                    }
+                                            
+                                    else {
+                                                                            
+                                            
+                                    }
+
+                                }
+
+                                else {
+
+                                        
+                                }
+
+                        ?>
+
                 </div>
                     
                     <div class="clearfix"></div>
@@ -421,7 +509,7 @@ include('partials-front/header-student.php');
                         <h1 class="title text-center">Recycled Books</h1>
                             <p></p>
                             <div class="recycle-icons text-center">
-                                <i class="fas fa-recycle">7</i>
+                                <i class="fas fa-recycle"> 7</i>
                             </div>   
                     </div>  
 

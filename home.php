@@ -171,7 +171,18 @@
                             <h3>Total Reservations</h3>
                         </div>
                         <div class="col-sm-3">
-                            <h1 class="num">89</h1>
+                            <?php 
+                            
+                            include('config.php');
+
+                                $sql3 = "SELECT * FROM tbl_reservation WHERE status='Active' ";    //SQL query
+
+                                $res3 = mysqli_query($conn, $sql3);   //Execute query
+
+                                $count3 = mysqli_num_rows($res3); //Count rows
+
+                            ?>
+                            <h1 class="num"><?php echo $count3 ?></h1>
                             <h2></h2>
                             <h3>Active Readers</h3>
                         </div>

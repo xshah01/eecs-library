@@ -116,7 +116,8 @@ include('partials-front-admin/header.php');
                                 
                                 include('config.php');
 
-                                    $sql3 = "SELECT * FROM tbl_reservation WHERE status='Reserved' ";    //SQL query
+                                    $sql3 = "SELECT * FROM tbl_reservation WHERE status='Reserved' 
+                                    OR status='Inactive'";    //SQL query
 
                                     $res3 = mysqli_query($conn, $sql3);   //Execute query
 
@@ -126,7 +127,7 @@ include('partials-front-admin/header.php');
                                 <a href="manage-reservations.php">
                                 <h1><?php echo $count3 ?></h1>
                                 <br />
-                                <p>Reservations/Loans</p>
+                                <p>Reservations</p>
                             </div>
                                 </a>
 
@@ -135,17 +136,17 @@ include('partials-front-admin/header.php');
                                 
                                 include('config.php');
 
-                                    $sql4 = "SELECT * FROM tbl_admin ";    //SQL query
+                                    $sql4 = "SELECT * FROM tbl_reservation WHERE status='Active'";    //SQL query
 
                                     $res4 = mysqli_query($conn, $sql4);   //Execute query
 
                                     $count4 = mysqli_num_rows($res4); //Count rows
 
-                                ?>
-                                <a href="manage-accounts.php">
-                                <h1><?php echo $count4 ?></h1>
-                                <br />
-                                <p>Accounts</p>
+                            ?>
+                            <a href="manage-reservations.php">
+                            <h1><?php echo $count4 ?></h1>
+                            <br />
+                            <p>Loans</p>
                             </div>
                                 </a>
 
@@ -164,7 +165,7 @@ include('partials-front-admin/header.php');
                                 <a href="manage-accounts.php">
                                 <h1><?php echo $count5 ?></h1>
                                 <br />
-                                <p>Recycled Books</p>
+                                <p>Accounts</p>
                             </div>
                                 </a>
 
@@ -182,6 +183,26 @@ include('partials-front-admin/header.php');
                                 ?>
                                 <a href="manage-accounts.php">
                                 <h1><?php echo $count6 ?></h1>
+                                <br />
+                                <p>Recycled Books</p>
+
+                            </div>
+                                </a>
+
+                            <div class="box7 text-center ">
+                                <?php 
+                                
+                                include('config.php');
+
+                                    $sql7 = "SELECT * FROM tbl_admin ";    //SQL query
+
+                                    $res7 = mysqli_query($conn, $sql7);   //Execute query
+
+                                    $count7 = mysqli_num_rows($res7); //Count rows
+
+                                ?>
+                                <a href="manage-accounts.php">
+                                <h1><?php echo $count7 ?></h1>
                                 <br />
                                 <p>Study Booth</p>
                             </div>

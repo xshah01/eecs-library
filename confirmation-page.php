@@ -47,6 +47,8 @@
 
                     <p>Click <a href="contact.php">here </a> to find your library</p>
 
+                    <p>Or see your reservation by clicking <a href="student.php">here </a></p>
+
                     <div class="clearfix"></div>
 
                     <br><br><br>
