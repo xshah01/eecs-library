@@ -386,7 +386,22 @@ include('partials-front/header-student.php');
                                         <p class="author"><?php echo $author; ?></p>
                                         <p class="edition"><?php echo $edition; ?></p> 
                                         <p class="ISBN"><?php echo $ISBN; ?></p>
-                                        <p class="date"><?php echo "Days remaining: <label style='color: blue';>$days</label>"; ?></p>
+                                        <p class="date">
+                                        <?php 
+                                
+                                            /* Display days in different colors */
+                                            if($days <= "1") {
+                                                echo "Days remaining: <label style='color: red';>$days</label>";
+                                            }
+                                            elseif($days <= "5") {
+                                                echo "Days remaining: <label style='color: orange';>$days</label>";
+                                            }
+                                            else {
+                                                echo "Days remaining: <label style='color: blue';>$days</label>";
+                                            }
+
+                                        ?>
+                                        </p>
 
                                 </div>
                             </div>

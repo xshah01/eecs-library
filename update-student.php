@@ -72,7 +72,7 @@
 
                     include('config.php');
 
-                        //Get the id of selected admin
+                        //Get the student id
                         $id=$_GET['id'];
 
                         //Create SQL query to retrieve the details
@@ -86,7 +86,7 @@
 
                             $count = mysqli_num_rows($res); //Check whether data is available or not
 
-                            //Check whether admin data has been retrieved or not
+                            //Check whether student data has been retrieved or not
                             if($count == 1) {
 
                                 //Retrieve the details
@@ -100,6 +100,7 @@
                             else {
                                 header("location: ".SITEURL.'student.php'); //Redirect to Student
                             }
+                            
                         }
 
                     ?>

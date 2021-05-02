@@ -54,7 +54,48 @@
 
     ?>
 
-    
+    <?php 
+
+    include('config.php');
+
+        /* Check whether student is set or not */
+        if(isset($_SESSION['email'])) {
+
+            $email = $_SESSION['email'];                                       
+
+            /* Get all details based on email */                   
+            $sql3 = "SELECT * FROM tbl_student WHERE email = '$email'"; //Create SQL query to retrieve the details
+
+            $res3 = mysqli_query($conn, $sql3); //Execute the query
+
+            $count3 = mysqli_num_rows($res3); //Check whether data is available or not
+
+            /* Check whether reservation data has been retrieved or not */
+            if($count3 == 1) {
+
+                $row3 = mysqli_fetch_assoc($res3);   //Retrieve the details
+
+                $id = $row3['id'];  //Get individual data                            
+                $full_name = $row3['full_name'];
+                $email = $row3['email'];
+                $phone = $row3['phone'];
+
+            }
+
+            else {
+                
+            
+            }
+
+        }
+        
+        else {
+
+
+        }
+
+    ?>
+
 
     <!-- ========================= Start Main Area ========================= -->
 
@@ -116,11 +157,11 @@
                         </div>
                                 <div class="contact-form">
                                 <legend>Personal Details</legend>
-                                        <input name="full-name" type="text" class="form-control" placeholder="Full name" required>
+                                        <input name="full-name" type="text" class="form-control" placeholder="Full name" value="<?php echo $full_name; ?>" required>
                                         <br>
-                                        <input name="email" type="text" class="form-control" placeholder="Email" required>
+                                        <input name="email" type="text" class="form-control" placeholder="Email" value="<?php echo $email; ?>" required>
                                         <br>
-                                        <input name="phone" type="text" class="form-control" placeholder="Phone">
+                                        <input name="phone" type="text" class="form-control" placeholder="Phone" value="<?php echo $phone; ?>">
                                         <br>
                                         <a href="<?php echo SITEURL; ?>confirmation-page.php?book_id=<?php echo $book_id; ?>">
                                             <input name="submit" type="submit" class="form-control submit" value="Reserve your book">  
