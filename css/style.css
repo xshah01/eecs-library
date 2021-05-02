@@ -259,7 +259,7 @@ header.sticky ul li a:hover {
         display:block;
         position:fixed;
         z-index:10;
-        height:2px;
+        height:4px;
         width:100%;
         top:0;
         left:0;

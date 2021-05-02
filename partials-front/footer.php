@@ -65,9 +65,9 @@ include('config.php');
     </script>
 
     <script type="text/javascript">
-    window.addEventListener("beforeunload",function(e){
-        document.body.className = "page-loading";
-    },false);
+        window.addEventListener("beforeunload",function(e){
+            document.body.className = "page-loading";
+        },false);
     </script>
 
 </body>

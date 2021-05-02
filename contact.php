@@ -26,14 +26,16 @@
                                         our contact data. We will be happy to answer you.</p>
                                 </div>
                                 <div class="contact-form">
-                                    <form id="contact-form" method="post" action="">
-                                        <input name="First name" type="text" class="form-control" placeholder="First name">
+                                    <form id="contact-form" action="https://formsubmit.co/eecs.library@gmail.com" method="POST">
+                                        <input name="First name" type="text" class="form-control" placeholder="First name" required>
                                         <br>
-                                        <input name="Last name" type="text" class="form-control" placeholder="Last name">
+                                        <input name="Last name" type="text" class="form-control" placeholder="Last name" required>
                                         <br>
-                                        <input name="Email" type="text" class="form-control" placeholder="Email">
+                                        <input name="Email" type="text" class="form-control" placeholder="Email" required>
                                         <br>
-                                        <textarea name="Message" type="text" class="form-control" placeholder="Message" row="5"></textarea>
+                                        <input type="hidden" name="_subject" value="New Inquiry">
+                                        <textarea name="Message" type="text" class="form-control" placeholder="Message" row="5" required></textarea>
+                                        <input type="hidden" name="_next" value="http://localhost/eecs-library/thankyou.php">
                                         <br>
                                         <input type="submit" class="form-control submit" value="Send message">
                                     </form>
@@ -66,7 +68,7 @@
                                         <i class="fas fa-envelope"></i>
                                     </h1>
                                     <h2></h2>
-                                    <p>service@eecs.kth.se</p>
+                                    <p>eecs.library@gmail.com</p>
                                 </div>
                                 <div class="col-sm-3">
                                     <h1 class="hours">
