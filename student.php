@@ -199,6 +199,9 @@ include('partials-front/header-student.php');
                                         <a href="#loans"><p class="edit">
                                             My loans ›</p>
                                         </a>
+                                        <a href="#recycled-books"><p class="edit">
+                                            Recycled books ›</p>
+                                        </a>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +210,7 @@ include('partials-front/header-student.php');
 
                 <br><br><br>
 
-                <div class="reservations" id="reservations">
+                <div class="reservations" id=reservations>
 
                 <div class="divider"></div>
 
@@ -275,7 +278,9 @@ include('partials-front/header-student.php');
                                         <p class="author"><?php echo $author; ?></p>
                                         <p class="edition"><?php echo $edition; ?></p> 
                                         <p class="ISBN"><?php echo $ISBN; ?></p>
-                                        <p class="date"><?php echo $reservation_date; ?></p>
+                                        <p class="date"><?php echo $reservation_date; ?>
+                                            (Pick up this book within 24h starting from this timestamp 
+                                            or you reservation will be terminated)</p>
 
                                 </div>
                             </div>
@@ -283,12 +288,13 @@ include('partials-front/header-student.php');
 
                         <?php
 
-                                        }       
+                                        } 
+
                                     }
                                             
                                     else {
 
-                                        exit(); // No data in database
+                                        echo "<div class='no-reservations-loans'>No Active Reservations</div>";
                                             
                                     }
                         
@@ -296,7 +302,7 @@ include('partials-front/header-student.php');
 
                                 else {
 
-                                    echo "No Reservations";
+                                    echo "<div class='no-reservations-loans'>No Active Reservations</div>";
                                         
                                 }
 
@@ -306,7 +312,7 @@ include('partials-front/header-student.php');
 
                 <div class="clearfix"></div>
 
-                <div class="loans">
+                <div class="loans" id="loans">
 
                     <div class="divider"></div>
 
@@ -387,7 +393,7 @@ include('partials-front/header-student.php');
                                             
                                     else {
 
-                                        exit(); // No data in database
+                                        echo "<div class='no-reservations-loans'>No Active Loans</div>";
                                             
                                     }
                         
@@ -395,7 +401,7 @@ include('partials-front/header-student.php');
 
                                 else {
 
-                                    echo "No Reservations";
+                                    echo "<div class='no-reservations-loans'>No Active Loans</div>";
                                         
                                 }
 
@@ -404,7 +410,24 @@ include('partials-front/header-student.php');
                 </div>
                     
                     <div class="clearfix"></div>
-                </div>
+
+                <div class="recycled-books" id="recycled-books">
+
+                    <div class="divider"></div>
+
+                    <br><br><br><br><br>
+
+                    <div class="recycled-books-title">
+                        <h1 class="title text-center">Recycled Books</h1>
+                            <p></p>
+                            <div class="recycle-icons text-center">
+                                <i class="fas fa-recycle">7</i>
+                            </div>   
+                    </div>  
+
+                    <br><br><br><br><br> 
+
+            </div>
         </section>   
 
     </main>

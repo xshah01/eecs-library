@@ -2699,6 +2699,7 @@ table {
     background-size: cover;
     filter: brightness(80%);
 }
+
 .site-banner-student .student-title {
     font-family: 'Abril Fatface', cursive;
 	font-size: 85px;
@@ -2728,7 +2729,7 @@ table {
     content: " ";
     display: block;
     width: 7%;
-    margin-left: 47%;
+    margin-left: 46.5%;
     padding-top: 14px;
     border-bottom: 2px solid rgb(59, 59, 59);
 }
@@ -2845,7 +2846,7 @@ table {
     content: " ";
     display: block;
     width: 7%;
-    margin-left: 47%;
+    margin-left: 46.5%;
     padding-top: 14px;
     border-bottom: 2px solid rgb(59, 59, 59);
 }
@@ -2856,7 +2857,6 @@ table {
     margin: 1%;
     padding-top: 6%;
     padding-left: 11%;
-    margin-bottom: -2%;
     background-color: transparent;
 }
 
@@ -2865,7 +2865,7 @@ table {
 }
 
 .site-banner-student .reservations .book-description {
-    width: 65%;
+    width: 77%;
     float: left;
     margin-left: 5%;
 }
@@ -2891,7 +2891,16 @@ table {
 }
 
 .site-banner-student .reservations .book-description .date {
-    font-size: 1rem;
+    font-size: .8rem;
+    color: rgb(100, 100, 100);
+}
+
+.site-banner-student .reservations .no-reservations-loans {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 30px;
+    text-transform: uppercase;
     color: rgb(100, 100, 100);
 }
 
@@ -2920,7 +2929,7 @@ table {
     content: " ";
     display: block;
     width: 7%;
-    margin-left: 47%;
+    margin-left: 46.5%;
     padding-top: 14px;
     border-bottom: 2px solid rgb(59, 59, 59);
 }
@@ -2931,7 +2940,6 @@ table {
     margin: 1%;
     padding-top: 6%;
     padding-left: 11%;
-    margin-bottom: -2%;
     background-color: transparent;
 }
 
@@ -2970,12 +2978,66 @@ table {
     color: rgb(100, 100, 100);
 }
 
+.site-banner-student .loans .no-reservations-loans {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(100, 100, 100);
+}
+
 .wrapper {
     width: 100%;
     margin: 0 auto;
 }
 
 /* End Loans Area */
+
+/* Start Recycled Books Area */
+
+.site-banner-student .main-content .recycled-books {
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.divider {
+    width   : 100%;
+    position: relative;
+    z-index : 1;
+  }
+  
+  .divider:before {
+    content : "";
+    position: absolute;
+    left    : 10%;
+    width   : 80%;
+    border-bottom:1px solid rgb(100, 100, 100);
+  }
+
+.site-banner-student .main-content .recycled-books h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 50px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .recycled-books p {
+    content: " ";
+    display: block;
+    width: 7%;
+    margin-left: 47%;
+    padding-top: 14px;
+    border-bottom: 2px solid rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .recycled-books i {
+    padding-top: 100px;
+    font-size: 200px;
+    color: rgb(120, 224, 143);
+}
+
+/* End Recycled Books Area */
 
 /* Start Update Student Area */
 

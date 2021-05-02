@@ -142,7 +142,7 @@ include('partials-front-admin/header.php');
                                 <a href="manage-reservations.php">
                                 <h1><?php echo $count3 ?></h1>
                                 <br />
-                                <p>Reservations</p>
+                                <p>Reservations/Loans</p>
                             </div>
                                 </a>
 
