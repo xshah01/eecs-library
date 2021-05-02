@@ -129,32 +129,32 @@
                                     /* Display the books */
 
                                     ?>
-
-                                        <div class="boxes-books">
-                                            <div class="book-img">
-                                                <?php
-                                                    if($image_name != "") {
-                                                        ?>
-                                                            <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>" alt="">
-                                                        <?php
-                                                    }
-                                                    else {
-                                                        echo "Image not found";
-                                                    }
-                                                ?>
-                                            </div>
-                                            <div class="book-description">
-                                                <h4><?php echo $title; ?></h4>
-                                                <p class="author"><?php echo $author; ?></p>
-                                                <p class="edition"><?php echo $edition; ?></p>
-                                                <a href="<?php echo SITEURL; ?>reservation-page.php?book_id=<?php echo $id; ?>">
-                                                    <button 
-                                                        type="button" class="btn-reserve-book">Reserve Book
-                                                    </button>   
-                                                </a>
+                                        <div class="books-row">
+                                            <div class="boxes-books">
+                                                <div class="book-img">
+                                                    <?php
+                                                        if($image_name != "") {
+                                                            ?>
+                                                                <img src="<?php echo SITEURL; ?>img/books/<?php echo $image_name; ?>" alt="">
+                                                            <?php
+                                                        }
+                                                        else {
+                                                            echo "Image not found";
+                                                        }
+                                                    ?>
+                                                </div>
+                                                <div class="book-description">
+                                                    <h4><?php echo $title; ?></h4>
+                                                    <p class="author"><?php echo $author; ?></p>
+                                                    <p class="edition"><?php echo $edition; ?></p>
+                                                    <a href="<?php echo SITEURL; ?>reservation-page.php?book_id=<?php echo $id; ?>">
+                                                        <button 
+                                                            type="button" class="btn-reserve-book">Reserve Book
+                                                        </button>   
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-
                                     <?php
 
                                 }

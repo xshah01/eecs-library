@@ -94,7 +94,6 @@ include('partials-front-admin/header.php');
                             <th>Author</th>
                             <th>Edition</th>
                             <th>ISBN</th>
-                            <th>Language</th>
                             <th>Image</th>
                             <th>Active</th>
                             <th>Manage</th>
@@ -127,7 +126,6 @@ include('partials-front-admin/header.php');
                                     $author = $rows['author'];
                                     $edition = $rows['edition'];
                                     $ISBN = $rows['ISBN'];
-                                    $language = $rows['language'];
                                     $image_name = $rows['image_name'];
                                     $active = $rows['active'];
 
@@ -140,7 +138,6 @@ include('partials-front-admin/header.php');
                                     <td><?php echo $author; ?></td>
                                     <td><?php echo $edition; ?></td>
                                     <td><?php echo $ISBN; ?></td>
-                                    <td><?php echo $language; ?></td>
                                     
                                     <td>
                                         <?php

@@ -732,7 +732,7 @@ header.sticky ul li a:hover {
     width: 48%;
     float: left;
     margin: 1%;
-    padding-left: 7%;
+    padding-left: 5%;
     padding-bottom: 5%;
     background-color: transparent;
 }
@@ -831,7 +831,7 @@ header.sticky ul li a:hover {
     width: 48%;
     float: left;
     margin: 1%;
-    padding-left: 7%;
+    padding-left: 5%;
     padding-bottom: 5%;
     background-color: transparent;
 }
@@ -881,7 +881,7 @@ header.sticky ul li a:hover {
     font-size: 1rem;
 }
 
-/* End Book-search Area */
+/* End category-book-search Area */
 
 /* ============================================== Reservation Page ===================================================== */
 
