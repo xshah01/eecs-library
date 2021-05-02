@@ -60,7 +60,7 @@ include('partials-front-admin/header.php');
                             <th>Student Email</th>
                             <th>Student Phone</th>
                             <th>Status</th>
-                            <th>Reservation Date</th>
+                            <th>Resv Date</th>
                             <th>Manage</th>
                         </tr>
 
@@ -178,7 +178,7 @@ include('partials-front-admin/header.php');
                         <th>Student Email</th>
                         <th>Student Phone</th>
                         <th>Status</th>
-                        <th>Reservation Date</th>
+                        <th>Resv Date</th>
                         <th></th>
                         <th>Manage</th>
                     </tr>
@@ -260,13 +260,13 @@ include('partials-front-admin/header.php');
                                 
                                     /* Display days in different colors */
                                     if($days <= "1") {
-                                        echo "<label style='color: red';>$days</label>";
+                                        echo "<label style='color: red';>$days</label> days left";
                                     }
                                     elseif($days <= "5") {
-                                        echo "<label style='color: orange';>$days</label>";
+                                        echo "<label style='color: orange';>$days</label> days left";
                                     }
                                     else {
-                                        echo "<label style='color: blue';>$days</label>";
+                                        echo "<label style='color: blue';>$days</label> days left";
                                     }
 
                                 ?>
