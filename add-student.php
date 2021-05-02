@@ -114,9 +114,9 @@ include('config.php');
     <div id="sign-in-form">
         <form action="" method="POST">
         <label for="full_name">Full Name</label>
-        <input id="full_name" type="text" name="full_name" />
+        <input id="full_name" type="text" name="full_name" required/>
         <label for="email">Email</label>
-        <input id="email" type="text" name="email" />
+        <input id="email" type="text" name="email" required/>
         <label for="phone">Phone</label>
         <input id="phone" type="text" name="phone" />
         <label for="password">Password</label>
