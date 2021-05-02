@@ -39,5 +39,11 @@
     <!-- Custom js file -->
     <script src="./js/main.js"></script>
 
+    <script type="text/javascript">
+    window.addEventListener("beforeunload",function(e){
+        document.body.className = "page-loading";
+    },false);
+    </script>
+
 </body>
 </html>
