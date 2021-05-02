@@ -97,6 +97,11 @@
                 <input type="submit" class="btn-sign-in" name="submit" value="Sign in" />
                 </form>
                 <footer>
+                <div class="sign-up">
+                    <a href="add-student.php">
+                        <p>Sign Up</p>
+                    </a>
+                </div>
                     <div class="fp">
                         <h1 class="icon">
                             <i class="fas fa-user-graduate"></i>

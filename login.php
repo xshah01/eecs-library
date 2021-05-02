@@ -97,6 +97,7 @@
                 <input type="submit" class="btn-sign-in" name="submit" value="Sign in" />
                 </form>
                 <footer>
+                    <br>
                     <div class="fp">
                         <h1 class="icon">
                             <i class="fas fa-users-cog"></i>
