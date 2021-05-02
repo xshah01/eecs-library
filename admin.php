@@ -69,26 +69,10 @@ include('partials-front-admin/header.php');
             </div>    
             <div class="main-content">
                 <div class="wrapper">
-
-                <div class="welcome-message">
-
-                    <?php 
-
-                        include('config.php');
-
-                        if(isset($_SESSION['login'])) {
-                            echo $_SESSION['login'];  //Display session message
-                            unset($_SESSION['login']);  //Remove session message
-                        }
-
-                    ?>
-
-
-                </div>
                     <div class="dashboard-title">
                         <h1 class="title text-center">Dashboard</h1>
                     </div>            
-                    <div class="col-3">
+                    <div class="col-12">
                         <div class="box1 text-center">
 
                             <?php 
@@ -146,7 +130,7 @@ include('partials-front-admin/header.php');
                             </div>
                                 </a>
 
-                                <div class="box4 text-center ">
+                            <div class="box4 text-center ">
                                 <?php 
                                 
                                 include('config.php');
@@ -162,6 +146,44 @@ include('partials-front-admin/header.php');
                                 <h1><?php echo $count4 ?></h1>
                                 <br />
                                 <p>Accounts</p>
+                            </div>
+                                </a>
+
+                            <div class="box5 text-center ">
+                                <?php 
+                                
+                                include('config.php');
+
+                                    $sql5 = "SELECT * FROM tbl_admin ";    //SQL query
+
+                                    $res5 = mysqli_query($conn, $sql5);   //Execute query
+
+                                    $count5 = mysqli_num_rows($res5); //Count rows
+
+                                ?>
+                                <a href="manage-accounts.php">
+                                <h1><?php echo $count5 ?></h1>
+                                <br />
+                                <p>Recycled Books</p>
+                            </div>
+                                </a>
+
+                            <div class="box6 text-center ">
+                                <?php 
+                                
+                                include('config.php');
+
+                                    $sql6 = "SELECT * FROM tbl_admin ";    //SQL query
+
+                                    $res6 = mysqli_query($conn, $sql6);   //Execute query
+
+                                    $count6 = mysqli_num_rows($res6); //Count rows
+
+                                ?>
+                                <a href="manage-accounts.php">
+                                <h1><?php echo $count6 ?></h1>
+                                <br />
+                                <p>Study Booth</p>
                             </div>
                                 </a>
 

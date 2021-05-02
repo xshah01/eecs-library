@@ -1,6 +1,7 @@
     <?php 
     
     include('partials-front/header.php');
+    include('login-check-student.php');
 
     ?>
 

@@ -1632,7 +1632,7 @@ a:link {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -1659,15 +1659,6 @@ a:link {
     padding-bottom: 50px;
     color: rgb(0, 0, 0);
     font-family: sans-serif;
-}
-
-.welcome-message {
-    font-family: sans-serif;
-	font-size: 25px;
-    color:rgb(6, 82, 221);
-    padding-left: 612px;
-    padding-bottom: 40px;
-    text-transform: uppercase;
 }
 
 .wrapper {
@@ -1708,9 +1699,7 @@ a:link {
     margin: 50px;
     padding: 20px;
     float: left;
-    background: #2193b0;
-    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    background: rgb(255, 95, 1);
 }
 
 .site-banner-admin .main-content .box2 {
@@ -1719,9 +1708,7 @@ a:link {
     margin: 50px;
     padding: 20px;
     float: left;
-    background: #11998e;
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
-    background: linear-gradient(to right, #38ef7d, #11998e);    
+    background: rgb(255, 113, 1);
 }
 
 .site-banner-admin .main-content .box3 {
@@ -1730,9 +1717,7 @@ a:link {
     margin: 50px;
     padding: 20px;
     float: left;
-    background: #fc4a1a;
-    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
-    background: linear-gradient(to right, #f7b733, #fc4a1a);
+    background: rgb(255, 130, 1);
 }
 
 .site-banner-admin .main-content .box4 {
@@ -1741,9 +1726,25 @@ a:link {
     margin: 50px;
     padding: 20px;
     float: left;
-    background: #ED213A;
-    background: -webkit-linear-gradient(to left, #93291E, #ED213A);
-    background: linear-gradient(to left, #93291E, #ED213A);
+    background: rgb(255, 148, 0);
+}
+
+.site-banner-admin .main-content .box5 {
+    border-radius: 10px;
+    width: 250px;
+    margin: 50px;
+    padding: 20px;
+    float: left;
+    background: rgb(255, 165, 0);
+}
+
+.site-banner-admin .main-content .box6 {
+    border-radius: 10px;
+    width: 250px;
+    margin: 50px;
+    padding: 20px;
+    float: left;
+    background: rgb(255, 182, 0);
 }
 
 /* End Admin Area */
@@ -1761,7 +1762,7 @@ a:link {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -1908,7 +1909,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -1989,7 +1990,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -2072,7 +2073,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -2201,7 +2202,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -2333,7 +2334,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -2414,7 +2415,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -2497,7 +2498,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }
@@ -2603,7 +2604,7 @@ table {
     position: relative;
     width: 100%;
     height: 75vh;
-    background: url(../img/accounts-bg.jpg);
+    background: url(../img/admin-bg.jpg);
     background-size: cover;
     filter: brightness(80%);
 }

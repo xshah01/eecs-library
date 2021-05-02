@@ -52,11 +52,7 @@ include('login-check.php');
         <a href="home.php" class="logo"href="home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
                 <li><a href="home.php">Exit Admin<span class="sr-only">(current)</span></a></li>
-                <li><a id="accounts" href="manage-accounts.php">Accounts</a></li>
-                <li><a id="categories" href="manage-categories.php">Categories</a></li>
-                <li><a id="books" href="manage-books.php">Books</a></li>
-                <li><a id="reservations" href="manage-reservations.php">Reservations/Loans</a></li>
-                <li><a id="admin" href="admin.php">Admin</a></li>
+                <li><a id="admin" href="admin.php">Dashboard</a></li>
                 <li><a id="logout" href="logout.php">Logout</a></li>
             </ul>
     </header>

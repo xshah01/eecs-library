@@ -27,8 +27,8 @@
                 $_SESSION['email'] = $_POST['email']; // store email
                 $_SESSION['password'] = $_POST['password']; // store password
                 
-                $_SESSION['login'] = "Welcome Admin"; //Admin available and login success
-                $_SESSION['admin'] = $email;    //Check whether admin is logged in or not. Logout will unset it
+                //Create a session for this login. Check whether admin is logged in or not. Logout will unset it
+                $_SESSION['admin'] = $email;
                 header("location: ".SITEURL.'admin.php'); //Redirect to Admin
                 exit(0);
                 
