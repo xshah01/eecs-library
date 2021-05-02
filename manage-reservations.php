@@ -61,7 +61,6 @@ include('partials-front-admin/header.php');
                             <th>Student Phone</th>
                             <th>Status</th>
                             <th>Reservation Date</th>
-                            <th></th>
                             <th>Manage</th>
                         </tr>
 
@@ -99,12 +98,6 @@ include('partials-front-admin/header.php');
                                         $status = $rows['status'];
                                         $reservation_date = $rows['reservation_date'];
 
-                                        /* Calculate "remaining days of loan" */
-                                        $date1 = new DateTime('now');  //Current date
-                                        $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 60 days'))) ;   //Future date
-                                        $diff = $date2->diff($date1)->format("%a");  //Find difference
-                                        $days = intval($diff);   //Rounding days
-
                         ?>
 
                         <!-- Display the values in our table -->
@@ -137,22 +130,6 @@ include('partials-front-admin/header.php');
                             </td>
 
                             <td><?php echo $reservation_date; ?></td>
-                            <td>
-                                <?php 
-                                
-                                    /* Display days in different colors */
-                                    if($days <= "1") {
-                                        echo "<label style='color: red';>$days</label>";
-                                    }
-                                    elseif($days <= "5") {
-                                        echo "<label style='color: orange';>$days</label>";
-                                    }
-                                    else {
-                                        echo "<label style='color: blue';>$days</label>";
-                                    }
-
-                                ?>
-                            </td>
                             <td>
                             <a href="<?php echo SITEURL; ?>update-reservation.php?id=<?php echo $id; ?>">
                                 <button type="button" class="btn-update-reservation mr-4">update resv</button>
@@ -202,6 +179,7 @@ include('partials-front-admin/header.php');
                         <th>Student Phone</th>
                         <th>Status</th>
                         <th>Reservation Date</th>
+                        <th></th>
                         <th>Manage</th>
                     </tr>
 
@@ -239,6 +217,12 @@ include('partials-front-admin/header.php');
                                     $status = $rows['status'];
                                     $reservation_date = $rows['reservation_date'];
 
+                                    /* Calculate "remaining days of loan" */
+                                    $date1 = new DateTime('now');  //Current date
+                                    $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 60 days'))) ;   //Future date
+                                    $diff = $date2->diff($date1)->format("%a");  //Find difference
+                                    $days = intval($diff);   //Rounding days
+
                     ?>
 
                     <!-- Display the values in our table -->
@@ -271,6 +255,22 @@ include('partials-front-admin/header.php');
                         </td>
 
                         <td><?php echo $reservation_date; ?></td>
+                        <td>
+                                <?php 
+                                
+                                    /* Display days in different colors */
+                                    if($days <= "1") {
+                                        echo "<label style='color: red';>$days</label>";
+                                    }
+                                    elseif($days <= "5") {
+                                        echo "<label style='color: orange';>$days</label>";
+                                    }
+                                    else {
+                                        echo "<label style='color: blue';>$days</label>";
+                                    }
+
+                                ?>
+                            </td>
                         <td>
                         <a href="<?php echo SITEURL; ?>update-reservation.php?id=<?php echo $id; ?>">
                             <button type="button" class="btn-update-reservation mr-4">update loan</button>
