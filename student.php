@@ -102,9 +102,9 @@ include('partials-front/header-student.php');
                                             
                                         }
                 
-                                        if(isset($_SESSION['student-not-found'])) {
-                                            echo $_SESSION['student-not-found'];  //Display session message
-                                            unset($_SESSION['student-not-found']);   //Remove session message
+                                        if(isset($_SESSION['wrong-password'])) {
+                                            echo $_SESSION['wrong-password'];  //Display session message
+                                            unset($_SESSION['wrong-password']);   //Remove session message
                                         }
                 
                                         if(isset($_SESSION['password-not-match'])) {

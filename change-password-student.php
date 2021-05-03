@@ -70,7 +70,7 @@
 
                 else {
 
-                    $_SESSION['student-not-found'] = "Student not found";
+                    $_SESSION['wrong-password'] = "Wrong Current Password";
                     header("location: ".SITEURL.'student.php'); //Redirect to Student
                     exit(0);
 
