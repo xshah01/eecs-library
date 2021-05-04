@@ -230,7 +230,8 @@ include('partials-front/header-student.php');
                                 INNER JOIN tbl_book 
                                 ON tbl_reservation.ISBN = tbl_book.ISBN 
                                 WHERE student_email = '$email'
-                                AND status = 'Reserved'";
+                                AND status = 'Reserved' 
+                                ORDER BY reservation_date ASC";
 
                                 //Execute query
                                 $res3 = mysqli_query($conn, $sql3);
@@ -332,7 +333,8 @@ include('partials-front/header-student.php');
                                 INNER JOIN tbl_book 
                                 ON tbl_reservation.ISBN = tbl_book.ISBN 
                                 WHERE student_email = '$email'
-                                AND status = 'Active'";
+                                AND status = 'Active'
+                                ORDER BY reservation_date ASC";
 
                                 //Execute query
                                 $res4 = mysqli_query($conn, $sql4);
