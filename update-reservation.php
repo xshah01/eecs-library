@@ -29,11 +29,11 @@
             $res = mysqli_query($conn, $sql);
 
             if($res == TRUE) {
-                $_SESSION['update'] = "Reservation Updated Succesfully";   //Create a session variable to display message
+                $_SESSION['update'] = "Reservation/Loan Updated Succesfully";   //Create a session variable to display message
                 header("location: ".SITEURL.'manage-reservations.php'); //Redirect to Manage Reservations
             }
             else {
-                $_SESSION['update'] = "Failed to Update Reservation";   //Create a session variable to display message
+                $_SESSION['update'] = "Failed to Update Reservation/Loan";   //Create a session variable to display message
                 header("location: ".SITEURL.'manage-reservations.php');
             }
 

@@ -143,6 +143,7 @@
                             </div>
                             <form method="POST" action="">
                                 <div class="book-description">
+                                <input type="hidden" name="book_id" value="<?php echo $book_id; ?>">
                                     <h4><?php echo $title; ?></h4>
                                     <input type="hidden" name="book" value="<?php echo $title; ?>">
                                         <p class="author"><?php echo $author; ?></p>
@@ -177,6 +178,7 @@
                                     if(isset($_POST['submit'])) {
                                                             
                                         /* Get all details from Form */
+                                        $id = $_POST['book_id'];
                                         $book = $_POST['book'];
                                         $author = $_POST['author'];
                                         $edition = $_POST['edition'];
@@ -200,11 +202,15 @@
                                                 student_phone = '$student_phone',
                                                 reservation_date = current_timestamp() ";
 
-                                        /* Execute the query */
+                                        /* Update Active = "No" in tbl_book */
+                                        $sql4 = "UPDATE tbl_book SET active = 'No' WHERE id = '$id' ";
+
+                                        /* Execute the queries */
                                         $res2 = mysqli_query($conn, $sql2);
+                                        $res4 = mysqli_query($conn, $sql4);
 
                                         /* Check whether query is executed successfully or not */
-                                        if($res2 == TRUE) {
+                                        if($res2 == TRUE AND $res4 == TRUE) {
 
                                             echo "<script>window.location.href='confirmation-page.php';</script>";    //Redirect to confirmation page
 

@@ -3207,6 +3207,7 @@ table {
 
 .site-banner-student .main-content .title3 h1:hover {
     color: rgb(206, 182, 116, 0.774);
+    text-decoration: underline;
 }
 
 /* End Recycled Books Area */
