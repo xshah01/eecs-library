@@ -523,10 +523,29 @@ include('partials-front/header-student.php');
                     <div class="recycled-books-title">
                         <h1 class="title text-center">Recycled Books</h1>
                             <p></p>
-                            <div class="recycle-icons text-center">
-                                <i class="fas fa-recycle"> 7</i>
-                            </div>   
-                    </div>  
+                            <div class="title2 text-center">
+                                <h1>How many books have I recycled so far?</h1>
+                            </div>
+                            <div class="book-body">
+                                <div class="book">
+                                    <div class="back"></div>
+                                    <div class="page6">7</div>
+                                    <div class="page5"></div>
+                                    <div class="page4"></div>
+                                    <div class="page3"></div>
+                                    <div class="page2"></div>
+                                    <div class="page1"></div>
+                                    <div class="front">
+                                        <div>Open me :)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title3 text-center">
+                                <a href="contact.php">
+                                    <h1>I want to recycle more books ›</h1>
+                                </a>    
+                            </div>
+	
 
                     <br><br><br><br><br> 
 
