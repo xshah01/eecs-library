@@ -528,7 +528,8 @@ include('partials-front/header-student.php');
                             <div class="title2 text-center">
                                 <h1>How many books have I recycled so far?</h1>
                             </div>
-                            <div class="book-body">
+                            <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
+                            <div class="book-body" style='padding-top: 100px;'>
                                 <div class="book">
                                     <div class="back"></div>
                                     <div class="page6">7</div>
@@ -542,9 +543,28 @@ include('partials-front/header-student.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="title3 text-center">
+                            <div class="title3 text-center" style='padding-top: 100px;'>
+                                <h1>[count loans] students <i class="fas fa-user-graduate"></i> in total have loaned my books
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="title3 text-center" style='padding-top: 20px;'>
+                                <h1>Enriching and improving their education <i class="fas fa-graduation-cap"></i></h1>
+                            </div>
+                            <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
+                            <div class="title3 text-center" style='padding-top: 100px;'>
+                                <h1>I have reduced my carbon footprint by saving [7.5 * count recycled books] kg CO<sub>2</sub>!
+                                <a href="http://www.takepart.com/article/2014/01/29/using-digital-readers-reduce-carbon-footprint">
+                                    <sup>1</sup></h1>
+                                </a>
+                            </div>
+                            <div class="title4 text-center" style='padding-top: 20px;'>
+                                <h1>Making this planet <i class="fas fa-globe-americas"></i> a better place
+                                </h1>
+                            </div>
+                            <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
+                            <div class="title5 text-center" style='padding-top: 100px;'>
                                 <a href="contact.php">
-                                    <h1>I want to recycle more books ›</h1>
+                                    <h1>I want to recycle more books <i class="fas fa-book"></i> ›</h1>
                                 </a>    
                             </div>
 	

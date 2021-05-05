@@ -3069,7 +3069,7 @@ table {
     font-family: sans-serif;
     font-size: 25px;
 	color: rgb(59, 59, 59);
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .site-banner-student .main-content .recycled-books .title2 {
@@ -3081,11 +3081,14 @@ table {
 
 .book-body {
     width: 100%;
-    padding-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     perspective: 1200px;
+  }
+
+  .arrow {
+    color: rgb(206, 182, 116, 0.774);
   }
   
   .book {
@@ -3202,10 +3205,31 @@ table {
     font-family: sans-serif;
     font-size: 25px;
 	color: rgb(59, 59, 59);
-    padding-top: 200px;
 }
 
-.site-banner-student .main-content .title3 h1:hover {
+.site-banner-student .main-content .title3 sup {
+    font-family: sans-serif;
+    font-size: 20px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .title3 sup:hover {
+    color: rgb(206, 182, 116, 0.774);
+}
+
+.site-banner-student .main-content .title4 h1 {
+    font-family: sans-serif;
+    font-size: 25px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .title5 h1 {
+    font-family: sans-serif;
+    font-size: 25px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .title5 h1:hover {
     color: rgb(206, 182, 116, 0.774);
     text-decoration: underline;
 }

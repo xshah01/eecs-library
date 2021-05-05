@@ -256,7 +256,7 @@
                                 Yet, many of us still struggle with old and unwanted books that takes up space 
                                 in our shelves. When you decide it's time to part with them, we want you to know 
                                 that they can go to a nice home where they can continue to enrich and improve 
-                                other student's education. We gratefully accept all kinds of books.</h3>
+                                other students education. We gratefully accept all kinds of books.</h3>
                             </div>
                             <div class="d-flex flex-row flex-wrap">
                                 <a href="contact.php">
