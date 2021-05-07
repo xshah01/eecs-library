@@ -3422,3 +3422,24 @@ table {
 }
 
 /* End Change Password Area */
+
+/* ================================================== Book Recycle ========================================================= */
+
+.wrap {
+    width: 100%;
+}
+
+.book-recycle-floatleft {
+    float: left;
+    margin-left: -12%;
+    width: 55%;
+    background-color: rgb(250, 250, 250);
+    height: 600px;
+}
+
+.book-recycle-floatright {
+    float: right;
+    background-color: rgb(255, 0, 0);
+    height: 600px;
+    width: 50%;
+}

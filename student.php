@@ -544,7 +544,8 @@ include('partials-front/header-student.php');
                                 </div>
                             </div>
                             <div class="title3 text-center" style='padding-top: 100px;'>
-                                <h1>[count loans] students <i class="fas fa-user-graduate"></i> in total have loaned my books
+                                <h1>[count loans] students <i class="fas fa-user-graduate"></i> in total have benefited
+                                from my books
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="title3 text-center" style='padding-top: 20px;'>
