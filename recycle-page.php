@@ -53,7 +53,7 @@
 
 <!-- ==================== Start Banner Area ==================== -->
 
-<section id="scroll" class="site-banner-reservation-page">
+<section id="scroll" class="site-banner-recycle-page">
     <div class="bg-image-books"></div>
         <div class="col-lg-7">
             <h3 class="books-title text-center">Book recycle</h3>
@@ -68,11 +68,20 @@
         <div class="container">
             <div class="wrap">
                 <div class="book-recycle-floatleft">
-                    <div class="contact-us-title tex-center">
-                        <h1>Get in touch with us</h1>
-                    </div>
-                    <div class="book-recycle-description">
-                        textbeskrivning + CO2 fakta
+                    <div class="inner-box">
+                        <div class="book-recycle-title text-center">
+                            <h1>Recycle your books</h1>
+                            <h2></h2>
+                        </div>
+                        <div class="book-recycle-description">
+                            <p>
+                                Books are an important part of our lives. Yet, many of us still struggle 
+                                with old and unwanted books that takes up space in our shelves. When you decide 
+                                it's time to part with them, we want you to know that they can go to a nice home 
+                                where they can continue to enrich and improve other students education. 
+                                We gratefully accept all kinds of books.+ CO2 fakta
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="book-recycle-floatright">

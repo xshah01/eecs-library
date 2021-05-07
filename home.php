@@ -252,7 +252,7 @@
                             <div class="col-lg-4 text-center">
                                 <h1>Recycle your books</h1>
                                 <h2></h2>
-                                <h3 style="text-align: justify;">Books are an important part of our lives but. 
+                                <h3 style="text-align: justify;">Books are an important part of our lives. 
                                 Yet, many of us still struggle with old and unwanted books that takes up space 
                                 in our shelves. When you decide it's time to part with them, we want you to know 
                                 that they can go to a nice home where they can continue to enrich and improve 
