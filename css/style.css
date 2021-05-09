@@ -674,27 +674,20 @@ header.sticky ul li a:hover {
 .site-banner-books .book-search input[type=search] {
     width: 50%;
     padding: .7%;
-    border-radius: 2px;
-    border: 1px solid black;
+    border: none;
+    border-bottom: 2px solid grey;
 }
 
-.site-banner-books .book-search input[type=submit] {
-    width: 6%;
-    padding: .7%;
-    border-radius: 2px;
-    background-color: white;
+.site-banner-books .book-search button[type=submit] {
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
     color: black;
-    border: 1px solid black;
     cursor: pointer;
 }
 
-.site-banner-books .book-search input[type=submit]:hover {
-    width: 6%;
-    padding: .7%;
-    border-radius: 2px;
-    background-color: black;
-    color: white;
-    border: 1px solid black;
+.site-banner-books .book-search button[type=submit]:hover {
+    color: grey;
     transition: background .4s ease;
 }
 
@@ -3431,16 +3424,17 @@ table {
 
 .site-banner-recycle-page .book-recycle-floatleft {
     float: left;
-    width: 50%;
+    width: 48%;
+    margin-left: -20px;
     background-color: rgb(206, 182, 116, 0.774);
-    height: 600px;
+    height: 778px;
 }
 
 .site-banner-recycle-page .book-recycle-floatright {
     float: right;
-    background-color: rgb(255, 0, 0);
-    height: 600px;
-    width: 50%;
+    height: 900px;
+    width: 48%;
+    margin-right: -20px;
 }
 
 .site-banner-recycle-page .bg-image-books {
@@ -3475,7 +3469,7 @@ table {
     margin: 10%;
     border: 1px solid white;
     background-color: transparent;
-    height: 58vh;
+    height: 79vh;
 }
 
 .site-banner-recycle-page .inner-box .book-recycle-title h1 {
@@ -3497,9 +3491,37 @@ table {
 
 .site-banner-recycle-page .book-recycle-description p {
     margin: 10%;
-    margin-top: -75%;
+    margin-top: -80%;
     font-family: sans-serif;
 	font-size: 18px;
     color: white;
 }
 
+.site-banner-recycle-page .form-control {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.site-banner-recycle-page .submit {
+    padding: 1rem 3rem;
+    font: var(--roboto);
+    font-size: 12px;
+    letter-spacing: 0.2125rem;
+    border: none;
+    background: rgb(206, 182, 116, 0.774);
+    background-clip: padding-box;
+    color: rgba(0, 0, 0, 0.774);
+    transition: background .6s ease;
+    text-transform: uppercase;
+}
+
+.site-banner-recycle-page .submit:hover {
+    background: var(206, 182, 116, 0.774);
+    color:  rgba(255, 255, 255, 0.774);
+    box-shadow: var(--box-shadow);
+}
