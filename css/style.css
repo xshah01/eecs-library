@@ -3525,3 +3525,13 @@ table {
     color:  rgba(255, 255, 255, 0.774);
     box-shadow: var(--box-shadow);
 }
+
+.site-banner-recycle-page .checkbox {
+    float: right;
+    margin-top: -30px;
+    padding-left: 25px;
+}
+
+.site-banner-recycle-page .checkbox a:hover {
+    color: rgb(206, 182, 116, 0.774);
+}

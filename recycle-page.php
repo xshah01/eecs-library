@@ -65,6 +65,7 @@
     <!-- ==================== Start Book Area ==================== -->
 
     <section class="recycle-page">
+    <br><br><br>
         <div class="container">
             <div class="wrap">
                 <div class="book-recycle-floatleft">
@@ -81,8 +82,10 @@
                                 where they can continue to enrich and improve other students education. 
                                 We gratefully accept all kinds of books.
                                 <br><br>
-                                By recycling unused books, you reduce your carbon foot
-                                book by book, you are making this planet a better place to live for the generations to come.
+                                By recycling unused books, you will make an even greater impact by conserving resources
+                                and finances that will generate less paper waste, ultimately reducing your carbon foot print.
+                                Book by book, we encourage you to embark on this greater and meaningful cause in making
+                                this planet a better place to live for the generations to come.
                             </p>
                         </div>
                     </div>
@@ -101,7 +104,7 @@
                             <input name="ISBN" type="text" class="form-control" placeholder="ISBN" required>
                             <br>
                             <input name="language" type="text" class="form-control" placeholder="Language" required>
-                            <br><br><br><br><br><br>
+                            <br><br>
                             <legend>Personal details</legend>
                             <br><br>
                             <input name="full_name" type="text" class="form-control" placeholder="Full name" required>
@@ -109,7 +112,12 @@
                             <input name="email" type="text" class="form-control" placeholder="Email" required>
                             <br>
                             <input name="phone" type="text" class="form-control" placeholder="Phone">
-                            <br>
+                            <br><br>
+                            <input name="condition" type="checkbox" required>
+                            <label for="condition" class="checkbox">By checking this box, you indicate that you have read and understood our
+                                <a href="book-condition-guidelines.php">book condition guidelines.</a>
+                            </label>
+                            <br><br><br>
                             <input type="submit" class="form-control submit" value="Recycle book">
                         </form>
                     </div>
