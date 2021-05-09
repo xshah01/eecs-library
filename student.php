@@ -535,9 +535,24 @@ include('partials-front/header-student.php');
                             </div>
                             <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
                             <div class="book-body" style='padding-top: 100px;'>
+
+                            <?php
+
+                            include('config.php');
+
+                                /* Get all details based on email */                   
+                                $sql6 = "SELECT * FROM tbl_recycle WHERE student_email = '$email' 
+                                AND status = 'Active'"; //Create SQL query to retrieve the recycles
+
+                                $res6 = mysqli_query($conn, $sql6); //Execute the query
+
+                                $count6 = mysqli_num_rows($res6); //Check whether data is available or not
+
+                            ?>
+
                                 <div class="book">
                                     <div class="back"></div>
-                                    <div class="page6">7</div>
+                                    <div class="page6"><?php echo $count6; ?></div>
                                     <div class="page5"></div>
                                     <div class="page4"></div>
                                     <div class="page3"></div>
@@ -558,7 +573,7 @@ include('partials-front/header-student.php');
                             </div>
                             <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
                             <div class="title3 text-center" style='padding-top: 100px;'>
-                                <h1>I have reduced my carbon footprint by saving [7.5 * count recycled books] kg CO<sub>2</sub>!
+                                <h1>I have reduced my carbon footprint by saving <?php echo ($count6 * 7.5); ?> kg CO<sub>2</sub>!
                                 <a href="http://www.takepart.com/article/2014/01/29/using-digital-readers-reduce-carbon-footprint">
                                     <sup>1</sup></h1>
                                 </a>

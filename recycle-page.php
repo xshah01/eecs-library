@@ -98,6 +98,7 @@ include('login-check-student.php');
                     $student_name = $_POST['full_name'];
                     $student_email = $_POST['email'];
                     $student_phone = $_POST['phone'];
+                    $status = "Waiting";   //Waiting, Active
 
                     /* Save the reservation in database */
                     $sql = "INSERT INTO tbl_recycle SET 
@@ -108,7 +109,8 @@ include('login-check-student.php');
                             language = '$language',
                             student_name = '$student_name',
                             student_email = '$student_email',
-                            student_phone = '$student_phone' ";
+                            student_phone = '$student_phone',
+                            status = '$status' ";
 
                     /* Execute the query */
                     $res = mysqli_query($conn, $sql);

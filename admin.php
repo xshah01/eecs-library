@@ -174,14 +174,14 @@ include('partials-front-admin/header.php');
                                 
                                 include('config.php');
 
-                                    $sql6 = "SELECT * FROM tbl_admin ";    //SQL query
+                                    $sql6 = "SELECT * FROM tbl_recycle WHERE status = 'Active'";    //SQL query
 
                                     $res6 = mysqli_query($conn, $sql6);   //Execute query
 
                                     $count6 = mysqli_num_rows($res6); //Count rows
 
                                 ?>
-                                <a href="manage-accounts.php">
+                                <a href="manage-recycles.php">
                                 <h1><?php echo $count6 ?></h1>
                                 <br />
                                 <p>Recycled Books</p>

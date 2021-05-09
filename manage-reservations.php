@@ -198,7 +198,7 @@ include('partials-front-admin/header.php');
                             /* Count rows to check whether we have data in database or not */
                             $count = mysqli_num_rows($res);  //Function to get all rows in database
 
-                            $sn = 4001;
+                            $sn1 = 5001;    //Loans
 
                             /* Check the number of rows */
                             if($count > 0) {
@@ -227,7 +227,7 @@ include('partials-front-admin/header.php');
 
                     <!-- Display the values in our table -->
                     <tr>
-                        <td><?php echo $sn++; ?></td>
+                        <td><?php echo $sn1++; ?></td>
                         <td><?php echo $book; ?></td>
                         <td><?php echo $author; ?></td>
                         <td><?php echo $edition; ?></td>
