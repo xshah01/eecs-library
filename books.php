@@ -24,8 +24,10 @@
             <section class="book-search">
                 <div class="container">
                     <form action="<?php echo SITEURL; ?>book-search.php" class="search-bar text-center" method="POST">
-                        <input type="search" name="search" placeholder="Search for your book here ... ">
-                        <input type="submit" name="submit" value="›">
+                        <input type="search" name="search" placeholder="Search for title, author, or ISBN">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </form>
                 </div>
             </section>

@@ -79,16 +79,39 @@
                                 with old and unwanted books that takes up space in our shelves. When you decide 
                                 it's time to part with them, we want you to know that they can go to a nice home 
                                 where they can continue to enrich and improve other students education. 
-                                We gratefully accept all kinds of books.+ CO2 fakta
+                                We gratefully accept all kinds of books.
+                                <br><br>
+                                By recycling unused books, you reduce your carbon foot
+                                book by book, you are making this planet a better place to live for the generations to come.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="book-recycle-floatright">
-                    <div class="find-us-title col-sm-3">
-                        <h1>Find us</h1>
-                        <p>Isafjordsgatan 22
-                            164 40 Kista</p>
+                    <div class="recycle-form">
+                        <form id="recycle-form" action="" method="POST">
+                            <legend>Book details</legend>
+                            <br><br>
+                            <input name="title" type="text" class="form-control" placeholder="Title" required>
+                            <br>
+                            <input name="author" type="text" class="form-control" placeholder="Author" required>
+                            <br>
+                            <input name="edition" type="text" class="form-control" placeholder="Edition" required>
+                            <br>
+                            <input name="ISBN" type="text" class="form-control" placeholder="ISBN" required>
+                            <br>
+                            <input name="language" type="text" class="form-control" placeholder="Language" required>
+                            <br><br><br><br><br><br>
+                            <legend>Personal details</legend>
+                            <br><br>
+                            <input name="full_name" type="text" class="form-control" placeholder="Full name" required>
+                            <br>
+                            <input name="email" type="text" class="form-control" placeholder="Email" required>
+                            <br>
+                            <input name="phone" type="text" class="form-control" placeholder="Phone">
+                            <br>
+                            <input type="submit" class="form-control submit" value="Recycle book">
+                        </form>
                     </div>
                     <div class="maps">
 
