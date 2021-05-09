@@ -117,6 +117,11 @@ include('partials-front/header-student.php');
                                             unset($_SESSION['delete']);   //Remove session message
                                         }
 
+                                        if(isset($_SESSION['recycle'])) {
+                                            echo $_SESSION['recycle'];  //Display session message
+                                            unset($_SESSION['recycle']);   //Remove session message
+                                        }
+
                                     ?>
 
                                     </div>
@@ -564,7 +569,7 @@ include('partials-front/header-student.php');
                             </div>
                             <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
                             <div class="title5 text-center" style='padding-top: 100px;'>
-                                <a href="contact.php">
+                                <a href="recycle-page.php">
                                     <h1>I want to recycle more books <i class="fas fa-book"></i> ›</h1>
                                 </a>    
                             </div>

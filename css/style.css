@@ -3418,6 +3418,8 @@ table {
 
 /* ================================================== Book Recycle ========================================================= */
 
+/* Start Book Recycle Area */
+
 .site-banner-recycle-page .wrap {
     width: 100%;
 }
@@ -3535,3 +3537,79 @@ table {
 .site-banner-recycle-page .checkbox a:hover {
     color: rgb(206, 182, 116, 0.774);
 }
+
+/* End Book Recycle Area */
+
+/* Start Confirmation Area */
+
+.site-banner-recycle-confirmation-page .bg-image-books {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url(../img/recycle-book.jpeg);
+    background-size: cover;
+    filter: brightness(80%);
+}
+
+.site-banner-recycle-confirmation-page .books-title {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 85px;
+	color: #FFF;
+    transform: translate(37%, -450%);
+    z-index: 2;
+}
+
+.site-banner-recycle-confirmation-page h2 {
+    position: relative;
+    content: " ";
+    display: block;
+    margin-left: 44%;
+    width: 10%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(380%, -22000%);
+    z-index: 2;
+}
+
+.site-banner-recycle-confirmation-page .container {
+    width: 80%;
+    padding: 5%;
+}
+
+.site-banner-recycle-confirmation-page .recycle-confirmation-page h1 {
+    font-family: 'Abril Fatface', cursive;
+	font-size: 56px;
+	color: rgb(49, 49, 49);
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.site-banner-recycle-confirmation-page .recycle-confirmation-page h4 {
+    font-family: sans-serif;
+	font-size: 30px;
+	color: rgb(59, 59, 59);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.site-banner-recycle-confirmation-page .recycle-confirmation-page p {
+    font-family: sans-serif;
+	font-size: 20px;
+	color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+.site-banner-recycle-confirmation-page .recycle-confirmation-page a {
+    font-family: sans-serif;
+	font-size: 20px;
+	color: rgb(206, 182, 116, 0.774);
+    text-align: center;
+}
+
+.site-banner-recycle-confirmation-page .recycle-confirmation-page a:hover {
+    font-family: sans-serif;
+	font-size: 20px;
+	color: rgb(59, 59, 59);
+    text-align: center;
+}
+
+/* End Confirmation Area */

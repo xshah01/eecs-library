@@ -84,7 +84,7 @@
                                     unwanted books that takes up space in our shelves. When you decide it's time to part with them, 
                                     we want you to know that they can go to a nice home where they can continue to enrich and improve 
                                     other students education. We gratefully accept all kinds of books.</p>
-                                    <a href="contact.html"><p class="link-to-contact">Find us and start recycling your books › </p></a>
+                                    <a href="recycle-page.php"><p class="link-to-contact">Start recycling your books › </p></a>
                                 </div>
                             </div>
                         </div>

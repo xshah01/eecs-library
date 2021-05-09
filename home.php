@@ -259,7 +259,7 @@
                                 other students education. We gratefully accept all kinds of books.</h3>
                             </div>
                             <div class="d-flex flex-row flex-wrap">
-                                <a href="contact.php">
+                                <a href="recycle-page.php">
                                 <button type="button" class="button button2 mr-4 text-uppercase">recycle now</button>
                                 </a>
                             </div>                       

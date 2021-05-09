@@ -1,55 +1,13 @@
-    <?php 
-    
-    include('partials-front/header.php');
-    include('login-check-student.php');
+<?php 
 
-    ?>
+include('partials-front/header.php');
+include('login-check-student.php');
 
-    <?php 
+?>
 
-    include('config.php');
+<!-- ========================= Start Main Area ========================= -->
 
-        /* Check whether student is set or not */
-        if(isset($_SESSION['email'])) {
-
-            $email = $_SESSION['email'];                                       
-
-            /* Get all details based on email */                   
-            $sql = "SELECT * FROM tbl_student WHERE email = '$email'"; //Create SQL query to retrieve the details
-
-            $res = mysqli_query($conn, $sql); //Execute the query
-
-            $count = mysqli_num_rows($res); //Check whether data is available or not
-
-            /* Check whether reservation data has been retrieved or not */
-            if($count == 1) {
-
-                $row = mysqli_fetch_assoc($res);   //Retrieve the details
-
-                $id = $row['id'];  //Get individual data                            
-                $full_name = $row['full_name'];
-                $email = $row['email'];
-                $phone = $row['phone'];
-
-            }
-
-            else {
-                
-            
-            }
-
-        }
-        
-        else {
-
-
-        }
-
-    ?>
-
-        <!-- ========================= Start Main Area ========================= -->
-
-        <main class="site-main">
+<main class="site-main">
 
 <!-- ==================== Start Banner Area ==================== -->
 
@@ -118,11 +76,8 @@
                                 <a href="book-condition-guidelines.php">book condition guidelines.</a>
                             </label>
                             <br><br><br>
-                            <input type="submit" class="form-control submit" value="Recycle book">
+                            <input name="submit" type="submit" class="form-control submit" value="Recycle book">
                         </form>
-                    </div>
-                    <div class="maps">
-
                     </div>
                 </div>
             </div>
@@ -135,48 +90,40 @@
                 if(isset($_POST['submit'])) {
                                         
                     /* Get all details from Form */
-                    $id = $_POST['book_id'];
-                    $book = $_POST['book'];
+                    $title = $_POST['title'];
                     $author = $_POST['author'];
                     $edition = $_POST['edition'];
                     $ISBN = $_POST['ISBN'];
                     $language = $_POST['language'];
-                    $status = "Reserved";   //Reserved, Active, Inactive
-                    $student_name = $_POST['full-name'];
+                    $student_name = $_POST['full_name'];
                     $student_email = $_POST['email'];
                     $student_phone = $_POST['phone'];
 
                     /* Save the reservation in database */
-                    $sql2 = "INSERT INTO tbl_reservation SET 
-                            book = '$book',
+                    $sql = "INSERT INTO tbl_recycle SET 
+                            title = '$title',
                             author = '$author',
                             edition = '$edition',
                             ISBN = '$ISBN',
                             language = '$language',
-                            status = '$status',
                             student_name = '$student_name',
                             student_email = '$student_email',
-                            student_phone = '$student_phone',
-                            reservation_date = current_timestamp() ";
+                            student_phone = '$student_phone' ";
 
-                    /* Update Active = "No" in tbl_book */
-                    $sql4 = "UPDATE tbl_book SET active = 'No' WHERE id = '$id' ";
-
-                    /* Execute the queries */
-                    $res2 = mysqli_query($conn, $sql2);
-                    $res4 = mysqli_query($conn, $sql4);
+                    /* Execute the query */
+                    $res = mysqli_query($conn, $sql);
 
                     /* Check whether query is executed successfully or not */
-                    if($res2 == TRUE AND $res4 == TRUE) {
+                    if($res == TRUE) {
 
-                        echo "<script>window.location.href='confirmation-page.php';</script>";    //Redirect to confirmation page
+                        echo "<script>window.location.href='recycle-confirmation-page.php';</script>";    //Redirect to confirmation page
 
                     }
 
                     else {
 
-                        $_SESSION['reservation'] = "Failed to reserve book";
-                        header("location: ".SITEURL.'reservation-page.php');    //Display message on the same page
+                        $_SESSION['recycle'] = "Failed to recycle book";
+                        header("location: ".SITEURL.'student.php');    //Display message on student page
 
                     }
                                         
@@ -184,26 +131,11 @@
                                         
                 else {
 
-                    header("location: ".SITEURL.'books.php');    //Redirect to book page
+                    header("location: ".SITEURL.'recycle-page.php');    //Stay on the same page
 
                 }
                                         
             ?>
-
-            <div class="admin-message">
-
-                <?php 
-
-                include('config.php');
-
-                    if(isset($_SESSION['reservation'])) {
-                        echo $_SESSION['reservation'];  //Display session message
-                        unset($_SESSION['reservation']);  //Remove session message
-                    }
-
-                ?>
-
-            </div>
 
             <div class="clearfix"></div>
 
