@@ -542,7 +542,7 @@ include('partials-front/header-student.php');
 
                                 /* Get all details based on email */                   
                                 $sql6 = "SELECT * FROM tbl_recycle WHERE student_email = '$email' 
-                                AND status = 'Active'"; //Create SQL query to retrieve the recycles
+                                AND status = 'Active' OR status = 'Waiting' "; //Create SQL query to retrieve the recycles
 
                                 $res6 = mysqli_query($conn, $sql6); //Execute the query
 
@@ -564,16 +564,47 @@ include('partials-front/header-student.php');
                                 </div>
                             </div>
                             <div class="title3 text-center" style='padding-top: 100px;'>
-                                <h1>[count loans] students <i class="fas fa-user-graduate"></i> in total have benefited
-                                from my books
-                                <i class="fas fa-book"></i>
+
+                            <?php
+
+                            include('config.php');
+
+                                /* Get all details based on email */                   
+                                $sql7 = "SELECT * FROM book_recycle "; //Create SQL query to retrieve the recycled loans
+
+                                $res7 = mysqli_query($conn, $sql7); //Execute the query
+
+                                $sql8 = "SELECT * FROM tbl_recycle INNER JOIN book_recycle
+                                ON tbl_recycle.ISBN = book_recycle.ISBN
+                                WHERE student_email = '$email' 
+                                AND status = 'Active' ";
+
+                                $res8 = mysqli_query($conn, $sql8); //Execute the query
+
+                                $count8 = mysqli_num_rows($res8); //Check whether data is available or not
+
+                                /* Get all details based on email */                   
+                                $sql9 = "SELECT * FROM tbl_recycle WHERE student_email = '$email' 
+                                AND status = 'Waiting' "; //Create SQL query to retrieve the pedning recycles
+
+                                $res9 = mysqli_query($conn, $sql9); //Execute the query
+
+                                $count9 = mysqli_num_rows($res9); //Check whether data is available or not
+                                
+                            ?>
+
+                                <h1><?php echo $count8; ?> book(s)<sup>*</sup> <i class="fas fa-book"></i> in total are available
+                                for reservation and ready to
                             </div>
                             <div class="title3 text-center" style='padding-top: 20px;'>
-                                <h1>Enriching and improving their education <i class="fas fa-graduation-cap"></i></h1>
+                                <h1>enrich and improve other students education <i class="fas fa-graduation-cap"></i></h1>
+                            </div>
+                            <div class="title3-mini text-center" style='padding-top: 20px;'>
+                                <h1><sup>*</sup> <?php echo $count9; ?> book(s) are still pending for registration by admin</h1>
                             </div>
                             <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
                             <div class="title3 text-center" style='padding-top: 100px;'>
-                                <h1>I have reduced my carbon footprint by saving <?php echo ($count6 * 7.5); ?> kg CO<sub>2</sub>!
+                                <h1>I have reduced my carbon footprint by saving <?php echo ($count8 * 7.5); ?> kg CO<sub>2</sub>!
                                 <a href="http://www.takepart.com/article/2014/01/29/using-digital-readers-reduce-carbon-footprint">
                                     <sup>1</sup></h1>
                                 </a>
@@ -585,7 +616,7 @@ include('partials-front/header-student.php');
                             <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
                             <div class="title5 text-center" style='padding-top: 100px;'>
                                 <a href="recycle-page.php">
-                                    <h1>I want to recycle more books <i class="fas fa-book"></i> ›</h1>
+                                    <h1>I want to recycle books <i class="fas fa-book"></i> ›</h1>
                                 </a>    
                             </div>
 	

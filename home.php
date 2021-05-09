@@ -150,7 +150,7 @@
                                 $count = mysqli_num_rows($res); //Count rows
 
                             ?>
-                            <h1><?php echo $count ?></h1>
+                            <h1><?php echo $count; ?></h1>
                             <h2></h2>
                             <h3>Books available</h3>
                         </div>
@@ -166,7 +166,7 @@
                                 $count2 = mysqli_num_rows($res2); //Count rows
 
                             ?>
-                            <h1><?php echo $count2 ?></h1>
+                            <h1><?php echo $count2; ?></h1>
                             <h2></h2>
                             <h3>Total Reservations</h3>
                         </div>
@@ -182,12 +182,23 @@
                                 $count3 = mysqli_num_rows($res3); //Count rows
 
                             ?>
-                            <h1 class="num"><?php echo $count3 ?></h1>
+                            <h1 class="num"><?php echo $count3; ?></h1>
                             <h2></h2>
                             <h3>Active Readers</h3>
                         </div>
                         <div class="col-sm-3">
-                            <h1 class="num">18</h1>
+                            <?php 
+                                
+                                include('config.php');
+
+                                    $sql4 = "SELECT * FROM tbl_recycle WHERE status='Active' ";    //SQL query
+
+                                    $res4 = mysqli_query($conn, $sql4);   //Execute query
+
+                                    $count4 = mysqli_num_rows($res4); //Count rows
+
+                                ?>
+                            <h1 class="num"><?php echo $count4; ?></h1>
                             <h2></h2>
                             <h3>Recycled Books</h3>
                         </div>

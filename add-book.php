@@ -64,6 +64,15 @@
                 $active = "No";
             }
 
+            if (isset($_POST['recycle'])) {
+                //Get the value from form
+                $recycle = $_POST['recycle'];
+            }
+            else {
+                //Set the default value
+                $recycle = "No";
+            }
+
             //SQL query 
             $sql2 = "INSERT INTO tbl_book SET
                 title = '$title',
@@ -73,7 +82,8 @@
                 language = '$language',
                 image_name = '$image_name',
                 category_id = $category,
-                active = '$active' ";
+                active = '$active',
+                recycle = '$recycle' ";
 
             //Execute query and save data into database
             $res2 = mysqli_query($conn, $sql2);
@@ -188,6 +198,12 @@
                                 <td>Active:
                                     <input type="radio" name="active" value="Yes">   Yes
                                     <input type="radio" name="active" value="No">   No
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Recycle:
+                                    <input type="radio" name="recycle" value="Yes">   Yes
+                                    <input type="radio" name="recycle" value="No">   No
                                 </td>
                             </tr>
                             <tr>

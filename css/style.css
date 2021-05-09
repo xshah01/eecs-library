@@ -2332,13 +2332,13 @@ table {
 
 .site-banner-books table tr th {
     padding-top: 100px;
-    padding-left: 32px;
+    padding-left: 30px;
     padding-bottom: 35px;
     text-align: left;
 }
 
 .site-banner-books table tr td {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-bottom: 15px;
 }
 
@@ -2999,17 +2999,17 @@ table {
 
 .site-banner-student .main-content .container button {
     background-color: transparent;
-    border: 1px solid rgb(100, 100, 100);
+    border: 1px solid rgb(206, 182, 116, 0.774);
     padding: 6px 18px;
     font-family: sans-serif;
-    color: rgb(100, 100, 100);
+    color: rgb(206, 182, 116, 0.774);
     text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 2px;
 }
 
 .site-banner-student .main-content .container button:hover {
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(206, 182, 116, 0.774);
     color: white;
     transition: .1s ease-in;
 }
@@ -3386,6 +3386,12 @@ table {
 .site-banner-student .main-content .title3 h1 {
     font-family: sans-serif;
     font-size: 25px;
+	color: rgb(59, 59, 59);
+}
+
+.site-banner-student .main-content .title3-mini h1 {
+    font-family: sans-serif;
+    font-size: 12px;
 	color: rgb(59, 59, 59);
 }
 
