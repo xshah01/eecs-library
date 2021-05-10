@@ -193,11 +193,11 @@ include('partials-front/header-student.php');
                                 </div>
                             </div>
                         </div>
-                        <div class="column-right">                              
+                        <div class="column-right-student">                              
                             <div class="books"> 
                                 <div class="col-xl-11">
                                     <br>
-                                    <h4>Books</h4>
+                                    <h4>Books and services</h4>
                                         <a href="#reservations"><p class="edit">
                                             My reservations ›</p>
                                         </a>

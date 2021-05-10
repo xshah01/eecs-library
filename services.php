@@ -60,7 +60,7 @@
                                     <div class="col-xl-11">
                                     <h4>Study booth</h4>
                                     <p>There are several reading and study booths available for quiet sessions, 
-                                        if you prefer to study in a quiet environment.</p>
+                                        if you prefer to study in a non-disturbing environment.</p>
                                     </div>
                                 </div>
                             </div>
@@ -106,9 +106,10 @@
                             <h4>Book club</h4>
                             <p>Life is short, and books take a long time to read, so let's make our reading count! 
                                 Variuos book clubs are available for those who enjoy reading all kinds of genres.</p>
-                            <p>All students are welcome whether you are a veteran or are reading a great work for your first time. 
-                                We will discuss these books to enlarge our understanding of the ideas that shape the human condition, 
-                                but our discussions will be casual and we won't take ourselves too seriously.</p>
+                            <p>All students are welcome whether you are a veteran or are reading a great work for your first time.
+                                You are welcome to visit us if you want to know more about current book clubs.
+                            </p>
+                            <p><br></p>
                             </div>
                         </div>
                     </div>

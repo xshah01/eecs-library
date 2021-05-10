@@ -1355,12 +1355,10 @@ header.sticky ul li a:hover {
     padding-top: 10px;
 }
 
-.site-banner-services .ask-a-librarian .link-to-contact {
+.site-banner-services .link-to-contact {
     font: var(--roboto);
 	font-size: 18px;
 	color: rgb(100, 100, 100);
-    margin-left: 80px;
-    padding-top: 10px;
     text-decoration: none;
 }
 
@@ -1368,7 +1366,7 @@ a:link {
     text-decoration: none;
 }
 
-.site-banner-services .ask-a-librarian .link-to-contact:hover {
+.site-banner-services .link-to-contact:hover {
     color: rgb(214, 195, 142);
     text-decoration: underline;
 }
@@ -1419,24 +1417,6 @@ a:link {
     padding-top: 10px;
 }
 
-.site-banner-services .recycle .link-to-contact {
-    font: var(--roboto);
-	font-size: 18px;
-	color: rgb(100, 100, 100);
-    margin-left: 80px;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-.site-banner-services .recycle .link-to-contact:hover {
-    color: rgb(214, 195, 142);
-    text-decoration: underline;
-}
-
 .site-banner-services .services-video3 {
     padding-left: 90px;
     margin-top: 100px;
@@ -1449,7 +1429,7 @@ a:link {
     font-weight: 700;
     line-height: 35px;
     margin-left: 750px;
-    margin-top: 180px;
+    margin-top: 150px;
 }
 
 .site-banner-services .book-club p {
@@ -2902,9 +2882,13 @@ table {
     display: flex;
 }
 
-.column-right,
+.column-right-student,
 .column-left {
     flex: 50%;
+}
+
+.column-right-student {
+    margin-left: -70px;
 }
 
 .site-banner-student .bg-image-student {
