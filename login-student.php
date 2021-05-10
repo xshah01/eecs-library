@@ -64,7 +64,7 @@
   <div class="container">
     <div class="wrap">
       <div class="headings">
-      <div class="admin-message">
+      <div class="admin-message-signup">
 
         <!-- Display message error message -->
         <?php 
@@ -91,9 +91,9 @@
             <div id="sign-in-form">
                 <form action="" method="POST">
                 <label for="email">Email</label>
-                <input id="email" type="text" name="email" />
+                <input id="email" type="text" name="email" required/>
                 <label for="password">Password</label>
-                <input id="password" type="password" name="password" />
+                <input id="password" type="password" name="password" required/>
                 <input type="submit" class="btn-sign-in" name="submit" value="Sign in" />
                 </form>
                 <footer>

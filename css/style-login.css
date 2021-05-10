@@ -186,9 +186,9 @@ body {
     display: block;
   }
 
-  .admin-message {
+  .admin-message-signup {
     padding-bottom: 25px;
-    padding-left: 80px;
+    text-align: center;
     color: rgb(247, 183, 49);
 }
   
