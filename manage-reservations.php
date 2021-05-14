@@ -68,7 +68,7 @@ include('partials-front-admin/header.php');
 
                         include('config.php');
                         
-                            $sql = "SELECT * FROM tbl_reservation WHERE status='Reserved' OR status='Inactive' ";
+                            $sql = "SELECT * FROM tbl_reservation WHERE status='Reserved' OR status='Inactive' OR status='Canceled' ";
 
                             /* Execute query */
                             $res = mysqli_query($conn, $sql);
@@ -118,6 +118,9 @@ include('partials-front-admin/header.php');
                                     /* Display "Reserved", "Active", "Inactive" in different colors */
                                     if($status == "Reserved") {
                                         echo "<label style='color: blue';>$status</label>";
+                                    }
+                                    elseif($status == "Canceled") {
+                                        echo "<label style='color: grey';>$status</label>";
                                     }
                                     elseif($status == "Active") {
                                         echo "<label style='color: green';>$status</label>";
@@ -243,6 +246,9 @@ include('partials-front-admin/header.php');
                                 /* Display "Reserved", "Active", "Inactive" in different colors */
                                 if($status == "Reserved") {
                                     echo "<label style='color: blue';>$status</label>";
+                                }
+                                elseif($status == "Canceled") {
+                                    echo "<label style='color: black';>$status</label>";
                                 }
                                 elseif($status == "Active") {
                                     echo "<label style='color: green';>$status</label>";

@@ -3095,6 +3095,14 @@ table {
     color: rgb(100, 100, 100);
 }
 
+.site-banner-student .reservations .book-description a {
+    color: red;
+}
+
+.site-banner-student .reservations .book-description a:hover {
+    color: rgba(0, 0, 0);
+}
+
 .site-banner-student .reservations .no-reservations-loans {
     text-align: center;
     padding-top: 60px;

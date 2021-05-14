@@ -60,7 +60,8 @@
                         include('config.php');
 
                             /* SQL query to get the books based on category */
-                            $sql2 = "SELECT * FROM tbl_book WHERE category_id=$category_id";  
+                            $sql2 = "SELECT * FROM tbl_book WHERE category_id=$category_id
+                            AND 'active' = 'Yes'";    
 
                             /* Execute the query */
                             $res2 = mysqli_query($conn, $sql2);

@@ -122,6 +122,11 @@ include('partials-front/header-student.php');
                                             unset($_SESSION['recycle']);   //Remove session message
                                         }
 
+                                        if(isset($_SESSION['delete-reservation'])) {
+                                            echo $_SESSION['delete-reservation'];  //Display session message
+                                            unset($_SESSION['delete-reservation']);   //Remove session message
+                                        }
+
                                     ?>
 
                                     </div>
@@ -229,6 +234,9 @@ include('partials-front/header-student.php');
                         <?php
 
                         include('config.php');
+
+                            //SQL Query to get the reservation ID    
+                            $sql10 = "SELECT * FROM tbl_reservation";
                                     
                             //SQL Query for reservations based on student_email        
                             $sql3 = "SELECT * FROM tbl_reservation 
@@ -238,20 +246,24 @@ include('partials-front/header-student.php');
                                 AND status = 'Reserved' 
                                 ORDER BY reservation_date ASC";
 
-                                //Execute query
+                                //Execute queries
                                 $res3 = mysqli_query($conn, $sql3);
+                                $res10 = mysqli_query($conn, $sql10);
 
-                                //Check whether query is executed or not
-                                if($res3 == TRUE) {
+                                //Check whether queries is executed or not
+                                if($res3 == TRUE AND $res10 == TRUE) {
 
                                     //Count rows to check whether we have data in database or not
                                     $count3 = mysqli_num_rows($res3);  //Function to get all rows in database
+                                    $count10 = mysqli_num_rows($res10);
 
                                     //Check the number of rows
                                     if($count3 > 0) {
                                         //We have data in database
                                         //While loop get all data from database and will run as long as there is data to fetch
-                                        while($rows3 = mysqli_fetch_assoc($res3)) {
+                                        while($rows3 = mysqli_fetch_assoc($res3) AND $rows10 = mysqli_fetch_assoc($res10)) {
+                                            $id = $rows10['id'];    //From tbl_reservation
+                                            //From sql3
                                             $title = $rows3['book'];
                                             $author = $rows3['author'];
                                             $edition = $rows3['edition'];
@@ -286,8 +298,12 @@ include('partials-front/header-student.php');
                                         <p class="ISBN"><?php echo $ISBN; ?></p>
                                         <p class="date"><?php echo $reservation_date; ?>
                                             (Pick up this book no later than the next day 
-                                            or you reservation will be terminated)</p>
-
+                                            or you reservation will be terminated)
+                                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                                            <a href="<?php echo SITEURL; ?>cancel-reservation.php?id=<?php echo $id; ?>">
+                                                CANCEL <i class="fas fa-ban"></i>
+                                            </a>
+                                        </p>
                                 </div>
                             </div>
                         </div>
