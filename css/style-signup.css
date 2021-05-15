@@ -142,14 +142,21 @@ body {
   }
 
   .signup .checkbox {
-    margin-left: -410px;
-    padding-top: 33px;
+    margin-left: -20px;
+    padding-top: 34px;
+    width: 30px;
+  }
+
+  .signup .checkbox input {
+    margin-left: -1px;
   }
 
   .signup .checkbox-text {
-    font-size: 9px;
+    width: 375px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 1);
-    margin-top: -40px;
+    margin-top: -43px;
+    margin-left: -2px;
     text-transform: lowercase;
     text-transform: capitalize;
   }
