@@ -356,7 +356,7 @@ include('partials-front/header-student.php');
                                 ON tbl_reservation.ISBN = tbl_book.ISBN 
                                 WHERE student_email = '$email'
                                 AND status = 'Active'
-                                ORDER BY reservation_date ASC";
+                                ORDER BY reservation_date DESC";
 
                                 //Execute query
                                 $res4 = mysqli_query($conn, $sql4);
