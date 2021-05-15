@@ -194,17 +194,17 @@ include('partials-front-admin/header.php');
                                 
                                 include('config.php');
 
-                                    $sql7 = "SELECT * FROM tbl_admin ";    //SQL query
+                                    $sql7 = "SELECT * FROM tbl_student ";    //SQL query
 
                                     $res7 = mysqli_query($conn, $sql7);   //Execute query
 
                                     $count7 = mysqli_num_rows($res7); //Count rows
 
                                 ?>
-                                <a href="manage-accounts.php">
+                                <a href="list-of-students.php">
                                 <h1><?php echo $count7 ?></h1>
                                 <br />
-                                <p>Study Booth</p>
+                                <p>Students</p>
                             </div>
                                 </a>
 
