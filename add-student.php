@@ -13,10 +13,11 @@ if(isset($_POST['submit'])) {
     $full_name = $_POST['full_name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $password = ($_POST['password']);
+    $password = md5($_POST['password']);
+    $confirm_password = md5($_POST['confirm_password']);
 
-    //SQL to check whether student with email and password exists or not
-    $sql = "SELECT * FROM tbl_student WHERE email = '$email' AND password = '$password'";
+    //SQL to check whether student exists or not
+    $sql = "SELECT * FROM tbl_student WHERE email = '$email' ";
 
     //Execute the query
     $res = mysqli_query($conn, $sql) or die(mysqli_error());
@@ -26,34 +27,48 @@ if(isset($_POST['submit'])) {
     
     //If there is no student with posted data
     if(!$count == 1) {
+
+        //Check whether passwords matches or not
+        if($password == $confirm_password) {
                           
-        //SQL query 
-        $sql1 = "INSERT INTO tbl_student SET
-                full_name = '$full_name',
-                email = '$email',
-                phone = '$phone',
-                password = '$password' ";
+            //SQL query to add student
+            $sql1 = "INSERT INTO tbl_student SET
+                    full_name = '$full_name',
+                    email = '$email',
+                    phone = '$phone',
+                    password = '$password' ";
 
-        //Execute query and save data into database
-        $res1 = mysqli_query($conn, $sql1) or die(mysqli_error());
+            //Execute query and save data into database
+            $res1 = mysqli_query($conn, $sql1) or die(mysqli_error());
 
-        if($res1 == TRUE) {
+            if($res1 == TRUE) {
 
-            $_SESSION['email'] = $_POST['email']; // store email
-            $_SESSION['password'] = $_POST['password']; // store password
-            //Create a session for this login. Check whether student is logged in or not. Logout will unset it
-            $_SESSION['student'] = $email;
+                $_SESSION['email'] = $_POST['email']; // store email
+                $_SESSION['password'] = $_POST['password']; // store password
+                //Create a session for this login. Check whether student is logged in or not. Logout will unset it
+                $_SESSION['student'] = $email;
 
-            $_SESSION['add'] = "Your account has been created.";   //Create a session variable to display message
-            header("location: ".SITEURL.'add-student.php'); //Stay on same page
-            exit(0);
+                $_SESSION['add'] = "Your account has been created.";   //Create a session variable to display message
+                header("location: ".SITEURL.'add-student.php'); //Stay on same page
+                exit(0);
+
+            }
+
+            else {
+
+                $_SESSION['add'] = "Failed to register. Try again.";   //Create a session variable to display message
+                header("location: ".SITEURL.'add-student.php'); //Stay on same page
+                exit(0);
+
+            }
 
         }
 
         else {
 
-            $_SESSION['add'] = "Failed to register. Try again.";   //Create a session variable to display message
+            $_SESSION['password-not-match'] = "Passwords did not match";
             header("location: ".SITEURL.'add-student.php'); //Stay on same page
+            exit(0);
 
         }
 
@@ -66,6 +81,7 @@ if(isset($_POST['submit'])) {
         exit(0);
 
     }
+
 
 }
 
@@ -118,6 +134,11 @@ include('config.php');
         unset($_SESSION['add']);  //Remove session message
     }
 
+    if(isset($_SESSION['password-not-match'])) {
+        echo $_SESSION['password-not-match'];  //Display session message
+        unset($_SESSION['password-not-match']);  //Remove session message
+    }
+
 ?>
 
 </div>
@@ -139,8 +160,8 @@ include('config.php');
         <input id="phone" type="text" name="phone" />
         <label for="password">Password</label>
         <input id="password" type="password" name="password" required/>
-        <label for="password2">Re-enter password</label>
-        <input id="password2" type="password" name="password2"/>
+        <label for="confirm_password">Re-enter password</label>
+        <input id="confirm_password" type="password" name="confirm_password" required/>
         <input type="submit" class="btn-sign-in" name="submit" value="Sign up" />
         </form>
         <footer>

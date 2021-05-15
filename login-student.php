@@ -11,9 +11,9 @@
 
             //Retrieve data from form
             $email = $_POST['email'];
-            $password = ($_POST['password']);
+            $password = md5($_POST['password']);
 
-            //SQL to check whether admin with email and password exists or not
+            //SQL to check whether student with email and password exists or not
             $sql = "SELECT * FROM tbl_student WHERE email = '$email' AND password = '$password'";
 
             //Execute the query

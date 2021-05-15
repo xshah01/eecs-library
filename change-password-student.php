@@ -12,8 +12,8 @@
             //Process the value from Form and save it in database
             $id = $_POST['id'];
             $current_password = ($_POST['current_password']);
-            $new_password = ($_POST['new_password']);
-            $confirm_password = ($_POST['confirm_password']);
+            $new_password = md5($_POST['new_password']);
+            $confirm_password = md5($_POST['confirm_password']);
 
             //Check whether admin with current ID and current password exists or not
             $sql = "SELECT * FROM tbl_student WHERE id=$id AND password='$current_password'";

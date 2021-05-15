@@ -558,8 +558,8 @@ include('partials-front/header-student.php');
                             include('config.php');
 
                                 /* Get all details based on email */                   
-                                $sql6 = "SELECT * FROM tbl_recycle WHERE student_email = '$email' 
-                                AND status = 'Active' OR status = 'Waiting' "; //Create SQL query to retrieve the recycles
+                                $sql6 = "SELECT * FROM tbl_recycle WHERE student_email = '$email' AND status = 'Active' 
+                                "; //Create SQL query to retrieve the recycles
 
                                 $res6 = mysqli_query($conn, $sql6); //Execute the query
 
@@ -587,12 +587,12 @@ include('partials-front/header-student.php');
                             include('config.php');
 
                                 /* Get all details based on email */                   
-                                $sql7 = "SELECT * FROM book_recycle "; //Create SQL query to retrieve the recycled loans
+                                $sql7 = "SELECT * FROM tbl_book"; //Create SQL query to retrieve the recycled loans
 
                                 $res7 = mysqli_query($conn, $sql7); //Execute the query
 
-                                $sql8 = "SELECT * FROM tbl_recycle INNER JOIN book_recycle
-                                ON tbl_recycle.ISBN = book_recycle.ISBN
+                                $sql8 = "SELECT * FROM tbl_recycle INNER JOIN tbl_book
+                                ON tbl_recycle.ISBN = tbl_book.ISBN
                                 WHERE student_email = '$email' 
                                 AND status = 'Active' ";
 
