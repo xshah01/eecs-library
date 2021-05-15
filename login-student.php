@@ -29,7 +29,8 @@
                 $_SESSION['password'] = $_POST['password']; // store password
                 //Create a session for this login. Check whether student is logged in or not. Logout will unset it
                 $_SESSION['student'] = $email;
-                header("location: ".SITEURL.'student.php'); //Redirect to Student
+
+                header('location:'.$_SESSION['redirectURL']);   // Redirect to previous page
                 exit(0);
                 
             }
