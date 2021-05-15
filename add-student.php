@@ -26,41 +26,16 @@ if(isset($_POST['submit'])) {
     
     //If there is no student with posted data
     if(!$count == 1) {
-
-        //Generate random 32 character hash and assign it to a local variable
-        $hash = md5(rand(0,1000));    //Example output: f4552671f8909587cf485ea990207f3b
-                                        
+                          
         //SQL query 
         $sql1 = "INSERT INTO tbl_student SET
                 full_name = '$full_name',
                 email = '$email',
                 phone = '$phone',
-                password = '$password',
-                hash = '$hash' ";
+                password = '$password' ";
 
         //Execute query and save data into database
         $res1 = mysqli_query($conn, $sql1) or die(mysqli_error());
-
-        /* Send the verification Email */
-        $to = $email; //Send email to student
-        $subject = 'Signup EECS-Library Verification'; //Give the email a subject 
-        $message = 
-
-        "   Thanks for signing up!
-            Your account has been created, you can login with the following credentials after you have activated your account by pressing the url below.
-            
-            ------------------------
-            Username: '.$email.'
-            Password: '.$password.'
-            ------------------------
-            
-            Please click this link to activate your account:
-            http://localhost/eecs-library/verify.php?email='.$email.'&hash='.$hash.'
-            
-        "; //Our message above including the link
-                      
-        $headers = 'From:noreply@eecs-library.com' . "\r\n"; //Set from headers
-        mail($to, $subject, $message, $headers); //Send our email
 
         if($res1 == TRUE) {
 
@@ -69,7 +44,7 @@ if(isset($_POST['submit'])) {
             //Create a session for this login. Check whether student is logged in or not. Logout will unset it
             $_SESSION['student'] = $email;
 
-            $_SESSION['add'] = "Your account has been created. Check your email to verify it.";   //Create a session variable to display message
+            $_SESSION['add'] = "Your account has been created.";   //Create a session variable to display message
             header("location: ".SITEURL.'add-student.php'); //Stay on same page
             exit(0);
 
@@ -86,7 +61,7 @@ if(isset($_POST['submit'])) {
 
     else {
 
-        $_SESSION['occupied'] = "This email is already registered";    //Student already registered
+        $_SESSION['occupied'] = "This student is already registered";    //Student already registered
         header("location: ".SITEURL.'add-student.php'); //Stay on same page
         exit(0);
 
@@ -103,7 +78,7 @@ if(isset($_POST['submit'])) {
 <title>Login Student</title>
 
 <!-- custom css file -->
-<link href="./css/style-login.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+<link href="./css/style-signup.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 <link href="./css/all.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 </head>
@@ -139,6 +114,7 @@ include('config.php');
 
     if(isset($_SESSION['add'])) {
         echo $_SESSION['add'];  //Display session message
+        echo "<a href='".$SITEURL.'login-student.php'."'> LOGIN ›</a>";
         unset($_SESSION['add']);  //Remove session message
     }
 
@@ -163,6 +139,8 @@ include('config.php');
         <input id="phone" type="text" name="phone" />
         <label for="password">Password</label>
         <input id="password" type="password" name="password" required/>
+        <label for="password2">Re-enter password</label>
+        <input id="password2" type="password" name="password2"/>
         <input type="submit" class="btn-sign-in" name="submit" value="Sign up" />
         </form>
         <footer>

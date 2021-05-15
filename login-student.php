@@ -25,14 +25,19 @@
             if($count == 1) {
 
             
-                $_SESSION['email'] = $_POST['email']; // store email
-                $_SESSION['password'] = $_POST['password']; // store password
+                $_SESSION['email'] = $_POST['email']; //Store email
+                $_SESSION['password'] = $_POST['password']; //Store password
                 //Create a session for this login. Check whether student is logged in or not. Logout will unset it
                 $_SESSION['student'] = $email;
 
-                header('location:'.$_SESSION['redirectURL']);   // Redirect to previous page
-                exit(0);
-                
+                if(isset($_SESSION['redirectURL'])) {
+                    header('location:'.$_SESSION['redirectURL']);   //Redirect to previous page
+                    exit(0);
+                }
+                else {
+                    header("location: ".SITEURL.'student.php'); //Redirect to student page
+                }
+
             }
 
             else {
@@ -82,7 +87,7 @@
                 echo $_SESSION['no-login-message']; //Display session message
                 unset($_SESSION['no-login-message']);  //Remove session message
             }
-
+            
         ?>
 
         </div>
