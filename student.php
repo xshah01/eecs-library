@@ -236,7 +236,8 @@ include('partials-front/header-student.php');
                         include('config.php');
 
                             //SQL Query to get the reservation ID    
-                            $sql10 = "SELECT * FROM tbl_reservation";
+                            $sql10 = "SELECT * FROM tbl_reservation WHERE student_email = '$email' AND status = 'Reserved'
+                            ORDER BY id DESC";
                                     
                             //SQL Query for reservations based on student_email        
                             $sql3 = "SELECT * FROM tbl_reservation 
