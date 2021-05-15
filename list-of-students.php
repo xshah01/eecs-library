@@ -34,11 +34,6 @@ include('partials-front-admin/header.php');
 
                     include('config.php');
 
-                        if(isset($_SESSION['add'])) {
-                            echo $_SESSION['add'];  //Display session message
-                            unset($_SESSION['add']);   //Remove session message
-                        }
-
                         if(isset($_SESSION['delete'])) {
                             echo $_SESSION['delete'];  //Display session message
                             unset($_SESSION['delete']);   //Remove session message
