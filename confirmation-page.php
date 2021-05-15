@@ -49,6 +49,8 @@
 
                     <p>Or see your reservation by clicking <a href="student.php">here </a></p>
 
+                    <p>Browse more <a href="books.php">books </a></p>
+
                     <div class="clearfix"></div>
 
                     <br><br><br>
