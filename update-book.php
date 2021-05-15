@@ -19,7 +19,7 @@
             $language = $_POST['language'];
             $current_image = $_POST['current_image'];
             $category = $_POST['category'];
-            $active = $_POST['active'];
+            $qty = $_POST['qty'];
 
             /* Update the image if selected */
             if(isset($_FILES['image']['name'])) {
@@ -86,7 +86,7 @@
                 language = '$language',
                 image_name = '$image_name',
                 category_id = '$category',
-                active = '$active' WHERE id = $id ";
+                qty = '$qty' WHERE id = $id ";
 
             /* Execute the query */
             $res3 = mysqli_query($conn, $sql3);
@@ -166,7 +166,7 @@
                                 $language = $row2['language'];
                                 $current_image = $row2['image_name'];
                                 $current_category = $row2['category_id'];
-                                $active = $row2['active'];
+                                $qty = $row2['qty'];
 
                             }
 
@@ -203,6 +203,9 @@
                             </tr>
                             <tr>
                                 <td><input type="text" class="form-control" name="language" value="<?php echo $language ?>"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="qty" value="<?php echo $qty ?>"></td>
                             </tr>
                             <tr>
                                 <td>Current Image:
@@ -257,12 +260,6 @@
                                         ?>
                                         
                                     </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Active:
-                                    <input <?php if($active == "Yes") {echo "checked";} ?> type="radio" name="active" value="Yes">   Yes
-                                    <input <?php if($active == "No") {echo "checked";} ?> type="radio" name="active" value="No">   No
                                 </td>
                             </tr>
                             <tr>

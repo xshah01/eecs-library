@@ -202,8 +202,8 @@
                                                 student_phone = '$student_phone',
                                                 reservation_date = current_timestamp() ";
 
-                                        /* Update Active = "No" in tbl_book */
-                                        $sql4 = "UPDATE tbl_book SET active = 'No' WHERE id = '$id' ";
+                                        /* Update Qty in tbl_book */
+                                        $sql4 = "UPDATE tbl_book SET qty = (qty - 1)  WHERE id = '$id' ";
 
                                         /* Execute the queries */
                                         $res2 = mysqli_query($conn, $sql2);

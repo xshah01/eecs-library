@@ -55,15 +55,6 @@
             }
             
             //For radio input, check whether the button is selected or not
-            if (isset($_POST['active'])) {
-                //Get the value from form
-                $active = $_POST['active'];
-            }
-            else {
-                //Set the default value
-                $active = "No";
-            }
-
             if (isset($_POST['recycle'])) {
                 //Get the value from form
                 $recycle = $_POST['recycle'];
@@ -82,7 +73,6 @@
                 language = '$language',
                 image_name = '$image_name',
                 category_id = $category,
-                active = '$active',
                 recycle = '$recycle' ";
 
             //Execute query and save data into database
@@ -192,12 +182,6 @@
 
                                         ?>
 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Active:
-                                    <input type="radio" name="active" value="Yes">   Yes
-                                    <input type="radio" name="active" value="No">   No
                                 </td>
                             </tr>
                             <tr>

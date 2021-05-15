@@ -15,7 +15,7 @@ include('config.php');
 
    $sql2 = "UPDATE tbl_reservation SET status = 'Canceled' WHERE id=$id";    //Create SQL query to delete reservation/ from database
 
-   $sql3 = "UPDATE tbl_book SET active = 'Yes' WHERE ISBN = $ISBN ";   //Update Active = "Yes" in tbl_book
+   $sql3 = "UPDATE tbl_book SET qty = (qty + 1) WHERE ISBN = $ISBN ";   //Update Qty in tbl_book
 
    $res2 = mysqli_query($conn, $sql2);  //Execute the query
    $res3 = mysqli_query($conn, $sql3);  //Execute the query

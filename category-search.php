@@ -61,7 +61,7 @@
 
                             /* SQL query to get the books based on category */
                             $sql2 = "SELECT * FROM tbl_book WHERE category_id=$category_id
-                            AND active = 'Yes' ";    
+                            AND qty >= 1 ";      
 
                             /* Execute the query */
                             $res2 = mysqli_query($conn, $sql2);
@@ -79,6 +79,7 @@
                                     $title = $row2['title'];
                                     $author = $row2['author'];
                                     $edition = $row2['edition'];
+                                    $qty = $row2['qty'];
                                     $image_name = $row2['image_name'];
 
                                     /* Display the books */
@@ -102,6 +103,7 @@
                                                 <h4><?php echo $title; ?></h4>
                                                 <p class="author"><?php echo $author; ?></p>
                                                 <p class="edition"><?php echo $edition; ?></p>
+                                                <p class="qty">Available: <?php echo $qty; ?></p>
                                                 <a href="<?php echo SITEURL; ?>reservation-page.php?book_id=<?php echo $id; ?>">
                                                     <button 
                                                         type="button" class="btn-reserve-book">Reserve Book

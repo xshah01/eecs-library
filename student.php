@@ -237,7 +237,7 @@ include('partials-front/header-student.php');
 
                             //SQL Query to get the reservation ID    
                             $sql10 = "SELECT * FROM tbl_reservation WHERE student_email = '$email' AND status = 'Reserved'
-                            ORDER BY id DESC";
+                            ORDER BY id ASC";
                                     
                             //SQL Query for reservations based on student_email        
                             $sql3 = "SELECT * FROM tbl_reservation 
@@ -245,7 +245,7 @@ include('partials-front/header-student.php');
                                 ON tbl_reservation.ISBN = tbl_book.ISBN 
                                 WHERE student_email = '$email'
                                 AND status = 'Reserved' 
-                                ORDER BY reservation_date ASC";
+                                ORDER BY reservation_date DESC";
 
                                 //Execute queries
                                 $res3 = mysqli_query($conn, $sql3);

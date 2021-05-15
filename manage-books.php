@@ -95,7 +95,7 @@ include('partials-front-admin/header.php');
                             <th>Edition</th>
                             <th>ISBN</th>
                             <th>Image</th>
-                            <th>Active</th>
+                            <th>Qty</th>
                             <th>Recycle</th>
                             <th>Manage</th>
                         </tr>
@@ -128,7 +128,7 @@ include('partials-front-admin/header.php');
                                     $edition = $rows['edition'];
                                     $ISBN = $rows['ISBN'];
                                     $image_name = $rows['image_name'];
-                                    $active = $rows['active'];
+                                    $qty = $rows['qty'];
                                     $recycle = $rows['recycle'];
 
                         ?>
@@ -158,7 +158,7 @@ include('partials-front-admin/header.php');
                                         ?>
                                     </td>
 
-                                    <td><?php echo $active; ?></td>
+                                    <td><?php echo $qty; ?></td>
                                     <td><?php echo $recycle; ?></td>
                                     <td>
                                         <a href="<?php echo SITEURL; ?>update-book.php?id=<?php echo $id; ?>">

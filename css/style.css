@@ -731,9 +731,9 @@ header.sticky ul li a:hover {
 }
 
 .site-banner-books .books .boxes-books .btn-reserve-book {
-    padding: 4.5%;
+    padding: 4%;
     font: var(--roboto);
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 0.05rem;
     position: relative;
     border: 1px solid black;
@@ -744,17 +744,9 @@ header.sticky ul li a:hover {
 }
 
 .site-banner-books .books .boxes-books .btn-reserve-book:hover {
-    padding: 4.5%;
-    font: var(--roboto);
-    font-size: 12px;
-    letter-spacing: 0.05rem;
-    position: relative;
-    border: 1px solid black;
-    border-radius: 4px;
     background: black;
-    background-clip: padding-box;
     color: white;
-    transition: background .4s; 
+    transition: .2s ease-in; 
 }
 
 .site-banner-books .books .boxes-books .book-img {
@@ -765,10 +757,11 @@ header.sticky ul li a:hover {
     width: 50%;
     float: left;
     margin-left: 8%;
+    font-size: .9rem;
 }
 
 .site-banner-books .books .boxes-books .book-description h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .site-banner-books .books .boxes-books .book-description .author {
@@ -830,9 +823,9 @@ header.sticky ul li a:hover {
 }
 
 .site-banner-category-book-search .category-book-search .boxes-books .btn-reserve-book {
-    padding: 4.5%;
+    padding: 4%;
     font: var(--roboto);
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 0.05rem;
     position: relative;
     border: 1px solid black;
@@ -843,17 +836,9 @@ header.sticky ul li a:hover {
 }
 
 .site-banner-category-book-search .category-book-search .boxes-books .btn-reserve-book:hover {
-    padding: 4.5%;
-    font: var(--roboto);
-    font-size: 12px;
-    letter-spacing: 0.05rem;
-    position: relative;
-    border: 1px solid black;
-    border-radius: 4px;
     background: black;
-    background-clip: padding-box;
     color: white;
-    transition: background .4s; 
+    transition: .2s ease-in; 
 }
 
 .site-banner-category-book-search .category-book-search .boxes-books .book-img {
@@ -864,10 +849,11 @@ header.sticky ul li a:hover {
     width: 50%;
     float: left;
     margin-left: 8%;
+    font-size: .9rem;
 }
 
 .site-banner-category-book-search .category-book-search .boxes-books .book-description h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .site-banner-category-book-search .category-book-search .boxes-books .book-description .author {
