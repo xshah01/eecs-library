@@ -84,7 +84,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: -30px;
+    margin-bottom: -50px;
   }
 
   .login-page .headings .home h1:hover {
@@ -114,7 +114,7 @@ body {
     outline: none;
     box-sizing: border-box;
     margin-bottom: 10px;
-    margin-top: -10px;
+    margin-top: -15px;
   }
   
   .login-page input:active,
@@ -139,6 +139,27 @@ body {
   
   .login-page #password + i:hover {
     color: rgba(255, 255, 255, 1);
+  }
+
+  .signup .checkbox {
+    margin-left: -410px;
+    padding-top: 33px;
+  }
+
+  .signup .checkbox-text {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: -40px;
+    text-transform: lowercase;
+    text-transform: capitalize;
+  }
+
+  .signup .checkbox-text a {
+    font-size: 9px;
+    color: rgb(247, 183, 49);
+    margin-top: -40px;
+    text-transform: lowercase;
+    text-transform: capitalize;
   }
   
   .login-page .btn-sign-in {

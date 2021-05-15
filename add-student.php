@@ -150,7 +150,7 @@ include('config.php');
     </a>  
 </div>     
 </div>
-    <div id="sign-in-form">
+    <div class="signup" id="sign-in-form">
         <form action="" method="POST">
         <label for="full_name">Full Name</label>
         <input id="full_name" type="text" name="full_name" required/>
@@ -162,6 +162,12 @@ include('config.php');
         <input id="password" type="password" name="password" required/>
         <label for="confirm_password">Re-enter password</label>
         <input id="confirm_password" type="password" name="confirm_password" required/>
+        <div class="checkbox">
+            <input id="checkbox" name="condition" type="checkbox" required>
+        </div>
+        <label for="condition" class="checkbox-text">By checking this box, you indicate that you have read and understood our
+            <a href="book-condition-guidelines.php">user terms</a>, our <a href="">personal data management</a> and our <a href="">cookie policy.</a>
+        </label>
         <input type="submit" class="btn-sign-in" name="submit" value="Sign up" />
         </form>
         <footer>
