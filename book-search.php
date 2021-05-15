@@ -42,9 +42,10 @@
 
                             /* SQL query to get the books based on search key word */
                             $sql = "SELECT * FROM tbl_book WHERE 
-                            title LIKE '%$search%' AND 'active' = 'Yes'
-                            OR ISBN LIKE '%$search%' AND 'active' = 'Yes'
-                            OR author LIKE '%$search%' AND 'active' = 'Yes' ";  
+                            (title LIKE '%$search%'
+                            OR ISBN LIKE '%$search%'
+                            OR author LIKE '%$search%')
+                            AND active = 'Yes' ";  
 
                             /* Execute the query */
                             $res = mysqli_query($conn, $sql);
