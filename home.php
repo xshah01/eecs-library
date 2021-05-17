@@ -122,6 +122,17 @@
                                     <span class="text-secondary">Briggs</span>
                                 </div>
                             </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all computerscience">
+                                <div class="img">
+                                    <a class="popup-img" href="books.php">
+                                        <img src="img/portfolio/p7.jpg" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-md-8 title py-4">
+                                    <h4 class="text-uppercase">algorithms</h4>
+                                    <span class="text-secondary">Sedgewick & Wayne</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
