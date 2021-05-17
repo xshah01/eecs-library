@@ -17,6 +17,7 @@
             $ISBN = $_POST['ISBN'];
             $language = $_POST['language'];
             $category = $_POST['category'];
+            $qty = $_POST['qty'];
 
             //For file input, check whether image is selected or not 
             if(isset($_FILES['image']['name'])) {
@@ -73,6 +74,7 @@
                 language = '$language',
                 image_name = '$image_name',
                 category_id = $category,
+                qty = $qty,
                 recycle = '$recycle' ";
 
             //Execute query and save data into database
@@ -138,6 +140,9 @@
                             </tr>
                             <tr>
                                 <td><input type="text" class="form-control" name="language" placeholder="Enter the book language"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" name="qty" placeholder="Enter the quantity"></td>
                             </tr>
                             <tr>
                                 <td>Select Image:

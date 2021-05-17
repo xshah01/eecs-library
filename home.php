@@ -58,79 +58,101 @@
                         <div class="book-container">
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all calculus">
                                 <div class="img">
-                                    <a class="popup-img" href="books.php">
+                                    <a class="popup-img" href="reservation-page.php?book_id=2">
                                         <img src="img/portfolio/p1.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="col-md-8 title py-4">
                                     <h4 class="text-uppercase">calculus</h4>
-                                    <span class="text-secondary">C.H. Edwards</span>
+                                    <span class="text-secondary">Edwards & Penney</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all network">
                                 <div class="img">
-                                    <a class="popup-img" href="books.php">
+                                    <a class="popup-img" href="reservation-page.php?book_id=3">
                                         <img src="img/portfolio/p2.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="col-md-8 title py-4">
                                     <h4 class="text-uppercase">computer networking</h4>
-                                    <span class="text-secondary">Jams F. Kurose</span>
+                                    <span class="text-secondary">Kurose & Ross</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all database">
                                 <div class="img">
-                                    <a class="popup-img" href="books.php">
+                                    <a class="popup-img" href="reservation-page.php?book_id=4">
                                         <img src="img/portfolio/p3.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="col-md-8 title py-4">
                                     <h4 class="text-uppercase">database systems</h4>
-                                    <span class="text-secondary">Michael Kiffer</span>
+                                    <span class="text-secondary">Kifer, Bernstein & Lewis</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all computerscience">
                                 <div class="img">
-                                    <a class="popup-img" href="books.php">
+                                    <a class="popup-img" href="reservation-page.php?book_id=5">
                                         <img src="img/portfolio/p4.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="col-md-8 title py-4">
                                     <h4 class="text-uppercase">computer science</h4>
-                                    <span class="text-secondary">Brett A. Becker</span>
+                                    <span class="text-secondary">Becker & Quille</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all database">
                                 <div class="img">
-                                    <a class="popup-img" href="books.php">
+                                    <a class="popup-img" href="reservation-page.php?book_id=6">
                                         <img src="img/portfolio/p5.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="col-md-8 title py-4">
                                     <h4 class="text-uppercase">modern database management</h4>
-                                    <span class="text-secondary">Jeffrey A. Hoffer</span>
+                                    <span class="text-secondary">Hoffer, Venkataraman & Topi</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all calculus">
                                 <div class="img">
-                                    <a class="popup-img" href="books.php">
+                                    <a class="popup-img" href="reservation-page.php?book_id=7">
                                         <img src="img/portfolio/p6.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="col-md-8 title py-4">
                                     <h4 class="text-uppercase">calculus</h4>
-                                    <span class="text-secondary">Briggs</span>
+                                    <span class="text-secondary">Briggs, Cochran & Gillett</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all computerscience">
                                 <div class="img">
-                                    <a class="popup-img" href="books.php">
+                                    <a class="popup-img" href="reservation-page.php?book_id=21">
                                         <img src="img/portfolio/p7.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="col-md-8 title py-4">
                                     <h4 class="text-uppercase">algorithms</h4>
                                     <span class="text-secondary">Sedgewick & Wayne</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all network">
+                                <div class="img">
+                                    <a class="popup-img" href="reservation-page.php?book_id=11">
+                                        <img src="img/portfolio/p8.jpg" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-md-8 title py-4">
+                                    <h4 class="text-uppercase">Networking Essentials</h4>
+                                    <span class="text-secondary">Beasley & Nilkaew</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 book-thumbnail all database">
+                                <div class="img">
+                                    <a class="popup-img" href="reservation-page.php?book_id=44">
+                                        <img src="img/portfolio/p9.jpg" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-md-8 title py-4">
+                                    <h4 class="text-uppercase">Database Concepts</h4>
+                                    <span class="text-secondary">Kroenke, Auer, Vandenberg & Yoder</span>
                                 </div>
                             </div>
                         </div>
