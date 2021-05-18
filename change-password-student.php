@@ -11,7 +11,7 @@
 
             //Process the value from Form and save it in database
             $id = $_POST['id'];
-            $current_password = ($_POST['current_password']);
+            $current_password = md5($_POST['current_password']);
             $new_password = md5($_POST['new_password']);
             $confirm_password = md5($_POST['confirm_password']);
 
