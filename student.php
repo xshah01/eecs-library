@@ -32,7 +32,7 @@ include('partials-front/header-student.php');
 
                                     $count2 = mysqli_num_rows($res2); //Check whether data is available or not
 
-                                    /* Check whether reservation data has been retrieved or not */
+                                    /* Check whether data has been retrieved or not */
                                     if($count2 == 1) {
 
                                         $row2 = mysqli_fetch_assoc($res2);   //Retrieve the details

@@ -51,6 +51,34 @@ include('login-check-student.php');
     
     <!-- ========================= Start Header Area ========================= -->
 
+    <?php 
+    
+    include('config.php');
+
+        /* Check whether student is set or not */
+        if(isset($_SESSION['email'])) {
+
+            $email = $_SESSION['email'];
+
+            /* Get all details based on email */                   
+            $sql = "SELECT * FROM tbl_student WHERE email = '$email'"; //Create SQL query to retrieve the name
+
+            $res = mysqli_query($conn, $sql); //Execute the query
+
+            $count = mysqli_num_rows($res); //Check whether data is available or not
+
+            /* Check whether data has been retrieved or not */
+            if($count == 1) {
+
+                $row = mysqli_fetch_assoc($res);   //Retrieve the details
+                                            
+                $full_name = $row['full_name'];
+
+                $words = explode(" ", $full_name);  //Split the full name and take the first name
+                $firstname = $words[0];
+
+                ?>
+
     <header>
         <a href="<?php echo SITEURL; ?>home.php" class="logo"href="<?php echo SITEURL; ?>home.php"><img src="./img/eecslogo.png" alt="logo"></a>
             <ul>
@@ -59,9 +87,47 @@ include('login-check-student.php');
                 <li><a href="<?php echo SITEURL; ?>services.php">Services</a></li>
                 <li><a href="<?php echo SITEURL; ?>about-us.php">About us</a></li>
                 <li><a href="<?php echo SITEURL; ?>contact.php">Contact us</a></li>
-                <li><a id="student" href="student.php">Student</a></li>
+                <li><a id="student" href="<?php echo SITEURL; ?>student.php">
+                    <?php include('config.php'); if(isset($_SESSION['email'])) { 
+                        echo $firstname; 
+                    } 
+                    else {
+                        echo "Student";
+                    }?></a></li>
                 <li><a id="logout" href="logout-student.php">Logout</a></li>
             </ul>
     </header>
+
+            <?php
+
+            }
+
+            else {  
+
+            }
+
+        }
+
+        else {
+
+            ?>
+    <header>
+        <a href="<?php echo SITEURL; ?>home.php" class="logo"href="<?php echo SITEURL; ?>home.php"><img src="./img/eecslogo.png" alt="logo"></a>
+            <ul>
+            <li><a href="<?php echo SITEURL; ?>home.php">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="<?php echo SITEURL; ?>books.php">Books</a></li>
+            <li><a href="<?php echo SITEURL; ?>services.php">Services</a></li>
+            <li><a href="<?php echo SITEURL; ?>about-us.php">About us</a></li>
+            <li><a href="<?php echo SITEURL; ?>contact.php">Contact us</a></li>
+            <li><a id="student" href="<?php echo SITEURL; ?>student.php">Student</a></li>
+            <li><a id="admin" href="<?php echo SITEURL; ?>admin.php">Admin</a></li>
+            </ul>
+    </header>
+
+            <?php
+
+        }
+
+    ?>
 
     <!-- ========================= End Header Area ========================= -->
