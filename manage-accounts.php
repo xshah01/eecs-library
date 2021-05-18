@@ -100,7 +100,7 @@ include('partials-front-admin/header.php');
                             //Count rows to check whether we have data in database or not
                             $count = mysqli_num_rows($res);  //Function to get all rows in database
 
-                            $sn = 1001;
+                            $sn = 6001;
 
                             //Check the number of rows
                             if($count > 0) {

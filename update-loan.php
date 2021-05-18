@@ -60,7 +60,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
-                            <h3 class="reservations-title text-center">Reservations</h3>
+                            <h3 class="reservations-title text-center">Loans</h3>
                             <h2></h2>
                         </div>    
                     </div> 
@@ -72,7 +72,7 @@
             <div class="main-content">
                 <div class="wrapper">
                     <div class="update-reservation-title">
-                        <h1 class="title">Update Reservation</h1>
+                        <h1 class="title">Update Loan</h1>
                     </div>
 
                     <?php 
@@ -133,8 +133,7 @@
                             <tr>
                                 <td>Status:
                                     <select name="status">
-                                        <option <?php if($status=="Reserved") {echo "selected";} ?> value="Reserved">Reserved</option>
-                                        <option <?php if($status=="Active") {echo "selected";} ?> value="Active">Activate Loan</option>
+                                        <option <?php if($status=="Active") {echo "selected";} ?> value="Active">Active</option>
                                         <option <?php if($status=="Inactive") {echo "selected";} ?> value="Inactive">Inactive</option>
                                     </select>
                                 <br><br></td>
@@ -142,7 +141,7 @@
                             <tr>
                                 <td>
                                     <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                    <input type="submit" class="form-control-submit" name="submit" value="update reservation"><br>
+                                    <input type="submit" class="form-control-submit" name="submit" value="update loan"><br>
                                 </td>
                             </tr>
                         </table>

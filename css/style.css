@@ -1045,6 +1045,7 @@ header.sticky ul li a:hover {
 	color: rgb(49, 49, 49);
     text-align: center;
     padding-bottom: 100px;
+    margin-top: -50px;
 }
 
 .site-banner-confirmation-page .confirmation-page h4 {
@@ -1875,13 +1876,13 @@ a:link {
 
 table tr th {
     padding-top: 100px;
-    padding-left: 175px;
+    padding-left: 100px;
     padding-bottom: 35px;
     text-align: left;
 }
 
 table tr td {
-    padding-left: 175px;
+    padding-left: 100px;
     padding-bottom: 15px;
 }
 
@@ -2516,6 +2517,13 @@ table {
 }
 
 .site-banner-reservations .main-content .manage-reservations-title h1 {
+    padding-left: 175px;
+    padding-bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+.manage-inactive-reservations-title h1 {
     padding-left: 175px;
     padding-bottom: 30px;
     color: rgb(0, 0, 0);
@@ -3439,7 +3447,7 @@ table {
 }
 
 .site-banner-update-student .main-content .update-student-title h1 {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-left: 175px;
     padding-bottom: 30px;
     color: rgb(0, 0, 0);
@@ -3479,7 +3487,7 @@ table {
 }
 
 .site-banner-update-student .delete-account {
-    padding-top: 10px;
+    margin-top: -100px;
     margin-left: 175px;
 }
 
@@ -3504,7 +3512,7 @@ table {
 }
 
 .site-banner-update-student .clearfix {
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
 /* End Update Student Area */
@@ -3545,7 +3553,7 @@ table {
 }
 
 .site-banner-change-password-student .main-content .change-password-title h1 {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-left: 175px;
     padding-bottom: 30px;
     color: rgb(0, 0, 0);
@@ -3585,7 +3593,7 @@ table {
 }
 
 .site-banner-change-password-student .clearfix {
-    padding-top: 200px;
+    padding-top: 20px;
 }
 
 /* End Change Password Area */
@@ -3755,6 +3763,7 @@ table {
 	color: rgb(49, 49, 49);
     text-align: center;
     padding-bottom: 100px;
+    margin-top: -50px;
 }
 
 .site-banner-recycle-confirmation-page .recycle-confirmation-page h4 {
