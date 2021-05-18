@@ -42,9 +42,9 @@
 
                             /* SQL query to get the books based on search key word */
                             $sql = "SELECT * FROM tbl_book WHERE 
-                            (title LIKE '%$search%'
-                            OR ISBN LIKE '%$search%'
-                            OR author LIKE '%$search%')
+                            (title LIKE '$search%'
+                            OR ISBN LIKE '$search%'
+                            OR author LIKE '$search%')
                             AND qty >= 1 ";  
 
                             /* Execute the query */
