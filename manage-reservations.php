@@ -102,7 +102,7 @@ include('partials-front-admin/header.php');
 
                                         /* Calculate "remaining day of reservation" */
                                         $date1 = new DateTime('now');  //Current date
-                                        $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 0 days'))) ;   //Future date
+                                        $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 2 days'))) ;   //Future date
                                         $diff = $date2->diff($date1)->format("%a");  //Find difference
                                         $days = intval($diff);   //Rounding days
 
