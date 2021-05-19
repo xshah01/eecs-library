@@ -102,14 +102,25 @@ include('partials-front-admin/header.php');
 
                                         /* Calculate "remaining day of reservation" */
                                         $date1 = new DateTime('now');  //Current date
-                                        $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 2 days'))) ;   //Future date
+                                        $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 0 days'))) ;   //Future date
                                         $diff = $date2->diff($date1)->format("%a");  //Find difference
                                         $days = intval($diff);   //Rounding days
 
                                         if($days == "0") {
+
                                             include('config.php');
-                                            $sql4 = "DELETE FROM tbl_reservation WHERE id=$id"; //Query to delete reservation if reservation time has exceeded
-                                            $res4 = mysqli_query($conn, $sql4);  //Execute the query
+
+                                                $sql4 = "DELETE FROM tbl_reservation WHERE id=$id"; //Query to delete reservation if reservation time has exceeded
+                                                $res4 = mysqli_query($conn, $sql4);  //Execute the query
+
+                                                $sql5 = "UPDATE tbl_book SET qty = (qty + 1) WHERE ISBN = $ISBN ";   //Update Qty in tbl_book
+                                                $res5 = mysqli_query($conn, $sql5);  //Execute the query
+
+                                        }
+                                        
+                                        else {
+
+
                                         }
 
                         ?>

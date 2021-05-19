@@ -203,7 +203,7 @@
                                                 reservation_date = current_timestamp() ";
 
                                         /* Update Qty in tbl_book */
-                                        $sql4 = "UPDATE tbl_book SET qty = (qty - 1)  WHERE id = '$id' ";
+                                        $sql4 = "UPDATE tbl_book SET qty = (qty - 1) WHERE id = '$id' ";
 
                                         /* Execute the queries */
                                         $res2 = mysqli_query($conn, $sql2);
