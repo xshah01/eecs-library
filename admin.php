@@ -213,6 +213,9 @@ include('partials-front-admin/header.php');
                     <br><br><br><br><br>
                     
                     <div class="clearfix"></div>
+
+                    <br><br><br>
+                    
                 </div>
             </div>
         </section>   
