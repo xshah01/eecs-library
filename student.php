@@ -298,7 +298,7 @@ include('partials-front/header-student.php');
                                         <p class="edition"><?php echo $edition; ?></p> 
                                         <p class="ISBN"><?php echo $ISBN; ?></p>
                                         <p class="date"><?php echo $reservation_date; ?>
-                                            (Pick up this book no later than the next day 
+                                            (Pick up this book no later than two days 
                                             or you reservation will be terminated)
                                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;
                                             <a href="<?php echo SITEURL; ?>cancel-reservation.php?id=<?php echo $id; ?>">

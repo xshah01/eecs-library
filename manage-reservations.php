@@ -100,6 +100,18 @@ include('partials-front-admin/header.php');
                                         $status = $rows['status'];
                                         $reservation_date = $rows['reservation_date'];
 
+                                        /* Calculate "remaining day of reservation" */
+                                        $date1 = new DateTime('now');  //Current date
+                                        $date2 = new DateTime(date('Y-m-d', strtotime($reservation_date. ' + 2 days'))) ;   //Future date
+                                        $diff = $date2->diff($date1)->format("%a");  //Find difference
+                                        $days = intval($diff);   //Rounding days
+
+                                        if($days == "0") {
+                                            include('config.php');
+                                            $sql4 = "DELETE FROM tbl_reservation WHERE id=$id"; //Query to delete reservation if reservation time has exceeded
+                                            $res4 = mysqli_query($conn, $sql4);  //Execute the query
+                                        }
+
                         ?>
 
                         <!-- Display the values in our table -->
@@ -269,7 +281,7 @@ include('partials-front-admin/header.php');
                                 <?php 
                                 
                                     /* Display days in different colors */
-                                    if($days <= "1") {
+                                    if($days <= "57") {
                                         include('config.php');
                                         /* Query for automatically updating the status on an outdated loan */
                                         $sql3 = "UPDATE tbl_reservation SET status = 'Inactive' WHERE id='$id' ";

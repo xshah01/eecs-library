@@ -135,7 +135,6 @@
                                     <select name="status">
                                         <option <?php if($status=="Reserved") {echo "selected";} ?> value="Reserved">Reserved</option>
                                         <option <?php if($status=="Active") {echo "selected";} ?> value="Active">Activate Loan</option>
-                                        <option <?php if($status=="Inactive") {echo "selected";} ?> value="Inactive">Inactive</option>
                                     </select>
                                 <br><br></td>
                             </tr>

@@ -25,7 +25,7 @@
 
                     <h1>Your book is now reserved</h1>
 
-                    <h4>Please pick up your book within 24h</h4>
+                    <h4>Please pick up your book within 48h</h4>
                     <p>or your reservation will be terminated</p>
 
                     <br><br>
@@ -67,7 +67,7 @@
         var t = Date.parse(endtime) - Date.parse(new Date());
         var seconds = Math.floor((t / 1000) % 60);
         var minutes = Math.floor((t / 1000 / 60) % 60);
-        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var hours = Math.floor(47);
         return {
             'total': t,
             'hours': hours,
