@@ -182,7 +182,7 @@ include('config.php');
 
 <script type="text/javascript">
     function userTerms() {
-        alert("To use our service, you must be 18 years old or have a parent's approval. We are happy to see that only students use the service, but this is not mandatory. The service is not provided to persons who have previously violated our User Terms. \n\nIt is up to you as a user to collect your reserved book within 24 hours, and avoid the risk of getting your reservation terminated. It is your responsibility to return borrowed book(s) and in perfect condition once the loan period of 60 days (including holidays) is due time. You have 2 days to return the book(s). If this return period is overdrawn, a late fee will be issued.");
+        alert("To use our service, you must be 18 years old or have a parent's approval. We are happy to see that only students use the service, but this is not mandatory. The service is not provided to persons who have previously violated our User Terms. \n\nIt is up to you as a user to collect your reserved book within 48 hours, and avoid the risk of getting your reservation terminated. \n\nIt is your responsibility to return borrowed book(s) and in perfect condition once the loan period of 60 days (including holidays) is due time. You have an extra period of 2 days to return the book(s). If this return period is overdrawn, a late fee will be issued.");
     }
 </script>
 
