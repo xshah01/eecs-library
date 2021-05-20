@@ -59,13 +59,13 @@
         <title>Login Student</title>
 
         <!-- custom css file -->
-        <link href="./css/style-login.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+        <link href="./css/style-login-student.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
         <link href="./css/all.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     </head>
     
     <body>
-<div class="login-page">       
+<div class="login-page-student">       
   <div class="container-shadow"></div>
   <div class="container">
     <div class="wrap">

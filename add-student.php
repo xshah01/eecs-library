@@ -130,8 +130,8 @@ include('config.php');
 
     if(isset($_SESSION['add'])) {
         echo $_SESSION['add'];  //Display session message
-        echo "<a href='".$SITEURL.'login-student.php'."'> LOGIN ›</a>";
-        unset($_SESSION['add']);  //Remove session message
+        echo "<a href='".$SITEURL.'login-student.php'."'style='color:white;'> LOGIN ›</a>";
+        //unset($_SESSION['add']);  //Remove session message
     }
 
     if(isset($_SESSION['password-not-match'])) {
