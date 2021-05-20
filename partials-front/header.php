@@ -86,13 +86,21 @@ include('config.php');
                 <li><a href="<?php echo SITEURL; ?>about-us.php">About us</a></li>
                 <li><a href="<?php echo SITEURL; ?>contact.php">Contact us</a></li>
                 <li><a id="student" href="<?php echo SITEURL; ?>student.php">
-                    <?php include('config.php'); if(isset($_SESSION['email'])) { 
+                    <?php include('config.php'); if(isset($_SESSION['student'])) { 
                         echo $firstname; 
                     } 
                     else {
-                        echo "Student";
+                        echo "student";
                     }?></a></li>
-                <li><a id="admin" href="<?php echo SITEURL; ?>admin.php">Admin</a></li>
+                    <?php 
+                    include('config.php');
+                        if(isset($_SESSION['student'])) {
+                            ?><li><a id="logout" href="<?php echo SITEURL; ?>logout-student.php">Logout</a></li><?php
+                        }
+                        else {
+                            ?><li><a id="admin" href="<?php echo SITEURL; ?>admin.php">Admin</a></li><?php
+                        }
+                    ?>
             </ul>
     </header>
 

@@ -167,6 +167,7 @@ body {
     margin-top: -40px;
     text-transform: lowercase;
     text-transform: capitalize;
+    cursor: pointer;
   }
   
   .login-page .btn-sign-in {
