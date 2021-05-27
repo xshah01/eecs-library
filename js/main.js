@@ -22,6 +22,18 @@ window.addEventListener("scroll", function () {
       header.classList.toggle("sticky", window.scrollY > 0);
   })
 
+/* Hide navbar when scrolling down. Else, show the navbar. */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("header").style.top = "0";
+  } else {
+    document.querySelector("header").style.top = "-150px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
   /* Scroll to Top */
 const toTop = document.querySelector(".to-top");
 window.addEventListener("scroll", () => {
