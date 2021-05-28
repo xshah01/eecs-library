@@ -550,8 +550,8 @@ include('partials-front/header-student.php');
                             <div class="title2 text-center">
                                 <h1>How many books have I recycled so far?</h1>
                             </div>
-                            <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
-                            <div class="book-body" style='padding-top: 100px;'>
+                            <div class="arrow text-center" style='padding-top: 75px; font-size: 50px;'>&#8595;</div>
+                            <div class="book-body" style='padding-top: 75px;'>
 
                             <?php
 
@@ -580,7 +580,7 @@ include('partials-front/header-student.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="title3 text-center" style='padding-top: 100px;'>
+                            <div class="title3 text-center" style='padding-top: 75px;'>
 
                             <?php
 
@@ -619,8 +619,8 @@ include('partials-front/header-student.php');
                             <div class="title3-mini text-center" style='padding-top: 20px;'>
                                 <h1><sup>*</sup> <?php echo $count9; ?> book(s) are still pending for registration by admin</h1>
                             </div>
-                            <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
-                            <div class="title3 text-center" style='padding-top: 100px;'>
+                            <div class="arrow text-center" style='padding-top: 75px; font-size: 50px;'>&#8595;</div>
+                            <div class="title3 text-center" style='padding-top: 75px;'>
                                 <h1>I have reduced my carbon footprint by saving <?php echo ($count8 * 7.5); ?> kg CO<sub>2</sub>!
                                 <a href="http://www.takepart.com/article/2014/01/29/using-digital-readers-reduce-carbon-footprint">
                                     <sup>1</sup></h1>
@@ -630,8 +630,8 @@ include('partials-front/header-student.php');
                                 <h1>Making this planet <i class="fas fa-globe-americas"></i> a better place
                                 </h1>
                             </div>
-                            <div class="arrow text-center" style='padding-top: 100px; font-size: 50px;'>&#8595;</div>
-                            <div class="title5 text-center" style='padding-top: 100px;'>
+                            <div class="arrow text-center" style='padding-top: 75px; font-size: 50px;'>&#8595;</div>
+                            <div class="title5 text-center" style='padding-top: 75px;'>
                                 <a href="recycle-page.php">
                                     <h1>I want to recycle books <i class="fas fa-book"></i> ›</h1>
                                 </a>    
