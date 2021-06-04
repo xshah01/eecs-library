@@ -32,7 +32,7 @@ include('login-check-student.php');
                     <h1>Book Condition Guidelines</h1>
                     <br><br>
                     <div class="condition-guidelines col-lg-4">
-                        <p>We'd love to help you recycle all of your old books, but can't unfortunately accept
+                        <p>We would love to help you recycle all of your old books, but unfortunately cannot accept
                             books with any of the following defects:
                             <ul>
                                 <li>Tears on the cover</li>

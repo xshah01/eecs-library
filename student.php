@@ -301,7 +301,8 @@ include('partials-front/header-student.php');
                                             (Pick up this book no later than two days 
                                             or you reservation will be terminated)
                                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;
-                                            <a href="<?php echo SITEURL; ?>cancel-reservation.php?id=<?php echo $id; ?>">
+                                            <a href="<?php echo SITEURL; ?>cancel-reservation.php?id=<?php echo $id; ?>"
+                                                onclick="return confirm('Are you sure you want to cancel this reservation?');">
                                                 CANCEL <i class="fas fa-ban"></i>
                                             </a>
                                         </p>

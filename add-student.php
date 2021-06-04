@@ -194,7 +194,7 @@ include('config.php');
 
 <script type="text/javascript">
     function cookies() {
-        alert("As in common practice with almost all professional websites, this website uses cookies, which are small files that are downloaded to your computer to improve your experience. \n\nWe use Account Related Cookies for handling the registration process and general administration. These cookies are usually deleted when you log out, but in some cases they may remain afterwards to remember your website settings when you log out. Form Related Cookies are also utilised when you send data via a form such as the one on the login page. These cookies can be set to remember your user information for future correspondence. \n\nTo preserve the your integrity, Third Party Cookies are not in usage.");
+        alert("As in common practice with almost all professional websites, this website uses cookies, which are small files that are downloaded to your computer to improve your experience. \n\nWe use Account Related Cookies for handling the registration process and general administration. These cookies are usually deleted when you log out, but in some cases they may remain afterwards to remember your website settings when you log out. Form Related Cookies are also utilised when you send data via a form such as the one on the login page. These cookies can be set to remember your user information for future correspondence. \n\nTo preserve your integrity, Third Party Cookies are not in use.");
     }
 </script>
 

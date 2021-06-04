@@ -38,7 +38,7 @@
                                         <p>Have a question? Ask us now! Librarians are available to answer your questions and help with your research. 
                                             We are happy to help you, but asking for your patience. As many of us are working remotely, this may impact our 
                                             access to some EECS library materials and our ability to fully respond to your question at this time. </p>
-                                            <a href="contact.html"><p class="link-to-contact">Use our conctact form to get in touch with a librarian › </p></a>
+                                            <a href="contact.php"><p class="link-to-contact">Use our conctact form to get in touch with a librarian › </p></a>
                                         </div>
                                     </div>
                                 </div>
