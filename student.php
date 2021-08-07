@@ -611,14 +611,11 @@ include('partials-front/header-student.php');
                                 
                             ?>
 
-                                <h1><?php echo $count8; ?> book(s)<sup>*</sup> <i class="fas fa-book"></i> in total are available
+                                <h1><?php echo $count8; ?> book(s)<i class="fas fa-book"></i> in total are available
                                 for reservation and ready to
                             </div>
                             <div class="title3 text-center" style='padding-top: 20px;'>
                                 <h1>enrich and improve other students education <i class="fas fa-graduation-cap"></i></h1>
-                            </div>
-                            <div class="title3-mini text-center" style='padding-top: 20px;'>
-                                <h1><sup>*</sup> <?php echo $count9; ?> book(s) are still pending for registration by admin</h1>
                             </div>
                             <div class="arrow text-center" style='padding-top: 75px; font-size: 50px;'>&#8595;</div>
                             <div class="title3 text-center" style='padding-top: 75px;'>
