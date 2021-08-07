@@ -611,7 +611,7 @@ include('partials-front/header-student.php');
                                 
                             ?>
 
-                                <h1><?php echo $count8; ?> book(s)<i class="fas fa-book"></i> in total are available
+                                <h1><?php echo $count8; ?> book(s) <i class="fas fa-book"></i> in total are available
                                 for reservation and ready to
                             </div>
                             <div class="title3 text-center" style='padding-top: 20px;'>
