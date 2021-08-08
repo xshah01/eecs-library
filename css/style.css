@@ -116,7 +116,7 @@ header.sticky ul li a {
 }
 
 header.sticky ul li a:hover {
-    color: rgb(255, 166, 0, 0.849);
+    color: rgba(255, 195, 82, 0.849);
 }
 
 .sticky #student:hover, .sticky #accounts:hover, .sticky #categories:hover, .sticky #books:hover, .sticky #reservations:hover, .sticky #admin:hover {
@@ -1328,7 +1328,7 @@ header.sticky ul li a:hover {
 .site-banner-services .ask-a-librarian h4 {
     font-family: 'Playfair Display', serif;
 	font-size: 32px;
-	color: rgb(214, 195, 142);
+	color: rgb(255, 195, 82, 0.849);
     font-weight: 700;
     line-height: 35px;
     margin-top: -800px;
