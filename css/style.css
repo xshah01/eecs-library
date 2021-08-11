@@ -3455,7 +3455,7 @@ table {
 }
 
 .site-banner-update-student .form-control {
-    margin-left: -10px;
+    margin-left: 0px;
     width: 400px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
