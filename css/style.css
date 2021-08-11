@@ -3467,6 +3467,7 @@ table {
 }
 
 .site-banner-update-student .form-control-submit {
+    margin-left: 60px;
     padding: 1rem 3rem;
     width: 100%;
     font: var(--roboto);
