@@ -3455,7 +3455,7 @@ table {
 }
 
 .site-banner-update-student .form-control {
-    margin-left: 50px;
+    margin-left: 60px;
     width: 400px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
@@ -3468,7 +3468,7 @@ table {
 
 .site-banner-update-student .form-control-submit {
     padding: 1rem 3rem;
-    width: 30.8%;
+    width: 100%;
     font: var(--roboto);
     font-size: 12px;
     letter-spacing: 0.2125rem;
