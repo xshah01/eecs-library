@@ -3484,17 +3484,16 @@ table {
     background: white;
     color:  black;
     border: 1px solid black;
-    margin: -1px;
 }
 
 .site-banner-update-student .delete-account {
     margin-top: -100px;
-    margin-left: 175px;
+    margin-left: 160px;
 }
 
 .site-banner-update-student .delete-account-btn {
     padding: 1rem 3rem;
-    width: 30.8%;
+    width: 400px;
     font: var(--roboto);
     font-size: 12px;
     letter-spacing: 0.2125rem;
