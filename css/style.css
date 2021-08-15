@@ -3506,10 +3506,10 @@ table {
 }
 
 .site-banner-update-student .delete-account-btn:hover {
-    font-size: 12px;
     border: 1px solid red;
     background: red;
     color: white;
+    margin: -.1px;
 }
 
 .site-banner-update-student .clearfix {
@@ -3591,7 +3591,6 @@ table {
     background: white;
     color:  black;
     border: 1px solid black;
-
 }
 
 .site-banner-change-password-student .clearfix {
