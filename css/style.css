@@ -3484,7 +3484,9 @@ table {
     background: white;
     color:  black;
     border: 1px solid black;
-    margin-top: .1px;
+    margin-left: 60px;
+    padding: 1rem 3rem;
+    width: 400px;
 }
 
 .site-banner-update-student .delete-account {
