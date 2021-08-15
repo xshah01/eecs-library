@@ -2390,6 +2390,7 @@ table {
     background: white;
     color:  black;
     border: 1px solid black;
+    margin-bottom: -2px;
 }
 
 .site-banner-add-category-book .clearfix {
