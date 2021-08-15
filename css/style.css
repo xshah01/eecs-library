@@ -2362,7 +2362,7 @@ table {
 
 .site-banner-add-category-book .form-control {
     margin-left: -10px;
-    width: 400%;
+    width: 400px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
     border-radius: 0;
@@ -2374,7 +2374,7 @@ table {
 
 .site-banner-add-category-book .form-control-submit {
     padding: 1rem 3rem;
-    width: 100%;
+    width: 400px;
     font: var(--roboto);
     font-size: 12px;
     letter-spacing: 0.2125rem;
