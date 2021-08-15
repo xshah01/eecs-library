@@ -2030,7 +2030,7 @@ table {
 
 .site-banner-change-password .form-control-submit {
     padding: 1rem 3rem;
-    width: 100%;
+    width: 400px;
     font: var(--roboto);
     font-size: 12px;
     letter-spacing: 0.2125rem;
