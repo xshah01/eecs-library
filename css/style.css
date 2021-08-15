@@ -1937,7 +1937,7 @@ table {
 
 .site-banner-add-update-admin .form-control {
     margin-left: -10px;
-    width: 400px;
+    width: 400%;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
     border-radius: 0;
@@ -2018,7 +2018,7 @@ table {
 
 .site-banner-change-password .form-control {
     margin-left: -10px;
-    width: 400px;
+    width: 400%;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
     border-radius: 0;
