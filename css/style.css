@@ -1937,7 +1937,7 @@ table {
 
 .site-banner-add-update-admin .form-control {
     margin-left: -10px;
-    width: 400%;
+    width: 400px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
     border-radius: 0;
@@ -2010,7 +2010,7 @@ table {
 
 .site-banner-change-password .main-content .change-password-title h1 {
     padding-top: 100px;
-    padding-left: 100px;
+    padding-left: 105px;
     padding-bottom: 30px;
     color: rgb(0, 0, 0);
     font-family: sans-serif;
@@ -2018,7 +2018,7 @@ table {
 
 .site-banner-change-password .form-control {
     margin-left: -10px;
-    width: 400%;
+    width: 400px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
     border-radius: 0;
