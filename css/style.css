@@ -2373,6 +2373,7 @@ table {
 }
 
 .site-banner-add-category-book .form-control-submit {
+    margin-left: 60px;
     padding: 1rem 3rem;
     width: 400px;
     font: var(--roboto);
