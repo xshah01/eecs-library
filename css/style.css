@@ -3512,7 +3512,7 @@ table {
     border: 1px solid red;
     background: red;
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-20px);
 }
 
 .site-banner-update-student .clearfix {
