@@ -3506,13 +3506,11 @@ table {
 }
 
 .site-banner-update-student .delete-account-btn:hover {
-    padding: 1rem 3rem;
-    width: 400px;
     font-size: 12px;
     border: 1px solid red;
     background: red;
     color: white;
-    transform: translateY(-20px);
+    padding: 1rem 3rem;
 }
 
 .site-banner-update-student .clearfix {
