@@ -2361,7 +2361,7 @@ table {
 }
 
 .site-banner-add-category-book .form-control {
-    margin-left: 60px;
+    margin-left: -10px;
     width: 400px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.322);
@@ -2373,9 +2373,8 @@ table {
 }
 
 .site-banner-add-category-book .form-control-submit {
-    margin-left: 60px;
     padding: 1rem 3rem;
-    width: 400px;
+    width: 100%;
     font: var(--roboto);
     font-size: 12px;
     letter-spacing: 0.2125rem;
@@ -2390,7 +2389,7 @@ table {
     background: white;
     color:  black;
     border: 1px solid black;
-    margin-bottom: -2px;
+    margin: -1px;
 }
 
 .site-banner-add-category-book .clearfix {
@@ -3485,7 +3484,7 @@ table {
     background: white;
     color:  black;
     border: 1px solid black;
-    margin-bottom: -2px;
+    margin-top: .1px;
 }
 
 .site-banner-update-student .delete-account {
@@ -3511,7 +3510,6 @@ table {
     border: 1px solid red;
     background: red;
     color: white;
-    padding: 1rem 3rem;
 }
 
 .site-banner-update-student .clearfix {
